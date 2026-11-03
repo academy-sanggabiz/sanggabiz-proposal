@@ -6,6 +6,7 @@ Repo ini berisi proposal dan dokumen kerja Sanggabiz.
 2. Untuk proposal, baca juga `ATURAN-PROPOSAL.md` (metode, silabus, anggaran, tempat, bahasa) dan `FORMAT-STANDAR-PROPOSAL.md` (bentuk halaman standar).
 2b. Proposal ditulis untuk meyakinkan dan mudah dipahami orang awam, bukan untuk memuat semua hal teknis. Tanpa istilah akademik, alat dan media ditulis umum, cukup satu contoh aset yang didesain sebaik mungkin. Lihat `ATURAN-PROPOSAL.md` bagian 9.
 2a. Sebelum menulis atau mengubah angka harga apa pun, baca `STANDAR-HARGA.md`: rentang harga acuan dengan sumbernya, rumus keuntungan dan pajak, dan daftar harga yang tidak kami ambil. Harga baru dari vendor dicatat di log harga pada berkas itu. Baca juga `ARAHAN-PRIYO.md` (arahan Pak Priyo soal proses bisnis, fee 10 persen, rincian per baris, honor pembicara, dan konsumsi). Arahan baru dari Pak Priyo atau pimpinan ditambahkan ke berkas itu dengan tanggal.
+2c. Pengetahuan umum yang bisa dipakai lintas proposal disimpan di folder `pengetahuan/` (misalnya `pengetahuan/BISINDO-LAYANAN-KEUANGAN.md`). Baca bila proposal menyentuh topik yang sama, dan tambahkan temuan baru dengan tanggal dan sumber.
 3. Sebelum commit, jalankan `python3 tools/cek-gaya.py` pada file yang ditulis atau diubah. Perbaiki semua temuan, kecuali di kutipan dan salinan sumber.
 4. Setiap proyek proposal punya foldernya sendiri (`tanoto/`, `slb-kaltim/`). Jangan mencampur aturan atau aset antarproyek.
 5. Kutipan chat dan dokumen sumber ditulis apa adanya. Tafsiran dipisah dan diberi label.
