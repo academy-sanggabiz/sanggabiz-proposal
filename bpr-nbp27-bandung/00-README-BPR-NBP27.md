@@ -10,6 +10,7 @@ Dibuat: 3 November 2026. Tahap: **v2** bagian silabus dan contoh aset (versi yan
 | Berkas | Fungsi |
 |---|---|
 | `proposal/v2 Silabus dan Contoh Aset - IHT Layanan Inklusif PT BPR NBP 27.pdf` dan `.pptx` | **Versi yang dipakai.** 6 halaman berbahasa sehari-hari: jadwal satu hari, silabus per modul, yang didapat BPR, dan satu contoh aset (kartu saku isyarat). PPTX bisa diedit dan diunggah ke Canva |
+| `kit/02 Kartu Saku Isyarat Perbankan v4 - foto contoh.pdf` dan `.pptx` | Kartu v2 dengan 20 gambar isyarat dari pengguna (3 November 2026). Gambar berlabel contoh, belum diperiksa pengguna Tuli. PPTX bisa diedit: teks, kotak, dan foto bisa diganti. Dibuat dengan `_build/potong_foto_contoh.py` lalu `_build/build_kartu_v4.py` |
 | `kit/02 Kartu Saku Isyarat Perbankan v3 - belajar mandiri.pdf` | Kartu belajar di rumah: tiap kata punya kotak tempel foto atau gambar, catatan, centang hafal, dan cek pengajar. Sisi belakang kartu tunjuk. Dibuat dengan `_build/build_kartu_v3.py` |
 | `kit/02 Kartu Saku Isyarat Perbankan v2.pdf` | Kartu saku desain ulang, dua sisi A5 siap cetak dan laminasi |
 | `proposal/v1 ...pdf` (arsip) | 12 halaman 16:9: ringkasan silabus, tiga halaman kurikulum per modul, hasil dan evaluasi, isi kit, enam halaman aset |

@@ -70,3 +70,4 @@ Kolom cara peragaan sengaja tidak ada. Bila sudah divalidasi pengguna Tuli, tamb
 
 ## Riwayat
 - 3 November 2026: berkas dibuat. Riset teks tidak menemukan uraian gerakan per kata yang bisa dipercaya.
+- 3 November 2026, sore: pengguna mengirim 20 gambar isyarat untuk kartu (tampaknya dibuat dengan alat AI). Dipakai sebagai contoh latihan di kartu v4 BPR NBP 27, berlabel "contoh". Gambar itu **bukan** sumber isyarat yang tervalidasi dan tidak dicatat sebagai pengetahuan di bagian 3.

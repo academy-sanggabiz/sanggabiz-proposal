@@ -21,10 +21,10 @@ def slug(k):
     return re.sub(r"[^a-z0-9]+", "-", k.lower()).strip("-")
 
 
-def foto_untuk(i, k):
+def foto_untuk(i, k, folder=FOTO):
     """Foto asli dari sesi foto co-trainer Tuli, misalnya foto-isyarat/01-selamat-pagi.jpg. None bila belum ada."""
     for ext in ("jpg", "jpeg", "png", "webp"):
-        f = FOTO / f"{i:02d}-{slug(k)}.{ext}"
+        f = folder / f"{i:02d}-{slug(k)}.{ext}"
         if f.exists():
             return f
     return None
@@ -96,6 +96,8 @@ body {{ font-family: 'Inter', sans-serif; color: {NAVY}; }}
 .foto .no {{ position: absolute; left: 6px; top: 5px; font-family: 'Montserrat'; font-weight: 800; font-size: 10px; opacity: .85; }}
 .foto .tag {{ position: absolute; right: 6px; bottom: 4px; font-size: 7px; opacity: .65; letter-spacing: .3px; text-transform: uppercase; }}
 .foto .no.lencana {{ color:#fff; opacity:1; border-radius:8px; padding:1px 6px; top:5px; left:5px; }}
+.foto .tagfoto {{ position:absolute; right:4px; bottom:3px; background:rgba(255,255,255,.86); border-radius:8px; padding:1px 6px;
+  font-size:6.5px; font-weight:700; letter-spacing:.4px; text-transform:uppercase; }}
 .kata {{ font-family: 'Montserrat'; font-weight: 700; font-size: 12px; padding: 5px 8px 6px; text-align: center; color: {NAVY}; background: #fff; }}
 .kaki {{ position: absolute; left: 28px; right: 28px; bottom: 14px; display: flex; justify-content: space-between; align-items: center;
   font-size: 9.5px; color: #4b6070; }}
@@ -137,14 +139,17 @@ def keterangan_foto():
     return "Foto isyarat diperagakan oleh <b>co-trainer Tuli dari Bandung</b>, sesuai isyarat yang dipakai nasabah setempat."
 
 
-def sisi_depan():
+def sisi_depan(folder=FOTO, keterangan=None, tag_foto=None):
+    """folder: tempat foto isyarat. keterangan: teks kaki kartu (bawaan dari keterangan_foto).
+    tag_foto: label kecil di pojok kanan bawah setiap foto, misalnya "contoh"."""
     ubin = ""
     for i, (k, kat) in enumerate(KATA, 1):
         tua, muda = KAT[kat]
-        f = foto_untuk(i, k)
+        f = foto_untuk(i, k, folder)
         if f:
+            tag = f'<span class="tagfoto" style="color:{tua}">{tag_foto}</span>' if tag_foto else ""
             isi = (f'<div class="foto asli" style="background:{muda} url({f.as_uri()}) center 30%/cover no-repeat;color:{tua}">'
-                   f'<span class="no lencana" style="background:{tua}">{i:02d}</span></div>')
+                   f'<span class="no lencana" style="background:{tua}">{i:02d}</span>{tag}</div>')
         else:
             isi = (f'<div class="foto" style="background:{muda};color:{tua}">'
                    f'<span class="no">{i:02d}</span>{ikon("tangan", tua, 30, 1.5)}<span class="tag">foto isyarat</span></div>')
@@ -155,7 +160,7 @@ def sisi_depan():
 <div class="kanan"><img src="{LOGO_PUTIH}">PT BPR NBP 27, Bandung</div></div>
 <div class="pita">{pita}</div>
 <div class="grid">{ubin}</div>
-<div class="kaki"><span>{keterangan_foto()}</span><span>Balik kartu untuk kartu tunjuk</span></div>
+<div class="kaki"><span>{keterangan or keterangan_foto()}</span><span>Balik kartu untuk kartu tunjuk</span></div>
 </div>"""
 
 

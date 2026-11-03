@@ -13,6 +13,8 @@ Arahan tim: v1 terlalu teknis. Proposal harus mudah dipahami orang awam dan meya
 
 Pembaruan kartu (3 November 2026, sore): kartu tunjuk memakai ilustrasi benda (uang, slot setor dan tarik, struk saldo, buku tabungan, kartu ATM). Ilustrasi generik, tidak meniru desain uang kertas atau merek kartu. Foto isyarat kini masuk otomatis dari `_build/foto-isyarat/` (lihat README di folder itu untuk daftar 20 foto dan ketentuan pengambilan). Sumber foto berlisensi terbuka untuk 20 kosakata loket tidak ditemukan. Dataset abjad BISINDO di Mendeley Data ada, tetapi lisensinya belum dicek.
 
+Kartu v4 (3 November 2026, sore): pengguna mengirim gambar kartu v2 yang sudah terisi 20 gambar tangan, lalu meminta gambar itu dipasang di setiap kotak, dalam PDF dan PPTX. Gambar disimpan di `sumber/`, dipotong ke `_build/foto-isyarat-contoh/`, dan dipakai di `kit/02 ... v4 - foto contoh`. Tata letaknya sama persis dengan kartu v2, jadi besar kemungkinan dibuat dengan alat AI. Gerakannya belum divalidasi: Formulir dan Tanda tangan hanya memperagakan benda, Ribu dan Juta hampir sama. Kaki kartu asli di gambar itu menyebut foto diperagakan co-trainer Tuli, dan kalimat itu tidak kami pakai karena tidak benar. v4 memberi label "contoh" di setiap foto. Jangan dipakai di proposal klien sebelum diperiksa pengguna Tuli.
+
 Catatan kartu saku: kotak foto di sisi depan sengaja berisi ikon tangan, bukan gambar isyarat buatan kami, karena BISINDO berbeda per daerah. Sebelum dicetak untuk kelas, foto 20 isyarat diambil dari co-trainer Tuli. Ikon centang pada tombol "Ya" di kartu tunjuk adalah piktogram fungsi untuk nasabah, bukan hiasan.
 
 ## 1. Keputusan yang perlu dikonfirmasi
