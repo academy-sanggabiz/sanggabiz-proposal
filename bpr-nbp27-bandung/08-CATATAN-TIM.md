@@ -11,6 +11,8 @@ Arahan tim: v1 terlalu teknis. Proposal harus mudah dipahami orang awam dan meya
 5. Halaman baru "Yang didapat PT BPR NBP 27" menggantikan tabel hasil dan evaluasi.
 6. v1 (PDF dan PPTX, 12 halaman) tetap disimpan sebagai arsip. Kit lain tetap dipakai sebagai dokumen kerja.
 
+Pembaruan kartu (3 November 2026, sore): kartu tunjuk memakai ilustrasi benda (uang, slot setor dan tarik, struk saldo, buku tabungan, kartu ATM). Ilustrasi generik, tidak meniru desain uang kertas atau merek kartu. Foto isyarat kini masuk otomatis dari `_build/foto-isyarat/` (lihat README di folder itu untuk daftar 20 foto dan ketentuan pengambilan). Sumber foto berlisensi terbuka untuk 20 kosakata loket tidak ditemukan. Dataset abjad BISINDO di Mendeley Data ada, tetapi lisensinya belum dicek.
+
 Catatan kartu saku: kotak foto di sisi depan sengaja berisi ikon tangan, bukan gambar isyarat buatan kami, karena BISINDO berbeda per daerah. Sebelum dicetak untuk kelas, foto 20 isyarat diambil dari co-trainer Tuli. Ikon centang pada tombol "Ya" di kartu tunjuk adalah piktogram fungsi untuk nasabah, bukan hiasan.
 
 ## 1. Keputusan yang perlu dikonfirmasi

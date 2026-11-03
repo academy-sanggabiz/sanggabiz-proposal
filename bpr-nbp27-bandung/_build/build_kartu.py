@@ -6,12 +6,28 @@ Sisi belakang: kartu tunjuk untuk nasabah, papan angka, dan tips untuk petugas.
 Pemakaian: python3 build_kartu.py && node render.js jobs_kartu.json
 """
 import json
+import re
 from gaya import BUILD, ROOT, FONT_FACE
+from ilustrasi import ilus
 
 HTML = BUILD / "html"
 HTML.mkdir(exist_ok=True)
 LOGO_PUTIH = (BUILD / "assets" / "logo_putih.png").as_uri()
 SLIDE = ROOT / "proposal" / "aset-slide"
+FOTO = BUILD / "foto-isyarat"
+
+
+def slug(k):
+    return re.sub(r"[^a-z0-9]+", "-", k.lower()).strip("-")
+
+
+def foto_untuk(i, k):
+    """Foto asli dari sesi foto co-trainer Tuli, misalnya foto-isyarat/01-selamat-pagi.jpg. None bila belum ada."""
+    for ext in ("jpg", "jpeg", "png", "webp"):
+        f = FOTO / f"{i:02d}-{slug(k)}.{ext}"
+        if f.exists():
+            return f
+    return None
 
 NAVY, TEAL, CYAN = "#13314F", "#15908F", "#34BDCF"
 KAT = {
@@ -79,6 +95,7 @@ body {{ font-family: 'Inter', sans-serif; color: {NAVY}; }}
 .foto {{ flex: 1; display: flex; align-items: center; justify-content: center; position: relative; }}
 .foto .no {{ position: absolute; left: 6px; top: 5px; font-family: 'Montserrat'; font-weight: 800; font-size: 10px; opacity: .85; }}
 .foto .tag {{ position: absolute; right: 6px; bottom: 4px; font-size: 7px; opacity: .65; letter-spacing: .3px; text-transform: uppercase; }}
+.foto .no.lencana {{ color:#fff; opacity:1; border-radius:8px; padding:1px 6px; top:5px; left:5px; }}
 .kata {{ font-family: 'Montserrat'; font-weight: 700; font-size: 12px; padding: 5px 8px 6px; text-align: center; color: {NAVY}; background: #fff; }}
 .kaki {{ position: absolute; left: 28px; right: 28px; bottom: 14px; display: flex; justify-content: space-between; align-items: center;
   font-size: 9.5px; color: #4b6070; }}
@@ -88,7 +105,8 @@ body {{ font-family: 'Inter', sans-serif; color: {NAVY}; }}
 .judul-k {{ font-family: 'Montserrat'; font-weight: 800; font-size: 12.5px; margin: 0 0 8px; display: flex; align-items: center; gap: 7px; }}
 .judul-k i {{ width: 20px; height: 20px; border-radius: 50%; color: #fff; font-style: normal; font-size: 10.5px; display: flex; align-items: center; justify-content: center; }}
 .tombol {{ display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }}
-.tombol div {{ border-radius: 11px; padding: 9px 8px; display: flex; align-items: center; gap: 8px; font-family: 'Montserrat'; font-weight: 700; font-size: 11.5px; }}
+.tombol div {{ border-radius: 11px; padding: 5px 8px 5px 5px; display: flex; align-items: center; gap: 6px; font-family: 'Montserrat'; font-weight: 700; font-size: 11.3px; line-height:1.15; background:#fff !important; border:1.4px solid #CFE6E3; box-shadow:0 1px 0 #CFE6E3; }}
+.tombol svg {{ flex:none; }}
 .konf {{ display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }}
 .konf div {{ border-radius: 20px; padding: 6px 10px 6px 7px; display: flex; align-items: center; gap: 5px; font-family: 'Montserrat'; font-weight: 700; font-size: 10.5px; }}
 .pad {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }}
@@ -115,9 +133,14 @@ def sisi_depan():
     ubin = ""
     for i, (k, kat) in enumerate(KATA, 1):
         tua, muda = KAT[kat]
-        ubin += (f'<div class="ubin" style="border-color:{muda}"><div class="foto" style="background:{muda};color:{tua}">'
-                 f'<span class="no">{i:02d}</span>{ikon("tangan", tua, 30, 1.5)}<span class="tag">foto isyarat</span></div>'
-                 f'<div class="kata">{k}</div></div>')
+        f = foto_untuk(i, k)
+        if f:
+            isi = (f'<div class="foto asli" style="background:{muda} url({f.as_uri()}) center 30%/cover no-repeat;color:{tua}">'
+                   f'<span class="no lencana" style="background:{tua}">{i:02d}</span></div>')
+        else:
+            isi = (f'<div class="foto" style="background:{muda};color:{tua}">'
+                   f'<span class="no">{i:02d}</span>{ikon("tangan", tua, 30, 1.5)}<span class="tag">foto isyarat</span></div>')
+        ubin += f'<div class="ubin" style="border-color:{muda}">{isi}<div class="kata">{k}</div></div>'
     pita = "".join(f'<span style="background:{m};color:{t}">{n.upper()}</span>' for n, (t, m) in KAT.items())
     return f"""<div class="sisi">
 <div class="kepala"><div><h1>Kartu Saku Isyarat Perbankan</h1><p>20 isyarat BISINDO yang paling sering dipakai di loket</p></div>
@@ -133,7 +156,7 @@ def sisi_belakang():
     kr, km = KAT["Konfirmasi"]
     nr, _ = KAT["Nominal"]
     layanan = [("setor", "Setor"), ("tarik", "Tarik"), ("saldo", "Cek saldo"), ("rekening", "Buka rekening"), ("buku", "Cetak buku"), ("kartu", "Kartu ATM")]
-    tombol = "".join(f'<div style="background:{tm};color:{tr}">{ikon(i, tr, 20)}<span style="color:{NAVY}">{t}</span></div>' for i, t in layanan)
+    tombol = "".join(f'<div>{ilus(i, 50, 38)}<span style="color:{NAVY}">{t}</span></div>' for i, t in layanan)
     konf = "".join(f'<div style="background:{km};color:{kr}">{ikon(i, kr, 15, 2)}<span style="color:{NAVY}">{t}</span></div>'
                    for i, t in [("ya", "Ya"), ("tidak", "Tidak"), ("ulang", "Ulangi"), ("tunggu", "Tunggu"), ("selesai", "Selesai")])
     pad = "".join(f"<div>{n}</div>" for n in "123456789") + '<div>0</div><div class="lebar">RIBU</div><div class="lebar">JUTA</div>'
