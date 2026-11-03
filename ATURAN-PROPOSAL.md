@@ -2,6 +2,23 @@
 
 Berlaku untuk semua proposal Sanggabiz. Dipakai bersama `ATURAN-PENULISAN.md` (cara menulis) dan `FORMAT-STANDAR-PROPOSAL.md` (bentuk halaman). Aturan di sini ditambah setiap ada arahan baru dari tim.
 
+## 0. Tujuan proposal: mudah dipahami dan meyakinkan
+Arahan tim, 3 November 2026, saat merevisi proposal pelatihan CS Aqiqah Al Kautsar. Kutipan chat, tidak diubah:
+
+> aku rasa proposalnya terlalu detail hal teknis, aku pengen proposal tu lebih enak di baca dan meyaknkan pembaca, gak usah semuanya dibaut assets ya kayak pre port test, untuk porosal contoh aja satu kayak kartu saku isyraat seperti apa. udah gitu aja. karena itu sebagai contoh, tap kartu isyaratnya buat yang bagus banget ya. nah bagian lain kalau bagan alat dan media gak usah di gabungkan dengan slde dan asset sebutkan aja general ya, alatnya apa dan media apa. kalau kayak penutup mata dll tu mash masuk. terus hal teknis academic gak usah di sebutin. masukkan hal ini ke pengetahuan mu ya nanti. masukkan ke gihtub juga. jadi proposal tu objektifnya bukan nulis secara teknis semua hal. tapi nulis mudah di pahami dan meyaknkan orang ketika baca proposalnya. dan ketika orang awam baca silabus juga paham akan sepert apa dan apa kegiatannay
+
+Aturan yang diturunkan (tafsiran Claude, koreksi bila keliru). Bagian ini mendahului bagian lain di berkas ini. Bila ada yang bertentangan, ikuti bagian ini.
+1. **Tujuan proposal adalah dipahami dan meyakinkan pembaca**, bukan mencatat semua hal teknis. Tulis untuk pemilik usaha atau pejabat yang memutuskan, bukan untuk sesama penyusun pelatihan.
+2. **Silabus harus bisa dibayangkan orang awam.** Setiap sesi cukup memuat: yang dipelajari, kegiatannya (urutan nyata di ruang pelatihan, siapa melakukan apa), alat dan media, dan hasil. Tulis kegiatan seperti menceritakan apa yang terjadi di ruangan.
+3. **Istilah akademik tidak disebut di dokumen klien.** Nama kerangka seperti ADDIE, Andragogi, Taksonomi Bloom, Kirkpatrick, backward design, dan istilah seperti "tujuan pembelajaran", "level 1 sampai 4", atau "indikator capaian" tidak dipakai. Kerangka tetap dipakai saat menyusun program, tetapi hasilnya ditulis dengan bahasa sehari-hari. Contoh: evaluasi empat level ditulis sebagai tabel "Kapan, Yang kami lihat, Tanda berhasil".
+4. **Istilah kerja diganti kata sehari-hari** bila ada padanannya. Contoh: huddle menjadi rapat harian 10 menit, lead tracker menjadi catatan calon pelanggan, scorecard menjadi rekap mingguan, role play menjadi bermain peran, coach menjadi pendamping. Istilah yang dipakai klien sendiri tetap boleh (closing, follow-up, CS).
+5. **Cukup satu aset contoh di proposal, dan dibuat bagus.** Pilih satu alat yang paling mewakili program (contoh: kartu saku untuk peserta) dan tampilkan dalam desain jadi. Aset lain (pre-test, post-test, lembar kerja, templat, rubrik, lembar cek) tidak dibuat dan tidak dilampirkan. Cukup disebut dalam kalimat bila perlu, misalnya "kuis singkat di awal dan akhir sesi".
+6. **Alat dan media ditulis umum.** Sebut benda yang dipakai di ruangan: penutup mata, kartu, kertas plano, spidol, stiker, pengatur waktu, ponsel peserta. Jangan mencampur dengan slide atau nama berkas aset, dan jangan merujuk ke lampiran.
+7. **Meyakinkan lewat gambaran perubahan.** Tunjukkan kondisi sekarang dan kondisi yang dituju, cara mengukur hasil dengan bahasa sederhana, dan batas yang jujur. Hindari tabel teknis yang panjang.
+8. Panjang yang wajar untuk pelatihan satu hari dengan pendampingan: sekitar 10 sampai 12 halaman termasuk sampul.
+
+Contoh penerapan: `aqiqah-alkautsar/proposal/v1 Proposal Training CS Closing - Aqiqah Al Kautsar.docx` dan kartu saku di `aqiqah-alkautsar/aset/`.
+
 ## 1. Kerangka kerja dan metode
 1. Pilih metode yang umum dipakai di dunia pelatihan dan sesuai dengan masalah yang mau diselesaikan. Jelaskan alasan pemilihannya dalam satu atau dua kalimat.
 2. Jangan memakai kerangka `Define, Design, Deliver, Discuss` (4D) di proposal mana pun. Proposal lama yang masih memakainya diganti saat disentuh berikutnya.
@@ -17,6 +34,7 @@ Berlaku untuk semua proposal Sanggabiz. Dipakai bersama `ATURAN-PENULISAN.md` (c
 | Siklus PDCA atau CQI | Pendampingan berulang selama beberapa bulan | Program pendampingan panjang |
 
 4. Setiap proposal menyebut metode yang dipakai dan di bagian mana metode itu muncul (misalnya ADDIE pada alur program, Bloom pada rumusan tujuan, Kirkpatrick pada evaluasi).
+   (Direvisi 3 November 2026, lihat bagian 0: nama metode tidak lagi ditulis di dokumen klien. Metode cukup dicatat di catatan tim proyek.)
 
 ## 2. Backward design (preferensi Nauval dan rekan kantor)
 Nauval dan beberapa rekan kantor menyukai pendekatan ini. Alurnya:
@@ -31,7 +49,8 @@ Cara memakainya: sediakan alurnya di proposal bila waktu program memungkinkan pe
 ## 3. Silabus
 Silabus ditulis per sesi dan per topik, cukup rinci supaya semua pembaca memahaminya dengan cara yang sama.
 1. Ringkasan di awal: sesi, topik, durasi, hasil.
-2. Tiap sesi dipecah menjadi topik. Tiap topik memuat: **tujuan pembelajaran** (kata kerja Bloom), **outline materi** (butir bernomor), **aktivitas** (urutan langkah dengan menit, siapa melakukan apa, bahan yang dipegang peserta), **alat dan media**, **output**, dan **ukuran keberhasilan**.
+2. Tiap sesi memuat empat baris: **yang dipelajari**, **kegiatannya** (urutan nyata, siapa melakukan apa), **alat dan media** (benda yang dipakai, ditulis umum), dan **hasil**. Pecahan per topik dengan menit, kata kerja Bloom, dan ukuran keberhasilan per topik disimpan di catatan tim bila diperlukan, tidak di dokumen klien.
+   (Direvisi 3 November 2026, lihat bagian 0. Versi sebelumnya meminta tujuan pembelajaran, outline, aktivitas per menit, output, dan ukuran keberhasilan untuk setiap topik.)
 3. Aktivitas menggambarkan keadaan nyata di ruang pelatihan, bukan istilah umum.
 4. Output tiap topik ditulis jelas. Semua output dikumpulkan di bagian "Hasil yang dibawa pulang" dengan keterangan dihasilkan di topik mana.
 5. Tidak ada istilah yang bisa dibaca dua arti. Bila memakai istilah teknis, jelaskan sekali di tempat pertama muncul.
