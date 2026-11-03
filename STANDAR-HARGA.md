@@ -217,6 +217,10 @@ Terlalu tinggi, klien akan memotong atau menolak:
 |---|---|---|---|---|---|
 | 17 Oktober 2026 | Seluruh tabel bagian 4 | lihat atas | SBM 2026 dan lainnya | Acuan awal | SLB Kaltim |
 | 17 Oktober 2026 | Pembicara, kit, fee, konsumsi, komponen tambahan | lihat `ARAHAN-PRIYO.md` | Pak Priyo Pamungkas | Draf ChatGPT untuk 80 peserta | SLB Kaltim |
+| 3 November 2026 | Sewa kursi roda | 150.000 per unit per hari | Estimasi [E], belum ada penawaran | Praktik pelatihan, Bandung | BPR NBP 27 |
+| 3 November 2026 | Penutup mata, papan tulis genggam dan spidol, bantalan tinta, lakban warna | 10.000, 25.000, 15.000, 15.000 per satuan | Estimasi [E], belum ada penawaran | Bahan praktik pelatihan | BPR NBP 27 |
+| 3 November 2026 | Co-trainer Tuli dan peraga netra | 600.000 per hari | Standar fasilitator bagian 4A [E] | Satu hari pelatihan | BPR NBP 27 |
+| 3 November 2026 | Penyesuaian modul, evaluasi, laporan untuk program satu hari dengan kit yang sudah tersusun | 1.000.000, 350.000, 600.000 per paket | Di bawah rentang bagian 4D, alasan di `bpr-nbp27-bandung/08-CATATAN-TIM.md` | Pagu klien Rp 11.000.000 all-in | BPR NBP 27 |
 
 ## 9. Sumber
 

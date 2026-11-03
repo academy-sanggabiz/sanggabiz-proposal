@@ -46,6 +46,9 @@ Silabus ditulis per sesi dan per topik, cukup rinci supaya semua pembaca memaham
 (Butir 2 sampai 4 direvisi pada 17 Oktober 2026. Versi sebelumnya melarang baris biaya manajemen dan menyerap fee ke komponen produk.)
 5. Honor pemateri dan harga tempat memakai acuan pasar atau standar biaya pemerintah yang dapat ditunjukkan. Pemateri lokal bila ada, untuk meniadakan biaya mobilisasi.
 6. Jumlah pengajar sesuai kebutuhan nyata. Tidak menambah orang agar terlihat besar.
+7. **Anggaran disusun dari sudut pandang klien** (arahan tim, 3 November 2026). Pertanyaannya: paket mana yang paling menarik bagi klien, bukan dari mana tim Sanggabiz berangkat. Kantor Sanggabiz di Yogyakarta, tetapi trainer, mentor, dan peraga dicari di dekat lokasi klien supaya tidak ada biaya menginap dan transport jauh. Pagu klien adalah batas keras. Bila harga standar melewati pagu, sesuaikan cakupan dan volume, lalu tulis alasan untuk setiap harga di luar rentang `STANDAR-HARGA.md` di catatan tim.
+   Kutipan arahan (tidak diubah):
+   > tim sanggabiz ada di kota jogja, tapi belum tentu dari sana juga, mungkin mentor malah cari di sekotar jakarta, jadi bukan rasional dari segi sanggabiz, tapi budget anggaran yang paling menarik dari segi user ya gitu pola pikir buat anggaran
 
 ## 4a. Menyusun proposal dari proses bisnis
 Usul Pak Priyo Pamungkas (Sanggabiz), diteruskan Muchson pada 17 Oktober 2026 saat membahas anggaran SLB Kaltim. Berlaku untuk proposal berikutnya. Kutipan chat, tidak diubah:

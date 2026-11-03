@@ -30,7 +30,7 @@ Catatan kartu saku: kotak foto di sisi depan sengaja berisi ikon tangan, bukan g
 | SOP internal BPR | Aset 01 dan 07 disesuaikan dengan SOP BPR | Minta SOP layanan disabilitas, aturan cap jempol, surat kuasa, dan slip kosong paling lambat H-10 |
 | Target angka | Post-test minimal 80, rubrik minimal 2,5 dari 3, survei minimal 4 dari 5 | Usulan kami, tidak ada di TOR |
 | Batas waktu laporan | 7 hari kerja setelah pelatihan | Usulan kami, tidak ada di TOR |
-| Anggaran | Belum dibuat | Plafon Rp 10.000.000 sampai Rp 11.000.000 all-in untuk honor tim, transport dan akomodasi ke Bandung, kit, sertifikat, dan laporan. Hitung dengan `../STANDAR-HARGA.md` dan fee 10 persen sesuai `../ARAHAN-PRIYO.md`. Ruang dan konsumsi ditanggung BPR |
+| Anggaran | Dibuat di v4: Rp 10.917.500 sudah termasuk pajak | Konfirmasi status PKP Sanggabiz (lihat bagian 5) dan pastikan trainer, co-trainer, dan peraga dari Bandung dan sekitarnya |
 
 ## 2. Isian untuk tim (stabilo kuning, cari `ISI TIM`)
 | Berkas | Isian |
@@ -62,3 +62,28 @@ Catatan kartu saku: kotak foto di sisi depan sengaja berisi ikon tangan, bukan g
 1. Hitung anggaran di dalam plafon.
 2. Susun surat penawaran, profil dan portofolio jasa keuangan, dan CV tim (TOR bagian VIII).
 3. Isi butir `ISI TIM`, lalu buat v2 tanpa menghapus v1.
+
+## 5. Hitungan internal anggaran v4 (3 November 2026)
+Sumber angka: `_build/anggaran.py`. Pagu TOR bagian VII: Rp 10.000.000 sampai Rp 11.000.000 all-in. Ruang, proyektor, sound system, dan konsumsi disediakan BPR, jadi tidak ada barisnya.
+
+| Hitungan | Angka |
+|---|---|
+| Biaya langsung (D), 15 baris | Rp 9.925.000 |
+| Fee 10 persen | Rp 992.500 |
+| Total ke klien, sudah termasuk pajak | Rp 10.917.500 |
+| Bila Sanggabiz PKP: PPN di dalam total (11/111) | sekitar Rp 1.081.914 |
+| Bila PKP: biaya langsung bersih yang tersedia (total dibagi 1,11 dibagi 1,10) | sekitar Rp 8.941.441, kurang sekitar Rp 983.559 dari D |
+| PPh 23 2 persen dipotong klien dari nilai jasa | mengurangi kas, tidak mengubah harga |
+
+Akibatnya: bila Sanggabiz PKP, rencana belanja perlu dihemat sekitar Rp 1 juta, atau fee yang diterima turun. Keputusan: `[ISI TIM: status PKP dan cara menulis pajak]`.
+
+Harga di luar rentang `../STANDAR-HARGA.md` bagian 4 dan alasannya:
+1. Penyesuaian modul dan kit Rp 1.000.000 (rentang Rp 3.000.000 sampai 7.000.000). Kit sudah tersusun di folder `kit/`, pekerjaan yang tersisa hanya menyesuaikan dengan SOP BPR dan mencetak. Rentang standar untuk menyusun modul dari awal.
+2. Pre-test, post-test, lembar pengamatan, dan survei Rp 350.000, ditambah laporan evaluasi Rp 600.000 (rentang gabungan Rp 2.500.000 sampai 4.500.000). Rentang standar mencakup moderasi tindak lanjut empat minggu. Program ini satu hari tanpa tindak lanjut, soal dan rekap Excel sudah jadi (kit 06 dan 11). Baris monev dan laporan dipisah sesuai pelajaran SLB Kaltim.
+3. Dokumentasi foto tidak punya baris sendiri. Diserap di baris manajer proyek, dan ditulis begitu di halaman anggaran.
+
+Asumsi yang perlu dijaga:
+1. Trainer, co-trainer Tuli, dan peraga netra dari Bandung dan sekitarnya. Transport Rp 100.000 per orang hanya cukup untuk dalam kota. Bila trainer dari Jakarta, tambah sekitar Rp 400.000 pulang pergi dan total melewati pagu, kecuali baris lain dihemat.
+2. Honor trainer 6 jam x Rp 750.000 memakai batas bawah rentang. Tidak bisa diturunkan lagi tanpa alasan tertulis.
+3. Kursi roda, penutup mata, papan tulis, bantalan tinta, dan lakban bertanda [E]. `[ISI TIM: tunggu penawaran vendor Bandung]`. Bila BPR punya kursi roda, baris sewa bisa dihapus.
+4. Jumlah ke klien di bawah pagu atas Rp 82.500, cukup sebagai ruang negosiasi kecil.
