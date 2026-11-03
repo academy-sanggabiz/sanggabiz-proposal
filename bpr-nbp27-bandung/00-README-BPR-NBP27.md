@@ -10,6 +10,7 @@ Dibuat: 3 November 2026. Tahap: draf v1 bagian silabus dan aset pelatihan. Angga
 | Berkas | Fungsi |
 |---|---|
 | `proposal/v1 Silabus dan Aset Pelatihan - IHT Layanan Inklusif PT BPR NBP 27.pdf` | 12 halaman 16:9: ringkasan silabus, tiga halaman kurikulum per modul, hasil dan evaluasi, isi kit, enam halaman aset |
+| `proposal/v1 Silabus dan Aset Pelatihan - IHT Layanan Inklusif PT BPR NBP 27.pptx` | Isi yang sama dalam PPTX yang bisa diedit. Teks, tabel, dan bentuk berupa objek asli, jadi tetap bisa diubah setelah diunggah ke Canva atau dibuka di PowerPoint |
 | `proposal/aset-slide/` | Gambar tiap aset yang dipakai di halaman proposal |
 | `kit/` | Isi kit pelatihan yang bisa langsung dicetak: 11 PDF dan 1 Excel |
 | `preview/` | Gambar tiap halaman proposal, bisa dilihat di GitHub |
@@ -25,6 +26,12 @@ Butuh Python 3 (openpyxl, Pillow), Node dengan Playwright, dan poppler (`pdftopp
 python3 build_kit.py && node render.js jobs_kit.json
 python3 build_rekap.py
 python3 build_proposal.py && node render.js jobs_proposal.json && python3 build_proposal.py --gabung
+python3 build_pptx.py
 ```
+
+## Mengunggah PPTX ke Canva
+1. Di Canva pilih Unggah, lalu pilih berkas PPTX. Canva mengubahnya menjadi desain yang bisa diedit.
+2. Font Montserrat dan Inter sudah ada di Canva. Bila ada teks yang bergeser, cek dulu tabel kurikulum di slide 2 sampai 4, karena isinya paling padat.
+3. Gambar aset di slide 6 sampai 12 berupa gambar biasa. Untuk mengganti gambar, ambil berkas baru dari `proposal/aset-slide/`.
 
 Silabus ditulis sekali di `_build/silabus.py` dan dipakai oleh halaman proposal dan Panduan Fasilitator, jadi perubahan cukup di satu tempat.

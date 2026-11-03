@@ -21,7 +21,7 @@ const path = require('path');
       await page.pdf(opt);
     }
     if (j.png) {
-      await page.screenshot({ path: j.png, fullPage: !!j.fullPage });
+      await page.screenshot({ path: j.png, fullPage: !!j.fullPage, omitBackground: !!j.transparent });
     }
     await ctx.close();
     console.log('ok', j.pdf || j.png);
