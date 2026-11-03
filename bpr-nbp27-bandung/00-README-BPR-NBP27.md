@@ -4,12 +4,13 @@
 >
 > Proyek terpisah dari folder proyek lain. Jangan mencampur aturan, aset, atau klaim.
 
-Dibuat: 3 November 2026. Tahap: **v2** bagian silabus dan contoh aset (versi yang dipakai). v1 disimpan sebagai arsip. Anggaran, surat penawaran, profil, dan CV belum dibuat.
+Dibuat: 3 November 2026. Tahap: **v3** bagian silabus dan contoh aset (versi yang dipakai). v1 dan v2 disimpan sebagai arsip. Anggaran, surat penawaran, profil, dan CV belum dibuat.
 
 ## Isi folder
 | Berkas | Fungsi |
 |---|---|
-| `proposal/v2 Silabus dan Contoh Aset - IHT Layanan Inklusif PT BPR NBP 27.pdf` dan `.pptx` | **Versi yang dipakai.** 6 halaman berbahasa sehari-hari: jadwal satu hari, silabus per modul, yang didapat BPR, dan satu contoh aset (kartu saku isyarat). PPTX bisa diedit dan diunggah ke Canva |
+| `proposal/v3 Silabus dan Contoh Aset - IHT Layanan Inklusif PT BPR NBP 27.pdf` dan `.pptx` | **Versi yang dipakai.** Sama dengan v2, tetapi halaman contoh aset memakai kartu v4 (20 gambar contoh). Dibuat dengan `_build/build_v3.py` dan `_build/build_pptx_v3.py` |
+| `proposal/v2 Silabus dan Contoh Aset - IHT Layanan Inklusif PT BPR NBP 27.pdf` dan `.pptx` | Arsip. 6 halaman berbahasa sehari-hari: jadwal satu hari, silabus per modul, yang didapat BPR, dan satu contoh aset (kartu saku isyarat). PPTX bisa diedit dan diunggah ke Canva |
 | `kit/02 Kartu Saku Isyarat Perbankan v4 - foto contoh.pdf` dan `.pptx` | Kartu v2 dengan 20 gambar isyarat dari pengguna (3 November 2026). Gambar berlabel contoh, belum diperiksa pengguna Tuli. PPTX bisa diedit: teks, kotak, dan foto bisa diganti. Dibuat dengan `_build/potong_foto_contoh.py` lalu `_build/build_kartu_v4.py` |
 | `kit/02 Kartu Saku Isyarat Perbankan v3 - belajar mandiri.pdf` | Kartu belajar di rumah: tiap kata punya kotak tempel foto atau gambar, catatan, centang hafal, dan cek pengajar. Sisi belakang kartu tunjuk. Dibuat dengan `_build/build_kartu_v3.py` |
 | `kit/02 Kartu Saku Isyarat Perbankan v2.pdf` | Kartu saku desain ulang, dua sisi A5 siap cetak dan laminasi |
@@ -35,6 +36,10 @@ python3 build_pptx.py
 python3 build_kartu.py && node render.js jobs_kartu.json
 python3 build_v2.py && node render.js jobs_v2.json && python3 build_v2.py --gabung
 python3 build_pptx_v2.py
+# v3 (kartu v4 di halaman contoh aset)
+python3 -I potong_foto_contoh.py && python3 build_kartu_v4.py
+python3 build_v3.py && node render.js jobs_v3.json && python3 build_v3.py --gabung
+python3 build_pptx_v3.py
 ```
 
 ## Mengunggah PPTX ke Canva
