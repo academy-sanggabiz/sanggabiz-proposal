@@ -2,6 +2,17 @@
 
 Isi catatan ini hanya untuk tim. Tidak dikirim ke klien.
 
+## 0. Perubahan v2 (3 November 2026)
+Arahan tim: v1 terlalu teknis. Proposal harus mudah dipahami orang awam dan meyakinkan. Arahan ini dicatat sebagai aturan umum di `../ATURAN-PROPOSAL.md` bagian 9.
+1. Istilah akademik dihapus dari dokumen klien: kode Bloom, andragogi, Kirkpatrick, N-gain, rubrik. Metodenya tetap sama dan dicatat di sini: andragogi pada kegiatan, Bloom pada rumusan hasil, Kirkpatrick level 1 sampai 3 pada cara memastikan hasil.
+2. Silabus ditulis sebagai cerita kegiatan: yang dipelajari, kegiatan peserta, alat dan media, hasil. Rincian menit tetap ada di Panduan Fasilitator (kit 00).
+3. Alat dan media ditulis umum, tanpa nomor aset atau slide.
+4. Proposal hanya menampilkan satu contoh aset: kartu saku isyarat, didesain ulang dua sisi. Sisi depan berisi 20 isyarat, sisi belakang berisi kartu tunjuk untuk nasabah (layanan, papan angka, jawaban, tips petugas).
+5. Halaman baru "Yang didapat PT BPR NBP 27" menggantikan tabel hasil dan evaluasi.
+6. v1 (PDF dan PPTX, 12 halaman) tetap disimpan sebagai arsip. Kit lain tetap dipakai sebagai dokumen kerja.
+
+Catatan kartu saku: kotak foto di sisi depan sengaja berisi ikon tangan, bukan gambar isyarat buatan kami, karena BISINDO berbeda per daerah. Sebelum dicetak untuk kelas, foto 20 isyarat diambil dari co-trainer Tuli. Ikon centang pada tombol "Ya" di kartu tunjuk adalah piktogram fungsi untuk nasabah, bukan hiasan.
+
 ## 1. Keputusan yang perlu dikonfirmasi
 | Hal | Di draf v1 | Yang perlu diputuskan |
 |---|---|---|

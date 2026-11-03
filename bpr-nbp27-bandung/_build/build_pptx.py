@@ -13,6 +13,7 @@ from pptx import Presentation
 from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.text import MSO_ANCHOR, PP_ALIGN
+from pptx.oxml.ns import qn
 from pptx.util import Emu, Pt
 from PIL import Image
 from gaya import BUILD, ROOT
@@ -89,6 +90,9 @@ def kotak(slide, x, y, w, h, fill=None, line=None, bentuk=MSO_SHAPE.RECTANGLE, l
         s.line.color.rgb = line
         s.line.width = Pt(lebar_garis)
     s.shadow.inherit = False
+    gaya_bawaan = s._element.find(qn("p:style"))
+    if gaya_bawaan is not None:
+        s._element.remove(gaya_bawaan)
     if bentuk == MSO_SHAPE.ROUNDED_RECTANGLE:
         s.adjustments[0] = 0.08
     return s

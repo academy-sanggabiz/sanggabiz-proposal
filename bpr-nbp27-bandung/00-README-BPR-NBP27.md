@@ -4,15 +4,17 @@
 >
 > Proyek terpisah dari folder proyek lain. Jangan mencampur aturan, aset, atau klaim.
 
-Dibuat: 3 November 2026. Tahap: draf v1 bagian silabus dan aset pelatihan. Anggaran, surat penawaran, profil, dan CV belum dibuat.
+Dibuat: 3 November 2026. Tahap: **v2** bagian silabus dan contoh aset (versi yang dipakai). v1 disimpan sebagai arsip. Anggaran, surat penawaran, profil, dan CV belum dibuat.
 
 ## Isi folder
 | Berkas | Fungsi |
 |---|---|
-| `proposal/v1 Silabus dan Aset Pelatihan - IHT Layanan Inklusif PT BPR NBP 27.pdf` | 12 halaman 16:9: ringkasan silabus, tiga halaman kurikulum per modul, hasil dan evaluasi, isi kit, enam halaman aset |
-| `proposal/v1 Silabus dan Aset Pelatihan - IHT Layanan Inklusif PT BPR NBP 27.pptx` | Isi yang sama dalam PPTX yang bisa diedit. Teks, tabel, dan bentuk berupa objek asli, jadi tetap bisa diubah setelah diunggah ke Canva atau dibuka di PowerPoint |
+| `proposal/v2 Silabus dan Contoh Aset - IHT Layanan Inklusif PT BPR NBP 27.pdf` dan `.pptx` | **Versi yang dipakai.** 6 halaman berbahasa sehari-hari: jadwal satu hari, silabus per modul, yang didapat BPR, dan satu contoh aset (kartu saku isyarat). PPTX bisa diedit dan diunggah ke Canva |
+| `kit/02 Kartu Saku Isyarat Perbankan v2.pdf` | Kartu saku desain ulang, dua sisi A5 siap cetak dan laminasi |
+| `proposal/v1 ...pdf` (arsip) | 12 halaman 16:9: ringkasan silabus, tiga halaman kurikulum per modul, hasil dan evaluasi, isi kit, enam halaman aset |
+| `proposal/v1 ...pptx` (arsip) | Isi yang sama dalam PPTX yang bisa diedit. Teks, tabel, dan bentuk berupa objek asli, jadi tetap bisa diubah setelah diunggah ke Canva atau dibuka di PowerPoint |
 | `proposal/aset-slide/` | Gambar tiap aset yang dipakai di halaman proposal |
-| `kit/` | Isi kit pelatihan yang bisa langsung dicetak: 11 PDF dan 1 Excel |
+| `kit/` | Dokumen kerja tim dan bahan cetak pelatihan: 12 PDF dan 1 Excel. Tidak ditampilkan di proposal v2, kecuali kartu saku isyarat |
 | `preview/` | Gambar tiap halaman proposal, bisa dilihat di GitHub |
 | `01-RINGKASAN-TOR.md` | Isi TOR yang dipakai, kutipan dan tafsiran dipisah |
 | `08-CATATAN-TIM.md` | Mulai dari sini: keputusan yang perlu dikonfirmasi, isian tim, daftar cek klaim |
@@ -27,6 +29,10 @@ python3 build_kit.py && node render.js jobs_kit.json
 python3 build_rekap.py
 python3 build_proposal.py && node render.js jobs_proposal.json && python3 build_proposal.py --gabung
 python3 build_pptx.py
+# v2
+python3 build_kartu.py && node render.js jobs_kartu.json
+python3 build_v2.py && node render.js jobs_v2.json && python3 build_v2.py --gabung
+python3 build_pptx_v2.py
 ```
 
 ## Mengunggah PPTX ke Canva
@@ -34,4 +40,4 @@ python3 build_pptx.py
 2. Font Montserrat dan Inter sudah ada di Canva. Bila ada teks yang bergeser, cek dulu tabel kurikulum di slide 2 sampai 4, karena isinya paling padat.
 3. Gambar aset di slide 6 sampai 12 berupa gambar biasa. Untuk mengganti gambar, ambil berkas baru dari `proposal/aset-slide/`.
 
-Silabus ditulis sekali di `_build/silabus.py` dan dipakai oleh halaman proposal dan Panduan Fasilitator, jadi perubahan cukup di satu tempat.
+Isi v2 ada di `_build/silabus_v2.py`. Silabus v1 dan rincian menit untuk fasilitator ada di `_build/silabus.py` dan dipakai oleh halaman proposal dan Panduan Fasilitator, jadi perubahan cukup di satu tempat.

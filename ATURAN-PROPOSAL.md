@@ -17,6 +17,7 @@ Berlaku untuk semua proposal Sanggabiz. Dipakai bersama `ATURAN-PENULISAN.md` (c
 | Siklus PDCA atau CQI | Pendampingan berulang selama beberapa bulan | Program pendampingan panjang |
 
 4. Setiap proposal menyebut metode yang dipakai dan di bagian mana metode itu muncul (misalnya ADDIE pada alur program, Bloom pada rumusan tujuan, Kirkpatrick pada evaluasi).
+5. Sejak 3 November 2026 nama metode dan istilah akademiknya hanya ditulis di catatan tim. Di dokumen klien metode cukup terlihat dari cara kegiatannya ditulis, dengan bahasa sehari-hari (lihat bagian 9).
 
 ## 2. Backward design (preferensi Nauval dan rekan kantor)
 Nauval dan beberapa rekan kantor menyukai pendekatan ini. Alurnya:
@@ -31,7 +32,7 @@ Cara memakainya: sediakan alurnya di proposal bila waktu program memungkinkan pe
 ## 3. Silabus
 Silabus ditulis per sesi dan per topik, cukup rinci supaya semua pembaca memahaminya dengan cara yang sama.
 1. Ringkasan di awal: sesi, topik, durasi, hasil.
-2. Tiap sesi dipecah menjadi topik. Tiap topik memuat: **tujuan pembelajaran** (kata kerja Bloom), **outline materi** (butir bernomor), **aktivitas** (urutan langkah dengan menit, siapa melakukan apa, bahan yang dipegang peserta), **alat dan media**, **output**, dan **ukuran keberhasilan**.
+2. Tiap sesi dipecah menjadi topik. Tiap topik memuat: **tujuan pembelajaran** (kata kerja yang bisa diamati, tanpa kode atau nama teori di dokumen klien, lihat bagian 9), **outline materi** (butir bernomor), **aktivitas** (urutan langkah dengan menit, siapa melakukan apa, bahan yang dipegang peserta), **alat dan media**, **output**, dan **ukuran keberhasilan**.
 3. Aktivitas menggambarkan keadaan nyata di ruang pelatihan, bukan istilah umum.
 4. Output tiap topik ditulis jelas. Semua output dikumpulkan di bagian "Hasil yang dibawa pulang" dengan keterangan dihasilkan di topik mana.
 5. Tidak ada istilah yang bisa dibaca dua arti. Bila memakai istilah teknis, jelaskan sekali di tempat pertama muncul.
@@ -101,3 +102,18 @@ Pekerjaan dan biaya yang lazim per tahap (tafsiran Claude):
 3. Proposal yang direvisi diberi nomor versi pada nama file (misalnya `v2 Proposal ...`).
 4. Versi lama tidak pernah dihapus. Saat membuat v2, v3, dan seterusnya, file versi sebelumnya tetap disimpan di folder yang sama sebagai arsip. Penghapusan hanya atas permintaan tim.
 5. Bila skrip pembuat dokumen diperbarui, simpan salinan skrip versi lama (misalnya `build_proposal_v1.js`) supaya versi lama tetap bisa dibuat ulang.
+
+## 9. Proposal untuk pembaca awam (arahan tim, 3 November 2026)
+Arahan ini muncul saat meninjau draf v1 proposal IHT layanan disabilitas PT BPR NBP 27. Draf itu dinilai terlalu teknis. Tujuan proposal adalah **mudah dipahami dan meyakinkan**, bukan mencatat semua hal teknis. Orang awam yang membaca silabus harus langsung paham kegiatannya akan seperti apa.
+
+Kutipan arahan (tidak diubah):
+> jadi proposal tu objektifnya bukan nulis secara teknis semua hal. tapi nulis mudah di pahami dan meyaknkan orang ketika baca proposalnya. dan ketika orang awam baca silabus juga paham akan sepert apa dan apa kegiatannay
+
+Cara menerapkan:
+1. **Tanpa istilah akademik di dokumen klien.** Jangan menulis kode Bloom (C1 sampai C6), andragogi, Kirkpatrick, ADDIE, backward design, N-gain, rubrik, atau nama teori lain. Gantinya, tulis apa yang dilakukan dan dirasakan peserta. Contoh: "setiap peserta pernah memandu dan pernah dipandu" lebih jelas daripada "peserta mampu memperagakan (C3)". Nama metode tetap boleh dicatat di catatan tim.
+2. **Silabus dibaca seperti cerita kegiatan.** Kolom yang dipakai: modul dan waktu, yang dipelajari, kegiatan peserta, alat dan media, hasil. Kegiatan ditulis berurutan dengan kalimat biasa. Rincian menit per menit disimpan di panduan fasilitator, tidak di proposal.
+3. **Alat dan media ditulis umum.** Sebut benda yang dipakai (penutup mata, kursi roda, papan tulis genggam, slip kosong) dan medianya (presentasi, peragaan langsung, modul cetak). Jangan merujuk ke nomor aset, nomor slide, atau nama berkas kit.
+4. **Cukup satu contoh aset di proposal**, yang paling mudah membuat pembaca membayangkan hasil pelatihan. Contoh itu dibuat dengan desain terbaik. Aset lain (tes, lembar pengamatan, formulir, panduan fasilitator) cukup disebut di daftar hasil atau disimpan sebagai dokumen kerja.
+5. **Tonjolkan yang meyakinkan pembaca**: siapa yang memandu, apa yang benar-benar dipraktikkan, apa yang dibawa pulang, dan apa yang didapat klien. Tulis dari sudut pandang klien ("yang didapat PT X").
+6. **Istilah dari TOR klien tetap dipakai** (misalnya pre-test, post-test, role-play, sighted guide), dengan penjelasan singkat bila perlu.
+7. Dokumen kerja untuk tim (panduan fasilitator, catatan tim) tetap boleh rinci dan teknis.

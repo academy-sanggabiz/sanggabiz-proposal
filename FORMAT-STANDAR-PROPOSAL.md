@@ -18,6 +18,7 @@ Contoh: `01-kurikulum-pembelajaran.png` dan varian slide `04-materi-dan-silabus-
 - Isi sel berupa kalimat ringkas yang menggambarkan kegiatan nyata, bukan istilah umum.
 - Varian slide per bab (contoh 04): halaman landscape, judul dua warna (hitam dan teal `#0E8A8A`), logo Sanggabiz dan logo klien di kanan atas. Tabel berkepala teal `#15908F` dengan huruf putih tebal. Kolom: **Bab dan fokus** (sel gabungan berlatar teal muda `#D7ECEC`, berisi judul bab dan kalimat "Fokus" miring), **Topik**, **Outline materi** (butir), **Tujuan pembelajaran**, **Format materi** (teal tebal, misalnya "Teori, Video"). Baris selang-seling putih dan `#F2F8F9`.
 - Dipakai untuk: silabus program multi-bab atau multi-modul.
+- Sejak 3 November 2026: label kolom memakai bahasa sehari-hari, tanpa kata "andragogi" atau istilah akademik lain di dokumen klien (`ATURAN-PROPOSAL.md` bagian 9).
 
 ## Tipe 2: Timeline kegiatan (gantt)
 Contoh: `02-timeline-gantt.png`.
