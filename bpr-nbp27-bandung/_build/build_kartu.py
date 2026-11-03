@@ -129,6 +129,14 @@ body {{ font-family: 'Inter', sans-serif; color: {NAVY}; }}
 """
 
 
+def keterangan_foto():
+    """Baris sumber foto di kaki kartu. Isi foto-isyarat/sumber.txt, misalnya: Pusbisindo, dipakai dengan izin tertulis."""
+    f = FOTO / "sumber.txt"
+    if f.exists() and f.read_text(encoding="utf8").strip():
+        return f"Foto isyarat: <b>{f.read_text(encoding='utf8').strip()}</b>"
+    return "Foto isyarat diperagakan oleh <b>co-trainer Tuli dari Bandung</b>, sesuai isyarat yang dipakai nasabah setempat."
+
+
 def sisi_depan():
     ubin = ""
     for i, (k, kat) in enumerate(KATA, 1):
@@ -147,7 +155,7 @@ def sisi_depan():
 <div class="kanan"><img src="{LOGO_PUTIH}">PT BPR NBP 27, Bandung</div></div>
 <div class="pita">{pita}</div>
 <div class="grid">{ubin}</div>
-<div class="kaki"><span>Foto isyarat diperagakan oleh <b>co-trainer Tuli dari Bandung</b>, sesuai isyarat yang dipakai nasabah setempat.</span><span>Balik kartu untuk kartu tunjuk</span></div>
+<div class="kaki"><span>{keterangan_foto()}</span><span>Balik kartu untuk kartu tunjuk</span></div>
 </div>"""
 
 

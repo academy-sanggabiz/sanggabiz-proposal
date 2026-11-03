@@ -14,6 +14,11 @@ python3 build_pptx_v2.py
 
 Foto otomatis masuk ke kartu cetak, halaman proposal PDF, dan PPTX.
 
+## Bila memakai foto dari lembaga resmi
+Foto dari kamus atau lembaga BISINDO (misalnya Pusbisindo atau GERKATIN) dilindungi hak cipta. Mencantumkan sumber saja tidak cukup untuk kartu cetak dan proposal komersial. Minta izin tertulis lebih dulu.
+
+Setelah izin ada, tulis keterangan sumber di berkas `sumber.txt` di folder ini, satu baris, misalnya `Pusbisindo, dipakai dengan izin tertulis`. Keterangan itu otomatis muncul di kaki kartu menggantikan kalimat co-trainer.
+
 ## Ketentuan foto
 1. Satu foto untuk satu isyarat, posisi tangan di titik paling jelas. Isyarat yang bergerak difoto di posisi akhir, atau dibuat dua foto lalu digabung oleh desainer.
 2. Format mendatar (landscape). Kotak di kartu lebar dan pendek, jadi bingkai foto dari kepala sampai dada, tangan di depan dada, ada ruang kosong di kiri dan kanan.
