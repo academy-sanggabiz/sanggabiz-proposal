@@ -101,3 +101,15 @@ Pekerjaan dan biaya yang lazim per tahap (tafsiran Claude):
 3. Proposal yang direvisi diberi nomor versi pada nama file (misalnya `v2 Proposal ...`).
 4. Versi lama tidak pernah dihapus. Saat membuat v2, v3, dan seterusnya, file versi sebelumnya tetap disimpan di folder yang sama sebagai arsip. Penghapusan hanya atas permintaan tim.
 5. Bila skrip pembuat dokumen diperbarui, simpan salinan skrip versi lama (misalnya `build_proposal_v1.js`) supaya versi lama tetap bisa dibuat ulang.
+
+## 9. Alat bantu (toolkit) dan LMS
+Arahan tim, 10 November 2026, dari proposal PT Asia Pramulia (`asia-pramulia/`). Berlaku untuk proposal pelatihan yang punya materi hitungan atau pekerjaan berulang.
+1. Bila materi berisi perhitungan atau pekerjaan berulang, buatkan alat kerja (kalkulator Excel, templat, checklist, formulir) agar waktu kelas dipakai untuk membaca hasil dan mengambil keputusan, bukan menghitung manual. Alat yang diberikan ke peserta adalah nilai jual Sanggabiz (USP).
+2. Alat tidak terbatas pada kalkulator. Templat, checklist, lembar kerja, dan formulir juga termasuk toolkit.
+3. Tiap alat membawa kasus contoh yang realistis dan lembar Panduan di dalamnya. Peserta mempelajari cara pakai sendiri dari lembar itu. Fasilitator tidak mengajarkan tombol dan rumus satu per satu.
+4. Data contoh ditulis terus terang sebagai data rekaan fasilitator. Jangan menyebutnya data klien atau hasil nyata. Bila klien memberi data anonim, pakai itu sebagai pengganti.
+5. Rumus dan hasil contoh diperiksa dengan hitungan tangan dan dihitung ulang di aplikasi lembar kerja sebelum dikirim. Uji di Excel desktop dan Google Sheets oleh anggota tim. Catat hasilnya di catatan tim.
+6. Skrip pembuat alat disimpan di folder proyek (misalnya `alat-bantu/_build/`) supaya alat bisa dibuat ulang. Berkas versi lama tidak dihapus (lihat bagian 8).
+7. Proposal tidak menjanjikan angka hasil dari pemakaian alat dan tidak menyebut alat sebagai pengganti sistem milik klien.
+8. LMS Sanggabiz boleh ditawarkan sebagai opsi lanjutan untuk materi yang bisa dipelajari mandiri. Tulis fitur dan harga LMS hanya bila sudah diisi tim dan harganya mengikuti `STANDAR-HARGA.md`. Tulis juga bahwa belajar mandiri tidak menggantikan sesi praktik untuk topik yang butuh latihan dengan data.
+9. Bila klien belum tahu kebutuhannya, tawarkan katalog modul dan paket dengan kedalaman yang jelas (pengenalan atau praktik), dan jujur soal apa yang bisa dilakukan peserta setelah tiap kedalaman. Ini pengecualian dari bagian 4 butir 1 (satu opsi) dan perlu persetujuan Pak Priyo atau Muchson.
