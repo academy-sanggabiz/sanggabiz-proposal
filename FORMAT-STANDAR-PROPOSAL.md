@@ -1,6 +1,6 @@
 # FORMAT STANDAR PROPOSAL SANGGABIZ
 
-Tiga bentuk halaman yang sudah dipakai Sanggabiz dan menjadi standar bila dibutuhkan. Contoh gambarnya ada di `reference/format-standar/`. Tidak semua proposal memakai ketiganya. Pakai sesuai isi.
+Empat bentuk halaman yang sudah dipakai Sanggabiz dan menjadi standar bila dibutuhkan. Contoh gambarnya ada di `reference/format-standar/`. Tidak semua proposal memakai keempatnya. Pakai sesuai isi.
 
 ## Unsur yang sama di semua halaman
 | Unsur | Isi |
@@ -32,6 +32,15 @@ Contoh: `03-strategi-dan-metode-pelaksanaan.png`.
 - Alur bernomor 1 sampai 8 berbentuk zig-zag. Tiap tahap adalah kotak abu `#D9D9D9` bersudut bulat dengan lingkaran nomor teal `#33BCCF`, judul tahap, deretan ikon kegiatan dengan teks di bawahnya, dan label ungu muda `#E2A9F1` berisi jumlah peserta atau dokumen keluaran (misalnya "#200 Peserta").
 - Panah putih menghubungkan kotak mengikuti urutan.
 - Dipakai untuk: gambaran pelaksanaan end to end yang rinci pada program besar.
+
+## Tipe 4: Silabus pelatihan dan alat bantu (deck)
+Contoh: `05-silabus-dan-alat-bantu-IHT-Asia-Pramulia.pptx` (dan PDF-nya). Ditetapkan tim sebagai standar silabus pelatihan pada 12 November 2026, menggantikan bentuk spreadsheet untuk pelatihan korporat satu hari. Dipakai pertama di `pest-control/`.
+- Slide 16:9 berlatar putih. Kepala: logo Sanggabiz kiri, tahun kanan, garis ungu `#8B5CF6`. Kaki: garis hitam tipis dan tiga kontak dengan lingkaran cyan `#34BDCF`.
+- Judul huruf kapital Montserrat tebal, hitam, rata tengah. Subjudul Inter kecil abu. Isi memakai Inter.
+- Urutan halaman: (1) ringkasan dengan tiga kotak angka (topik, kasus atau peserta, alat) dan tabel rundown, (2) alur empat sesi berupa kartu berkepala biru tua `#145B78` dengan butir Topik, Pertanyaan, Diteruskan, dan kotak kasus pelatihan berlatar ungu muda, (3) satu slide per sesi berisi tabel kepala teal `#15908F`, (4) hasil untuk peserta, manajemen, dan cara memastikan hasil, ditambah kotak fasilitator, (5) toolkit alat bantu, (6) contoh alat bantu dengan tangkapan layar lembar kerja dan tiga kotak samping (Apa ini, Data kasus, Dipakai di).
+- Tabel sesi: kolom Topik (latar teal muda `#D7ECEC`, nomor topik, judul, jam), Yang dipelajari, Kegiatan peserta, Alat dan media, Hasil. Di `pest-control/` kolom kedua diberi "Tujuan" dengan kata kerja Bloom, kegiatan diberi menit, dan kolom Hasil memuat Output dan Ukuran, agar memenuhi `ATURAN-PROPOSAL.md` bagian 3.
+- Satu kasus latihan dipakai sepanjang hari dan hasil satu sesi diteruskan ke sesi berikutnya. Data kasus ditulis sebagai buatan Sanggabiz, bukan data klien.
+- Alat bantu berupa lembar kerja Excel dengan rumus hidup yang dibawa pulang peserta.
 
 ## Catatan
 - Format ini memakai warna cyan dan biru. Compro Sanggabiz memakai navy `#0B396D` dan kuning `#FFC00C`. Pilih satu keluarga warna per dokumen dan konsisten. Proposal SLB Kaltim memakai keluarga compro.
