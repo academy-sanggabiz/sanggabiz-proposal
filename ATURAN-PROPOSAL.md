@@ -35,6 +35,7 @@ Silabus ditulis per sesi dan per topik, cukup rinci supaya semua pembaca memaham
 3. Aktivitas menggambarkan keadaan nyata di ruang pelatihan, bukan istilah umum.
 4. Output tiap topik ditulis jelas. Semua output dikumpulkan di bagian "Hasil yang dibawa pulang" dengan keterangan dihasilkan di topik mana.
 5. Tidak ada istilah yang bisa dibaca dua arti. Bila memakai istilah teknis, jelaskan sekali di tempat pertama muncul.
+6. Bentuk halaman silabus mengikuti `FORMAT-STANDAR-PROPOSAL.md` Tipe 4 (standar sejak 12 November 2026): halaman silabus satu hari dengan rundown, rincian dua modul per halaman dengan kolom Yang dipelajari, Kegiatan peserta, Alat dan media, Hasil, lalu halaman yang didapat klien, contoh aset, dan anggaran.
 
 ## 4. Anggaran untuk klien
 0. Semua angka mengikuti `STANDAR-HARGA.md` (rentang harga, rumus keuntungan dan pajak, harga yang tidak diambil). Butir di bawah mengatur cara menampilkannya ke klien.

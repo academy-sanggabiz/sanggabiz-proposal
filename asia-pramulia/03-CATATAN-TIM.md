@@ -20,12 +20,14 @@ Dibuat 10 November 2026. Berkas ini daftar isian, pertanyaan, dan daftar cek. Pe
 | Hal | Status |
 |---|---|
 | Lembar pemetaan awal terhadap job specification | `[ISI TIM: belum dibuat]` |
-| Video lini produksi plastik untuk Modul 2 | `[ISI TIM]` |
+| Foto lini (delapan pemborosan) dan foto atau video area produksi (Gemba Walk) | `[ISI TIM]` |
 | Data contoh atau data anonim klien untuk alat | `[ISI TIM]` |
-| Fasilitator tiap modul (nama, latar, honor) | `[ISI TIM]` |
-| Alat non-hitung (kaizen, Gemba, A3, checklist, rencana pengendalian, SOP cycle count) | `[ISI TIM: belum dibuat]` |
+| Dua fasilitator: nama, latar, honor (deck halaman 7 bertanda ISI TIM) | `[ISI TIM]` |
+| Alat cetak dan formulir: buku kasus, checklist Gemba, kartu kaizen, lembar rencana tindak lanjut, pre-test, post-test, survei | `[ISI TIM: belum dibuat]` |
+| Jumlah peserta (deck halaman 1 bertanda ISI TIM) | `[ISI TIM]` |
+| Laptop untuk latihan, minimal satu per kelompok berisi Excel | `[ISI TIM: dari klien, peserta, atau sewa]` |
 | Fitur, materi, dan harga LMS Sanggabiz | `[ISI TIM]` |
-| Anggaran per modul dan per kedalaman | `[ISI TIM: hitung dari STANDAR-HARGA.md]` |
+| Anggaran program satu hari dan halaman Rincian Anggaran di deck | `[ISI TIM: hitung dari STANDAR-HARGA.md]` |
 | Target ukuran keberhasilan | `[ISI TIM: konfirmasi dengan klien]` |
 
 ## 3. Daftar cek klaim sebelum kirim
@@ -41,11 +43,12 @@ Dibuat 10 November 2026. Berkas ini daftar isian, pertanyaan, dan daftar cek. Pe
 
 ## 4. Keputusan yang perlu dikonfirmasi
 
-1. Menampilkan katalog paket (lebih dari satu opsi) di dokumen klien. Aturan standar meminta satu opsi saja. Alasan pengecualian: klien belum tahu kebutuhannya. Konfirmasi Pak Priyo atau Muchson.
+1. Selesai 12 November 2026: tidak ada katalog paket. Deck menawarkan satu program satu hari.
 2. Menawarkan LMS sebagai opsi lanjutan di dokumen klien.
 3. Berapa banyak alat non-hitung yang masuk paket tanpa biaya tambahan.
 
 ## 5. Catatan kerja
 
 - 10 November 2026: draf silabus modular dan lima kalkulator dibuat. Pengecekan: rumus dihitung ulang tanpa galat di LibreOffice, hasil contoh dicek dengan hitungan tangan.
-- Silabus awal yang rinci (tanpa paket dan tanpa alat) hanya ada di riwayat chat, tidak disimpan sebagai berkas terpisah. Versi di `01-SILABUS-DRAF.md` menggantikannya. Versi pertama berisi semua kegiatan hitung manual. Versi ini mengganti sebagian dengan alat.
+- Silabus awal yang rinci (tanpa paket dan tanpa alat) hanya ada di riwayat chat, tidak disimpan sebagai berkas terpisah. Versi di `01-SILABUS-DRAF-v1-modular.md` (sekarang arsip) menggantikannya. Versi pertama berisi semua kegiatan hitung manual. Versi ini mengganti sebagian dengan alat.
+- 12 November 2026: tim menyetujui silabus satu hari dan alat bantu. Bentuk silabus mengikuti standar baru (FORMAT-STANDAR-PROPOSAL.md Tipe 4). Data lima kalkulator diselaraskan menjadi satu kasus, ditambah lembar Kebutuhan Bahan dan Dampak Perbaikan. Deck 11 halaman dibuat di `proposal/`, tanpa halaman anggaran.

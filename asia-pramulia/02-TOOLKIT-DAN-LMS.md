@@ -20,39 +20,39 @@ Pilihan memakai data klien: bila PT Asia Pramulia mau memberi data yang sudah di
 
 Folder `alat-bantu/`. Semua berupa berkas Excel dengan rumus hidup, lembar Panduan di depan, sel isian berwarna biru muda, dan sel hasil berwarna abu-abu. Skrip pembuatnya ada di `alat-bantu/_build/buat_kalkulator.py`.
 
-| Berkas | Dipakai di sesi | Isi dan kasus contoh |
+| Berkas | Dipakai di | Isi dan kasus contoh |
 |---|---|---|
-| `1-Kalkulator-OEE.xlsx` | 4 | OEE per shift per mesin, enam big losses, loss terbesar. Contoh: 8 shift dua mesin injeksi |
-| `2-Pareto-5Why-CAPA.xlsx` | 1 | Pareto jenis cacat dengan grafik, formulir 5 Why, daftar CAPA dengan status dan penanda terlambat. Contoh: short shot akibat dryer tidak dinyalakan |
-| `3-Anggaran-dan-Varians.xlsx` | 5 | Anggaran tahunan dari volume produksi, anggaran fleksibel, varians per akun dengan batas toleransi. Contoh: anggaran departemen produksi 2027 dan realisasi enam bulan |
-| `4-Inventori-dan-Gudang.xlsx` | 7 dan 8 | Analisis ABC, stok pengaman dan titik pemesanan ulang dan EOQ, cycle count dengan akurasi stok, pelacakan sisa bahan baku per SPK. Contoh: 12 bahan baku, pembantu, pelengkap |
-| `5-Kapasitas-dan-Jadwal.xlsx` | 6 | Beban jam mesin, kapasitas mingguan, urutan order, dan status terlambat. Contoh: 7 order tiga mesin, ada satu minggu yang kelebihan beban |
+| `1-Kalkulator-OEE.xlsx` | Sesi 3 | OEE per shift per mesin dengan cavity, enam big losses, loss terbesar. Contoh: 8 shift, IM-01 (tutup botol 28 mm, 8 cavity) dan IM-02 (ember, 1 cavity) |
+| `2-Pareto-5Why-CAPA.xlsx` | Sesi 4 | Pareto jenis cacat dengan grafik, formulir 5 Why, daftar CAPA dengan status dan penanda terlambat. Contoh: short shot di IM-01 akibat dryer tidak dinyalakan |
+| `3-Anggaran-dan-Varians.xlsx` | Sesi 1 dan 4 | Anggaran lini tutup botol dari volume produksi, anggaran fleksibel, varians per akun, dan lembar Dampak Perbaikan. Contoh: resin melewati anggaran fleksibel 6,7 persen |
+| `4-Inventori-dan-Gudang.xlsx` | Sesi 2 | Analisis ABC, stok pengaman, titik pemesanan ulang dan EOQ, cycle count dengan akurasi stok, sisa bahan baku per SPK tutup botol |
+| `5-Kapasitas-dan-Jadwal.xlsx` | Sesi 1 | Beban jam mesin, kapasitas mingguan, urutan order, status terlambat, dan lembar Kebutuhan Bahan. Contoh: 7 order tiga mesin |
 
-Pemeriksaan yang sudah dilakukan (10 November 2026): semua rumus dihitung ulang di LibreOffice tanpa galat, dan hasil contoh dicek dengan hitungan tangan untuk OEE, Pareto, anggaran fleksibel, kelas ABC, titik pemesanan ulang, dan beban mesin. Belum diuji di Excel desktop dan Google Sheets oleh anggota tim. `[ISI TIM: buka di Excel dan Google Sheets, catat bila ada yang berbeda]`
+Versi 12 November 2026 menyelaraskan data kelima berkas menjadi satu kasus (order tutup botol 28 mm di IM-01) dan menambah dua lembar: Kebutuhan Bahan dan Dampak Perbaikan. Versi pertama disimpan di `alat-bantu/arsip-v1/`.
 
-Skenario latihan yang sudah tertanam di data contoh:
-- OEE: loss terbesar adalah kecepatan turun, bukan kerusakan. Peserta diajak membaca dulu sebelum menebak.
-- Jadwal: urutan awal membuat tiga order terlambat. Mengubah kolom Urutan mengubah hasil, sehingga peserta membandingkan FIFO, tenggat terdekat, dan waktu proses terpendek.
-- Pesan Ulang: satu item (masterbatch putih) sudah di bawah titik pemesanan ulang.
-- Cycle count: empat dari delapan item selisihnya melebihi toleransi 2 persen.
-- Sisa bahan: dua dari empat SPK melebihi batas bahan tidak terlacak 1 persen.
+Pemeriksaan (12 November 2026): semua rumus dihitung ulang di LibreOffice tanpa galat. Hasil contoh dicek dengan hitungan tangan untuk OEE, anggaran fleksibel, dampak perbaikan, kebutuhan bahan, dan sisa bahan. Belum diuji di Excel desktop dan Google Sheets oleh anggota tim. `[ISI TIM: buka di Excel dan Google Sheets, catat bila ada yang berbeda]`
 
-## 4. Alat lain yang direncanakan (belum dibuat)
+Angka kasus yang tertanam:
+- OEE gabungan 69,2 persen. Loss terbesar kecepatan turun (361 menit), bukan kerusakan. Operator memperlambat siklus karena short shot.
+- Pareto: short shot 412 pcs, 39 persen dari cacat seminggu.
+- Varians: resin melewati anggaran fleksibel 6,7 persen, lembur melewati lebih dari dua kali lipat, perawatan 22 persen.
+- Dampak perbaikan: scrap turun dari 4 ke 1,5 persen dan lembur turun, perkiraan hemat Rp 70.665.000 per tahun atau 1,6 persen dari anggaran lini.
+- Cycle count: resin PP selisih 2,8 persen karena sisa dari IM-01 belum dicatat. Empat dari delapan item perlu diselidiki.
+- Sisa bahan: dua dari empat SPK tutup botol melewati batas bahan tidak terlacak 1 persen.
+- Jadwal: urutan awal membuat tiga order terlambat. Resin HDPE kurang untuk jadwal minggu ini, resin PP cukup.
+- Pesan Ulang: masterbatch putih di bawah titik pemesanan ulang.
 
-Alat ini non-hitung dan lebih cepat dibuat. Belum ada, ditandai rencana.
+## 4. Alat cetak dan formulir untuk pelatihan satu hari (belum dibuat)
 
-| Alat | Sesi | Fungsi |
-|---|---|---|
-| Templat usulan kaizen satu halaman | 2 | Kondisi sebelum, usulan, hasil yang diharapkan, PIC |
-| Lembar pengamatan delapan pemborosan | 2 | Dipakai peserta saat menonton video atau berjalan di lini |
-| Checklist Gemba Walk lima area | 3 | Keselamatan, 5S, aliran material, kondisi mesin, informasi visual |
-| Lembar temuan dan jadwal Gemba rutin | 3 | Mencatat temuan, pertanyaan, dan tindak lanjut |
-| Templat laporan A3 | 1 | Ringkasan masalah, akar penyebab, CAPA dalam satu lembar |
-| Checklist awal shift injeksi | 1, 4 | Contoh checklist yang memuat langkah dryer dan cek cetakan |
-| Templat rencana pengendalian stok | 8 | Siapa memeriksa apa, seberapa sering, batas selisih |
-| SOP cycle count satu halaman | 7 | Langkah menghitung, mencatat, dan menelusuri selisih |
+| Alat | Fungsi |
+|---|---|
+| Buku kasus | Cerita pabrik contoh dan data awal setiap sesi, 4 sampai 6 halaman |
+| Checklist Gemba Walk | Lima area amatan dan kolom temuan, 1 halaman |
+| Kartu usulan kaizen | Kondisi sebelum, usulan, perkiraan hasil, penanggung jawab, setengah halaman |
+| Lembar rencana tindak lanjut | Rencana 30 hari per peserta, 1 halaman |
+| Pre-test, post-test, dan survei | Formulir daring, soal yang sama di awal dan akhir |
 
-`[ISI TIM: tentukan mana yang masuk paket pelatihan dan mana yang dibuat bila klien memilih paket tertentu]`
+Rencana alat dari 10 November 2026 yang dicoret untuk pelatihan satu hari: lembar pengamatan delapan pemborosan (diganti foto lini di slide), lembar jadwal Gemba rutin, templat laporan A3, checklist awal shift injeksi, templat rencana pengendalian stok, dan SOP cycle count. Alat ini bisa dibuat untuk sesi lanjutan atau LMS.
 
 ## 5. Nilai jual di proposal
 
@@ -80,4 +80,4 @@ Cara menawarkannya di proposal (usul):
 1. Letakkan sebagai opsi lanjutan di akhir, bukan di tabel anggaran inti.
 2. Hubungkan dengan paket: klien yang memilih paket pengenalan satu hari mendapat jalur belajar mandiri untuk memperdalam modul yang belum dibahas praktik.
 3. Tulis apa adanya soal batas: belajar mandiri tidak menggantikan sesi praktik dengan fasilitator, terutama untuk topik yang butuh latihan dengan data (OEE, penjadwalan, inventori).
-4. Aturan anggaran di `ATURAN-PROPOSAL.md` bagian 4 meminta satu opsi saja di dokumen klien. Katalog paket dan opsi LMS adalah pengecualian karena klien sendiri belum tahu kebutuhannya. Minta konfirmasi Pak Priyo atau Muchson.
+4. Aturan anggaran di `ATURAN-PROPOSAL.md` bagian 4 meminta satu opsi saja di dokumen klien. Sejak 12 November 2026 deck hanya menawarkan satu program satu hari. LMS disebut sebagai materi lanjutan di halaman toolkit, tanpa harga. Bila LMS ditawarkan dengan harga terpisah, minta konfirmasi Pak Priyo atau Muchson.

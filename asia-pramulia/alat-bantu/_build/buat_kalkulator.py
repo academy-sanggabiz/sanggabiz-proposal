@@ -113,7 +113,7 @@ def kalkulator_oee():
         ]),
         ("Cara memakai", [
             "1. Buka lembar OEE. Satu baris berisi satu shift satu mesin.",
-            "2. Isi sel biru: tanggal, mesin, waktu terjadwal, istirahat terencana, tiga jenis downtime, waktu siklus ideal, output total, dan dua jenis reject.",
+            "2. Isi sel biru: tanggal, mesin, waktu terjadwal, istirahat terencana, tiga jenis downtime, waktu siklus ideal, cavity, output total, dan dua jenis reject.",
             "3. Kolom abu-abu menghitung Availability, Performance, Quality, dan OEE. Kolom loss mengubah semua kerugian menjadi menit.",
             "4. Buka lembar Loss. Di sana ada OEE gabungan semua baris, ranking enam big losses, dan nama loss terbesar.",
             "5. Ambil loss terbesar, lalu telusuri penyebabnya dengan 5 Why (lihat kalkulator Pareto dan CAPA).",
@@ -121,8 +121,8 @@ def kalkulator_oee():
         ("Arti istilah", [
             "Waktu terjadwal: lama shift dalam menit. Istirahat terencana: istirahat dan briefing yang memang dijadwalkan. Selisihnya disebut waktu produksi terencana.",
             "Kerusakan: mesin berhenti karena rusak. Setup dan penyesuaian: ganti cetakan, ganti material, penyetelan awal. Henti kecil: berhenti singkat, misalnya produk nyangkut atau sensor, biasanya di bawah 10 menit.",
-            "Waktu siklus ideal: waktu tercepat satu siklus cetak menurut standar mesin dan cetakan, dalam detik. Output total dihitung per pcs hasil cetak, termasuk yang reject.",
-            "Availability = waktu jalan dibagi waktu produksi terencana. Performance = (waktu siklus ideal x output total) dibagi waktu jalan. Quality = output baik dibagi output total. OEE = ketiganya dikalikan.",
+            "Waktu siklus ideal: waktu tercepat satu siklus cetak menurut standar mesin dan cetakan, dalam detik. Cavity: jumlah pcs yang tercetak dalam satu siklus. Output total dihitung per pcs hasil cetak, termasuk yang reject.",
+            "Availability = waktu jalan dibagi waktu produksi terencana. Performance = (waktu siklus ideal x output total / cavity) dibagi waktu jalan. Quality = output baik dibagi output total. OEE = ketiganya dikalikan.",
         ]),
         ("Enam big losses di berkas ini", [
             "Kerusakan, setup dan penyesuaian, dan henti kecil diisi langsung. Kecepatan turun dihitung dari selisih waktu jalan dan waktu ideal. Reject proses dan reject start-up diubah ke menit dengan waktu siklus ideal.",
@@ -139,21 +139,23 @@ def kalkulator_oee():
     title(ws, "OEE per shift per mesin", CONTOH)
     labels = ["Tanggal", "Mesin", "Waktu terjadwal (menit)", "Istirahat terencana (menit)",
               "Kerusakan (menit)", "Setup dan penyesuaian (menit)", "Henti kecil (menit)",
-              "Waktu siklus ideal (detik)", "Output total (pcs)", "Reject proses (pcs)",
-              "Reject start-up (pcs)",
+              "Waktu siklus ideal (detik per siklus)", "Cavity (pcs per siklus)", "Output total (pcs)",
+              "Reject proses (pcs)", "Reject start-up (pcs)",
               "Waktu produksi terencana (menit)", "Waktu jalan (menit)", "Availability",
               "Performance", "Quality", "OEE",
-              "Loss kecepatan (menit)", "Loss reject proses (menit)", "Loss reject start-up (menit)"]
+              "Loss kecepatan (menit)", "Loss reject proses (menit)", "Loss reject start-up (menit)",
+              "Waktu ideal output baik (menit)"]
     head(ws, 4, labels, height=62)
+    # IM-01: tutup botol 28 mm, cetakan 8 cavity. IM-02: ember 10 liter, 1 cavity.
     contoh = [
-        (date(2027, 1, 4), "IM-01", 480, 60, 35, 40, 20, 25, 690, 14, 4),
-        (date(2027, 1, 4), "IM-02", 480, 60, 0, 55, 30, 32, 505, 9, 6),
-        (date(2027, 1, 5), "IM-01", 480, 60, 70, 0, 25, 25, 640, 20, 3),
-        (date(2027, 1, 5), "IM-02", 480, 60, 15, 45, 40, 32, 490, 12, 2),
-        (date(2027, 1, 6), "IM-01", 480, 60, 20, 50, 15, 25, 760, 10, 5),
-        (date(2027, 1, 6), "IM-02", 480, 60, 45, 40, 35, 32, 440, 18, 7),
-        (date(2027, 1, 7), "IM-01", 480, 60, 0, 35, 20, 25, 795, 8, 4),
-        (date(2027, 1, 7), "IM-02", 480, 60, 30, 60, 25, 32, 470, 11, 3),
+        (date(2027, 1, 4), "IM-01", 480, 60, 35, 25, 20, 18, 8, 7450, 260, 40),
+        (date(2027, 1, 4), "IM-02", 480, 60, 0, 30, 30, 45, 1, 420, 6, 3),
+        (date(2027, 1, 5), "IM-01", 480, 60, 70, 0, 25, 18, 8, 7300, 310, 35),
+        (date(2027, 1, 5), "IM-02", 480, 60, 15, 25, 40, 45, 1, 400, 5, 2),
+        (date(2027, 1, 6), "IM-01", 480, 60, 20, 30, 15, 18, 8, 8100, 180, 45),
+        (date(2027, 1, 6), "IM-02", 480, 60, 45, 25, 35, 45, 1, 370, 8, 4),
+        (date(2027, 1, 7), "IM-01", 480, 60, 0, 20, 20, 18, 8, 9050, 120, 30),
+        (date(2027, 1, 7), "IM-02", 480, 60, 30, 30, 25, 45, 1, 400, 6, 2),
     ]
     first, last = 5, 24
     for i in range(first, last + 1):
@@ -161,34 +163,37 @@ def kalkulator_oee():
             for j, v in enumerate(contoh[i - first]):
                 ws.cell(row=i, column=1 + j, value=v)
         ws.cell(row=i, column=1).number_format = "dd/mm/yyyy"
-        ws[f"L{i}"] = f'=IF(C{i}="","",C{i}-D{i})'
-        ws[f"M{i}"] = f'=IF(C{i}="","",L{i}-E{i}-F{i}-G{i})'
-        ws[f"N{i}"] = f'=IF(C{i}="","",M{i}/L{i})'
-        ws[f"O{i}"] = f'=IF(OR(C{i}="",M{i}<=0),"",H{i}*I{i}/60/M{i})'
-        ws[f"P{i}"] = f'=IF(OR(C{i}="",I{i}=0),"",(I{i}-J{i}-K{i})/I{i})'
-        ws[f"Q{i}"] = f'=IF(OR(N{i}="",O{i}="",P{i}=""),"",N{i}*O{i}*P{i})'
-        ws[f"R{i}"] = f'=IF(C{i}="","",M{i}-H{i}*I{i}/60)'
-        ws[f"S{i}"] = f'=IF(C{i}="","",H{i}*J{i}/60)'
-        ws[f"T{i}"] = f'=IF(C{i}="","",H{i}*K{i}/60)'
-    box(ws, f"A{first}:K{last}", INPUT_FILL)
-    box(ws, f"L{first}:T{last}", CALC_FILL)
-    for col in "NOPQ":
+        ws[f"M{i}"] = f'=IF(C{i}="","",C{i}-D{i})'
+        ws[f"N{i}"] = f'=IF(C{i}="","",M{i}-E{i}-F{i}-G{i})'
+        ws[f"O{i}"] = f'=IF(C{i}="","",N{i}/M{i})'
+        ws[f"P{i}"] = f'=IF(OR(C{i}="",N{i}<=0,I{i}=0),"",H{i}*J{i}/I{i}/60/N{i})'
+        ws[f"Q{i}"] = f'=IF(OR(C{i}="",J{i}=0),"",(J{i}-K{i}-L{i})/J{i})'
+        ws[f"R{i}"] = f'=IF(OR(O{i}="",P{i}="",Q{i}=""),"",O{i}*P{i}*Q{i})'
+        ws[f"S{i}"] = f'=IF(OR(C{i}="",I{i}=0),"",N{i}-H{i}*J{i}/I{i}/60)'
+        ws[f"T{i}"] = f'=IF(OR(C{i}="",I{i}=0),"",H{i}*K{i}/I{i}/60)'
+        ws[f"U{i}"] = f'=IF(OR(C{i}="",I{i}=0),"",H{i}*L{i}/I{i}/60)'
+        ws[f"V{i}"] = f'=IF(OR(C{i}="",I{i}=0),"",H{i}*(J{i}-K{i}-L{i})/I{i}/60)'
+    box(ws, f"A{first}:L{last}", INPUT_FILL)
+    box(ws, f"M{first}:V{last}", CALC_FILL)
+    for col in "OPQR":
         for i in range(first, last + 1):
             ws[f"{col}{i}"].number_format = "0.0%"
-    for col in "LMRST":
+    for col in "MNSTUV":
         for i in range(first, last + 1):
             ws[f"{col}{i}"].number_format = "0.0"
-    widths(ws, {c: 13 for c in "ABCDEFGHIJKLMNOPQRST"})
+    for i in range(first, last + 1):
+        ws[f"J{i}"].number_format = "#,##0"
+    widths(ws, {c: 12 for c in "ABCDEFGHIJKLMNOPQRSTUV"})
     ws.freeze_panes = "C5"
 
     ls = wb.create_sheet("Loss")
     title(ls, "Ringkasan OEE dan enam big losses", "Dihitung dari semua baris di lembar OEE.")
     ls["A4"] = "OEE gabungan"
-    ls["B4"] = f'=IFERROR(SUMPRODUCT((OEE!I{first}:I{last}-OEE!J{first}:J{last}-OEE!K{first}:K{last})*OEE!H{first}:H{last})/60/SUM(OEE!L{first}:L{last}),"")'
+    ls["B4"] = f'=IFERROR(SUM(OEE!V{first}:V{last})/SUM(OEE!M{first}:M{last}),"")'
     ls["A5"] = "Availability gabungan"
-    ls["B5"] = f'=IFERROR(SUM(OEE!M{first}:M{last})/SUM(OEE!L{first}:L{last}),"")'
+    ls["B5"] = f'=IFERROR(SUM(OEE!N{first}:N{last})/SUM(OEE!M{first}:M{last}),"")'
     ls["A6"] = "Total waktu produksi terencana (menit)"
-    ls["B6"] = f"=SUM(OEE!L{first}:L{last})"
+    ls["B6"] = f"=SUM(OEE!M{first}:M{last})"
     for r in (4, 5, 6):
         ls[f"A{r}"].font = BOLD
         ls[f"B{r}"].fill = CALC_FILL
@@ -201,9 +206,9 @@ def kalkulator_oee():
         ("Kerusakan", f"=SUM(OEE!E{first}:E{last})"),
         ("Setup dan penyesuaian", f"=SUM(OEE!F{first}:F{last})"),
         ("Henti kecil", f"=SUM(OEE!G{first}:G{last})"),
-        ("Kecepatan turun", f"=SUM(OEE!R{first}:R{last})"),
-        ("Reject proses", f"=SUM(OEE!S{first}:S{last})"),
-        ("Reject start-up", f"=SUM(OEE!T{first}:T{last})"),
+        ("Kecepatan turun", f"=SUM(OEE!S{first}:S{last})"),
+        ("Reject proses", f"=SUM(OEE!T{first}:T{last})"),
+        ("Reject start-up", f"=SUM(OEE!U{first}:U{last})"),
     ]
     for k, (nama, f) in enumerate(loss_rows):
         r = 9 + k
@@ -270,26 +275,26 @@ def kalkulator_pareto_capa():
         ws[f"C{i}"].number_format = "0.0%"
     box(ws, f"A{f}:B{l}", INPUT_FILL)
     box(ws, f"C{f}:D{l}", CALC_FILL)
-    ws["F4"] = "Urut dari terbanyak"
-    ws["F4"].font = BOLD
-    head(ws, 5, ["Urutan", "Jenis cacat", "Jumlah (pcs)", "Persen kumulatif", "Kelas"], col=6, height=32)
+    ws["F3"] = "Urut dari terbanyak"
+    ws["F3"].font = BOLD
+    head(ws, 4, ["Urutan", "Jenis cacat", "Jumlah (pcs)", "Persen kumulatif", "Kelas"], col=6, height=32)
     for k in range(1, 13):
-        r = 5 + k
+        r = 4 + k
         ws[f"F{r}"] = k
         ws[f"G{r}"] = f'=IFERROR(INDEX($A${f}:$A${l},MATCH(F{r},$D${f}:$D${l},0)),"")'
         ws[f"H{r}"] = f'=IFERROR(INDEX($B${f}:$B${l},MATCH(F{r},$D${f}:$D${l},0)),"")'
-        ws[f"I{r}"] = f'=IF(H{r}="","",SUM($H$6:H{r})/SUM($B${f}:$B${l}))'
+        ws[f"I{r}"] = f'=IF(H{r}="","",SUM($H$5:H{r})/SUM($B${f}:$B${l}))'
         ws[f"J{r}"] = f'=IF(H{r}="","",IF(OR(F{r}=1,I{r-1}<0.8),"Prioritas","Lainnya"))' if k > 1 else f'=IF(H{r}="","","Prioritas")'
         ws[f"I{r}"].number_format = "0.0%"
-    box(ws, "F6:J17", CALC_FILL)
+    box(ws, "F5:J16", CALC_FILL)
     widths(ws, {"A": 26, "B": 14, "C": 10, "D": 9, "E": 3, "F": 9, "G": 26, "H": 14, "I": 16, "J": 12})
     bar = BarChart()
     bar.title = "Pareto jenis cacat"
-    bar.add_data(Reference(ws, min_col=8, min_row=5, max_row=17), titles_from_data=True)
-    bar.set_categories(Reference(ws, min_col=7, min_row=6, max_row=17))
+    bar.add_data(Reference(ws, min_col=8, min_row=4, max_row=16), titles_from_data=True)
+    bar.set_categories(Reference(ws, min_col=7, min_row=5, max_row=16))
     bar.y_axis.title = "Pcs"
     line = LineChart()
-    line.add_data(Reference(ws, min_col=9, min_row=5, max_row=17), titles_from_data=True)
+    line.add_data(Reference(ws, min_col=9, min_row=4, max_row=16), titles_from_data=True)
     line.y_axis.axId = 200
     line.y_axis.title = "Kumulatif"
     line.y_axis.crosses = "max"
@@ -368,6 +373,7 @@ def kalkulator_anggaran():
             "3. Lembar Varians: isi anggaran periode, volume anggaran, volume realisasi, dan realisasi tiap akun. Perilaku diambil dari pilihan Anda.",
             "4. Kalkulator membuat anggaran fleksibel, yaitu anggaran akun variabel disesuaikan dengan volume produksi yang benar-benar terjadi. Selisih dihitung terhadap anggaran fleksibel supaya adil.",
             "5. Akun yang selisihnya melewati batas toleransi ditandai Perlu tindakan. Tulis penyebab dan tindakan di kolom yang disediakan.",
+            "6. Lembar Dampak Perbaikan: isi scrap dan lembur sebelum dan sesudah perbaikan. Kalkulator menghitung perkiraan penghematan per tahun dan persennya dari total anggaran.",
         ]),
         ("Arti istilah", [
             "Varians: selisih antara realisasi dan anggaran. Untuk biaya, realisasi di atas anggaran berarti biaya lebih besar dari rencana.",
@@ -380,7 +386,7 @@ def kalkulator_anggaran():
         ]),
     ])
     ws = wb.create_sheet("Anggaran")
-    title(ws, "Anggaran produksi tahun 2027", CONTOH)
+    title(ws, "Anggaran lini tutup botol tahun 2027", CONTOH)
     ws["A4"], ws["B4"] = "Volume produksi tahun anggaran (pcs)", 18000000
     ws["A4"].font = BOLD
     ws["B4"].fill = INPUT_FILL
@@ -389,7 +395,7 @@ def kalkulator_anggaran():
     head(ws, 6, ["Kelompok biaya", "Akun", "Perilaku", "Variabel: Rp per unit", "Tetap: Rp per tahun",
                  "Total anggaran (Rp)", "Rp per unit"], height=40)
     akun = [
-        ("Bahan baku", "Resin polipropilen", "Variabel", 78.0, None),
+        ("Bahan baku", "Resin polipropilen", "Variabel", 67.0, None),
         ("Bahan baku", "Masterbatch warna", "Variabel", 3.2, None),
         ("Bahan pelengkap", "Kemasan dan label", "Variabel", 6.5, None),
         ("Tenaga kerja langsung", "Operator produksi", "Tetap", None, 1_450_000_000),
@@ -449,7 +455,7 @@ def kalkulator_anggaran():
                 "Realisasi (Rp)", "Selisih (Rp)", "Selisih (persen)", "Status", "Penyebab", "Tindakan"],
          height=40)
     real = [
-        ("Resin polipropilen", "Variabel", 702_000_000, 781_000_000),
+        ("Resin polipropilen", "Variabel", 603_000_000, 690_000_000),
         ("Masterbatch warna", "Variabel", 28_800_000, 31_400_000),
         ("Kemasan dan label", "Variabel", 58_500_000, 62_300_000),
         ("Operator produksi", "Tetap", 725_000_000, 731_000_000),
@@ -492,6 +498,42 @@ def kalkulator_anggaran():
     v[f"G{t}"].number_format = "0.0%"
     v[f"G{t}"].fill = CALC_FILL
     widths(v, {"A": 34, "B": 12, "C": 20, "D": 20, "E": 18, "F": 16, "G": 14, "H": 34, "I": 40, "J": 34})
+
+    d = wb.create_sheet("Dampak Perbaikan")
+    title(d, "Perkiraan dampak perbaikan ke biaya", CONTOH)
+    isian = [
+        (4, "Volume produksi per tahun (pcs)", "=Anggaran!B4", "#,##0", False),
+        (5, "Berat resin per pcs (gram)", 2.6, "0.0", True),
+        (6, "Harga resin per kg (Rp)", 24500, "#,##0", True),
+        (7, "Scrap sebelum perbaikan (persen)", 0.04, "0.0%", True),
+        (8, "Scrap sesudah perbaikan (persen)", 0.015, "0.0%", True),
+        (9, "Lembur per bulan sebelum perbaikan (Rp)", 6_900_000, "#,##0", True),
+        (10, "Lembur per bulan sesudah perbaikan (Rp)", 3_400_000, "#,##0", True),
+    ]
+    for r, lab, val, fmt, is_input in isian:
+        d[f"A{r}"] = lab
+        d[f"B{r}"] = val
+        d[f"B{r}"].number_format = fmt
+        d[f"B{r}"].fill = INPUT_FILL if is_input else CALC_FILL
+        d[f"B{r}"].border = BORDER
+    hasil = [
+        (12, "Resin yang dihemat per tahun (kg)", "=B4*(B7-B8)*B5/1000", "#,##0"),
+        (13, "Penghematan resin per tahun (Rp)", "=B12*B6", "#,##0"),
+        (14, "Penghematan lembur per tahun (Rp)", "=(B9-B10)*12", "#,##0"),
+        (15, "Total penghematan per tahun (Rp)", "=B13+B14", "#,##0"),
+        (16, "Persen dari total anggaran lini", '=IFERROR(B15/Anggaran!F24,"")', "0.0%"),
+    ]
+    for r, lab, f, fmt in hasil:
+        d[f"A{r}"] = lab
+        d[f"A{r}"].font = BOLD
+        d[f"B{r}"] = f
+        d[f"B{r}"].number_format = fmt
+        d[f"B{r}"].fill = CALC_FILL
+        d[f"B{r}"].border = BORDER
+    d["A18"] = ("Hitungan ini perkiraan untuk memilih prioritas. Penghematan nyata dibuktikan dengan data "
+                "scrap dan lembur sesudah CAPA berjalan.")
+    d["A18"].font = Font(italic=True, color="666666")
+    widths(d, {"A": 44, "B": 20})
     return wb
 
 
@@ -554,20 +596,20 @@ def kalkulator_inventori():
     box(abc, f"A{f}:F{l}", INPUT_FILL)
     box(abc, f"G{f}:J{l}", CALC_FILL)
     dropdown(abc, f"C{f}:C{l}", ["Baku", "Pembantu", "Pelengkap"])
-    abc["L4"] = "Ringkasan kelas"
-    abc["L4"].font = BOLD
-    head(abc, 5, ["Kelas", "Jumlah item", "Persen nilai"], col=12, height=30)
+    abc["L3"] = "Ringkasan kelas"
+    abc["L3"].font = BOLD
+    head(abc, 4, ["Kelas", "Jumlah item", "Persen nilai"], col=12, height=40)
     for k, kelas in enumerate(("A", "B", "C")):
-        r = 6 + k
+        r = 5 + k
         abc[f"L{r}"] = kelas
         abc[f"M{r}"] = f'=COUNTIF($J${f}:$J${l},L{r})'
         abc[f"N{r}"] = f'=SUMIF($J${f}:$J${l},L{r},$H${f}:$H${l})'
         abc[f"N{r}"].number_format = "0.0%"
-    box(abc, "L6:N8", CALC_FILL)
-    abc["L10"] = ("Aturan: item masuk kelas A bila persen kumulatif sebelum item itu masih di bawah 80 persen, "
+    box(abc, "L5:N7", CALC_FILL)
+    abc["L9"] = ("Aturan: item masuk kelas A bila persen kumulatif sebelum item itu masih di bawah 80 persen, "
                   "kelas B bila di bawah 95 persen, selebihnya C. Item bernilai sama mendapat kelas yang sama.")
-    abc["L10"].alignment = Alignment(wrap_text=True, vertical="top")
-    abc.merge_cells("L10:N14")
+    abc["L9"].alignment = Alignment(wrap_text=True, vertical="top")
+    abc.merge_cells("L9:N13")
     widths(abc, {"A": 10, "B": 30, "C": 12, "D": 14, "E": 9, "F": 14, "G": 18, "H": 10, "I": 12, "J": 8, "K": 3,
                  "L": 10, "M": 12, "N": 12})
 
@@ -643,8 +685,8 @@ def lengkapi_inventori(wb, pr):
     head(cc, 6, ["Kode", "Nama bahan", "Lokasi", "Stok sistem", "Stok fisik", "Selisih", "Selisih (persen)",
                  "Status", "Dugaan penyebab"], height=40)
     contoh = [
-        ("RB-001", "Resin PP homopolimer", "A-01-02", 41250, 41190, "Pembulatan timbang"),
-        ("RB-002", "Resin HDPE blow", "A-01-03", 21000, 20400, "Belum dicatat pengembalian dari mesin"),
+        ("RB-001", "Resin PP homopolimer", "A-01-02", 41250, 40100, "Pengembalian sisa dari mesin IM-01 belum dicatat"),
+        ("RB-002", "Resin HDPE blow", "A-01-03", 21000, 20950, "Pembulatan timbang"),
         ("RB-003", "Masterbatch putih", "A-02-01", 2300, 2300, ""),
         ("RB-004", "Masterbatch biru", "A-02-02", 880, 910, "Salah input penerimaan"),
         ("PL-001", "Kardus karton luar", "B-03-01", 2300, 2290, ""),
@@ -680,7 +722,7 @@ def lengkapi_inventori(wb, pr):
     widths(cc, {"A": 10, "B": 28, "C": 11, "D": 12, "E": 12, "F": 10, "G": 12, "H": 11, "I": 38, "J": 3, "K": 22})
 
     sb = wb.create_sheet("Sisa Bahan")
-    title(sb, "Pelacakan sisa bahan baku per surat perintah produksi", CONTOH)
+    title(sb, "Pelacakan sisa bahan baku per surat perintah produksi (tutup botol 28 mm, IM-01)", CONTOH)
     sb["A4"], sb["B4"] = "Batas bahan tidak terlacak (persen dari bahan keluar)", 0.01
     sb["A4"].font = BOLD
     sb["B4"].fill = INPUT_FILL
@@ -691,10 +733,10 @@ def lengkapi_inventori(wb, pr):
                  "Bahan di reject (kg)", "Dikembalikan ke gudang (kg)", "Sisa di area mesin (kg)",
                  "Giling ulang (kg)", "Bahan tidak terlacak (kg)", "Persen tidak terlacak", "Status"], height=70)
     contoh = [
-        (date(2027, 1, 4), "SPK-0104-01", "Resin PP", 1000, 38200, 650, 24.5, 25, 15, 0),
-        (date(2027, 1, 5), "SPK-0105-01", "Resin PP", 1200, 44100, 1100, 25.0, 25, 12, 30),
-        (date(2027, 1, 6), "SPK-0106-02", "Resin HDPE", 800, 20800, 420, 36.0, 10, 20, 0),
-        (date(2027, 1, 7), "SPK-0107-01", "Resin PP", 1100, 40300, 770, 25.0, 18, 22, 25),
+        (date(2027, 1, 4), "SPK-0104-01", "Resin PP", 230, 80000, 2400, 2.6, 10, 4, 5),
+        (date(2027, 1, 5), "SPK-0105-01", "Resin PP", 180, 60000, 2100, 2.6, 12, 3, 4),
+        (date(2027, 1, 6), "SPK-0106-01", "Resin PP", 120, 41000, 1200, 2.6, 6, 3.5, 0),
+        (date(2027, 1, 7), "SPK-0107-01", "Resin PP", 200, 68000, 2600, 2.6, 8, 4, 5),
     ]
     f5, l5 = 7, 26
     for i in range(f5, l5 + 1):
@@ -737,6 +779,7 @@ def kalkulator_jadwal():
             "3. Kalkulator menghitung jam mesin tiap order, jam selesai kumulatif sesuai urutan, hari selesai, dan status Tepat waktu atau Terlambat.",
             "4. Ubah kolom Urutan untuk mencoba aturan prioritas. FIFO: urut menurut kedatangan order. Tenggat terdekat: urutkan dari tenggat paling awal. Waktu proses terpendek: urutkan dari jam mesin paling sedikit. Bandingkan jumlah order yang terlambat.",
             "5. Lembar Mesin menunjukkan beban dibandingkan kapasitas. Bila di atas 100 persen, pilih: tambah shift, pindahkan order ke mesin lain, atau negosiasi tenggat.",
+            "6. Lembar Kebutuhan Bahan: isi jenis resin, berat per pcs, persen masterbatch, dan isi karton tiap order. Kalkulator menghitung kebutuhan resin, masterbatch, dan karton, lalu membandingkan kebutuhan resin dengan stok bebas di gudang.",
         ]),
         ("Arti istilah", [
             "Cavity: jumlah produk yang tercetak dalam satu siklus. Waktu siklus: lama satu siklus cetak dalam detik. Jam mesin = (jumlah x (1 + scrap) / cavity x waktu siklus) / 3600, ditambah waktu setup.",
@@ -811,19 +854,78 @@ def kalkulator_jadwal():
     od["D26"].border = BORDER
     widths(od, {"A": 11, "B": 28, "C": 8, "D": 13, "E": 8, "F": 11, "G": 11, "H": 9, "I": 13, "J": 11,
                 "K": 11, "L": 13, "M": 10, "N": 14})
+
+    kb = wb.create_sheet("Kebutuhan Bahan")
+    title(kb, "Kebutuhan bahan dari jadwal minggu ini", CONTOH)
+    head(kb, 4, ["No. order", "Produk", "Jumlah (pcs)", "Scrap (persen)", "Jenis resin", "Berat per pcs (gram)",
+                 "Masterbatch (persen dari resin)", "Pcs per karton", "Resin (kg)", "Masterbatch (kg)", "Karton"],
+         height=55)
+    bahan = [("Resin PP", 2.6, 0.02, 2000), ("Resin PP", 2.6, 0.02, 2000), ("Resin PP", 22, 0.015, 200),
+             ("Resin HDPE", 480, 0.02, 20), ("Resin HDPE", 28, 0.02, 100), ("Resin PP", 14, 0.02, 500),
+             ("Resin PP", 6, 0.01, 1000)]
+    for i in range(f2, l2 + 1):
+        k = i - f2
+        kb[f"A{i}"] = f'=IF(Order!A{i}="","",Order!A{i})'
+        kb[f"B{i}"] = f'=IF(Order!A{i}="","",Order!B{i})'
+        kb[f"C{i}"] = f'=IF(Order!A{i}="","",Order!D{i})'
+        kb[f"D{i}"] = f'=IF(Order!A{i}="","",Order!H{i})'
+        if k < len(bahan):
+            kb[f"E{i}"], kb[f"F{i}"], kb[f"G{i}"], kb[f"H{i}"] = bahan[k]
+        kb[f"I{i}"] = f'=IF(OR(A{i}="",F{i}=""),"",C{i}*(1+D{i})*F{i}/1000)'
+        kb[f"J{i}"] = f'=IF(I{i}="","",I{i}*G{i})'
+        kb[f"K{i}"] = f'=IF(OR(A{i}="",H{i}=""),"",ROUNDUP(C{i}/H{i},0))'
+        kb[f"C{i}"].number_format = "#,##0"
+        kb[f"D{i}"].number_format = kb[f"G{i}"].number_format = "0.0%"
+        kb[f"I{i}"].number_format = kb[f"J{i}"].number_format = "#,##0.0"
+        kb[f"K{i}"].number_format = "#,##0"
+    box(kb, f"A{f2}:D{l2}", CALC_FILL)
+    box(kb, f"E{f2}:H{l2}", INPUT_FILL)
+    box(kb, f"I{f2}:K{l2}", CALC_FILL)
+    dropdown(kb, f"E{f2}:E{l2}", ["Resin PP", "Resin HDPE"])
+    kb["M3"] = "Cek stok resin"
+    kb["M3"].font = BOLD
+    head(kb, 4, ["Jenis resin", "Kebutuhan (kg)", "Stok bebas di gudang (kg)", "Status"], col=13, height=55)
+    for k, (jenis, stok) in enumerate((("Resin PP", 2500), ("Resin HDPE", 2400))):
+        r = 5 + k
+        kb[f"M{r}"] = jenis
+        kb[f"N{r}"] = f'=SUMIF($E${f2}:$E${l2},M{r},$I${f2}:$I${l2})'
+        kb[f"O{r}"] = stok
+        kb[f"P{r}"] = f'=IF(N{r}<=O{r},"Cukup","Kurang, pesan atau geser order")'
+        kb[f"N{r}"].number_format = kb[f"O{r}"].number_format = "#,##0.0"
+        for col in "MNP":
+            kb[f"{col}{r}"].fill = CALC_FILL
+            kb[f"{col}{r}"].border = BORDER
+        kb[f"O{r}"].fill = INPUT_FILL
+        kb[f"O{r}"].border = BORDER
+    kb["M8"] = "Stok bebas: stok fisik yang belum dialokasikan untuk order lain. Ambil dari hasil cycle count, bukan dari angka sistem."
+    kb["M8"].alignment = Alignment(wrap_text=True, vertical="top")
+    kb.merge_cells("M8:P10")
+    widths(kb, {"A": 11, "B": 26, "C": 12, "D": 10, "E": 13, "F": 12, "G": 14, "H": 11, "I": 11, "J": 12,
+                "K": 9, "L": 3, "M": 14, "N": 14, "O": 16, "P": 30})
+    return wb
+
+
+def atur_cetak(wb):
+    """Landscape A4, lebar muat satu halaman, supaya rapi saat dicetak atau diekspor ke PDF."""
+    for ws in wb.worksheets:
+        ws.page_setup.orientation = "landscape"
+        ws.page_setup.paperSize = ws.PAPERSIZE_A4
+        ws.sheet_properties.pageSetUpPr.fitToPage = True
+        ws.page_setup.fitToWidth = 1
+        ws.page_setup.fitToHeight = 0
     return wb
 
 
 def main():
     import os
     os.makedirs(OUT, exist_ok=True)
-    kalkulator_oee().save(f"{OUT}/1-Kalkulator-OEE.xlsx")
-    kalkulator_pareto_capa().save(f"{OUT}/2-Pareto-5Why-CAPA.xlsx")
-    kalkulator_anggaran().save(f"{OUT}/3-Anggaran-dan-Varians.xlsx")
+    atur_cetak(kalkulator_oee()).save(f"{OUT}/1-Kalkulator-OEE.xlsx")
+    atur_cetak(kalkulator_pareto_capa()).save(f"{OUT}/2-Pareto-5Why-CAPA.xlsx")
+    atur_cetak(kalkulator_anggaran()).save(f"{OUT}/3-Anggaran-dan-Varians.xlsx")
     wb, abc, pr = kalkulator_inventori()
     wb = lengkapi_inventori(wb, pr)
-    wb.save(f"{OUT}/4-Inventori-dan-Gudang.xlsx")
-    kalkulator_jadwal().save(f"{OUT}/5-Kapasitas-dan-Jadwal.xlsx")
+    atur_cetak(wb).save(f"{OUT}/4-Inventori-dan-Gudang.xlsx")
+    atur_cetak(kalkulator_jadwal()).save(f"{OUT}/5-Kapasitas-dan-Jadwal.xlsx")
     print("selesai")
 
 
