@@ -19,12 +19,29 @@ Notulen mengusulkan Selasa, 17 November 2026, saat Dr Ghofur ada di Indonesia. T
 
 | Sesi | Tanggal usulan | Isi | Bentuk |
 |---|---|---|---|
-| 1 | Selasa, 17 November 2026 | M1 Introduction to AI, M2 Claude AI Utilization, pre-test | Luring di kantor MFA Jakarta |
+| 1 | Selasa, 17 November 2026 | M1 Introduction to AI, M2 Claude AI Utilization, pre-test | Luring |
 | 2 | Kamis, 19 November 2026 | M3 Prompt Engineering, Standar Prompt MFA, cek perangkat | Hibrida |
-| 3 | Selasa, 24 November 2026 | M4 AI Agent, M5 Hermes, M6 setup | Luring, peserta luar negeri daring |
-| Klinik | Rabu, 25 November 2026 | Instalasi yang belum selesai, 30 menit | Daring |
+| 3 | Selasa, 24 November 2026 | M4 AI Agent, M5 Hermes, M6 setup | Luring |
+| Klinik setup | Rabu, 25 November 2026 | Instalasi yang belum selesai, 30 menit | Daring |
 | 4 | Kamis, 26 November 2026 | M7 penerapan, rencana 30 hari, post-test | Hibrida |
-| Klinik pasca | Pekan pertama Desember 2026 | Agen pertama di pekerjaan nyata, 60 menit | Daring |
+| Klinik pendampingan | Pekan pertama Desember 2026 | Agen pertama di pekerjaan nyata, 60 menit | Daring |
+
+Arti bentuk pelaksanaan:
+
+| Bentuk | Tim Jakarta | Trainer dan asisten | Tim Malaysia dan Australia |
+|---|---|---|---|
+| Luring | Wajib hadir di ruang kelas kantor MFA | Hadir di ruang kelas | Daring lewat Google Meet |
+| Hibrida | Boleh di ruang kelas atau dari laptop masing-masing | Trainer di ruang kelas | Daring lewat Google Meet |
+| Daring | Dari laptop masing-masing | Dari jauh, berbagi layar | Daring lewat Google Meet |
+
+Alasan per sesi:
+1. Sesi 1 luring karena pembukaan, perkenalan, dan aktivitas kartu tempel lebih hidup di satu ruangan.
+2. Sesi 2 hibrida karena praktiknya cukup di Claude. Kelompok penyusun templat dicampur antarnegara di breakout room, supaya Standar Prompt MFA disusun bersama ketiga tim.
+3. Sesi 3 luring karena instalasi Hermes di laptop peserta paling cepat dibantu bila trainer dan asisten ada di ruangan. Peserta daring dipandu asisten lewat berbagi layar. Bila peserta daring lebih dari 3 orang, perlu satu asisten daring tambahan.
+4. Sesi 4 hibrida karena agen sudah terpasang, jadi praktik bisa dari meja masing-masing. Presentasi kanvas agen lewat layar bersama.
+5. Klinik daring karena hanya untuk peserta yang membutuhkan dan bisa dijadwalkan per orang.
+
+Platform daring: Google Meet, mengikuti platform rapat MFA. [ISI TIM: konfirmasi platform dengan MFA]
 
 Sesi 1 tidak membutuhkan instalasi apa pun, jadi bisa tetap digelar 17 November bila MFA ingin memanfaatkan kehadiran Dr Ghofur. Peserta cukup punya akun Claude.
 

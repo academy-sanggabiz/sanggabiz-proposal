@@ -7,7 +7,7 @@ from openpyxl.utils import get_column_letter
 import silabus_data as d
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(HERE, "..", "silabus", "v1 Silabus Pelatihan AI Agent - MyFundAction.xlsx")
+OUT = os.path.join(HERE, "..", "silabus", "v2 Silabus Pelatihan AI Agent - MyFundAction.xlsx")
 
 TEAL = "15908F"
 TEAL_M = "D7ECEC"
@@ -205,8 +205,25 @@ for s in d.SKEMA_B["sesi"]:
     for rr in range(awal + 1, r):
         ws.cell(rr, 1).border = BORDER
 r += 1
-ws.cell(r, 1, "Di antara sesi").font = Font(name=FONT, size=10, bold=True)
-ws.cell(r, 2, d.SKEMA_B["antara"]).font = Font(name=FONT, size=10)
+ws.cell(r, 1, "Bentuk pelaksanaan per sesi").font = Font(name=FONT, size=12, bold=True, color=TEAL)
+r += 1
+kepala(ws, r, ["Sesi", "Bentuk", "Siapa di mana"])
+ws.merge_cells(start_row=r, start_column=3, end_row=r, end_column=6)
+r += 1
+for nama, bentuk, ket in [(x["nama"], x["bentuk"], x["ket_bentuk"]) for x in d.SKEMA_B["sesi"]] + d.SKEMA_B["klinik"]:
+    sel(ws, r, 1, nama, bold=True, fill=TEAL_M)
+    sel(ws, r, 2, bentuk, bold=True, align=WRAP_C, color=TEAL)
+    sel(ws, r, 3, ket)
+    ws.merge_cells(start_row=r, start_column=3, end_row=r, end_column=6)
+    for c in range(4, 7):
+        ws.cell(r, c).border = BORDER
+    ws.row_dimensions[r].height = tinggi([ket], [100])
+    r += 1
+r += 1
+for label, isi in [("Peserta Malaysia dan Australia", "Selalu daring di semua sesi"), ("Platform daring", d.SKEMA_B["platform"]), ("Di antara sesi", d.SKEMA_B["antara"])]:
+    ws.cell(r, 1, label).font = Font(name=FONT, size=10, bold=True)
+    ws.cell(r, 2, isi).font = Font(name=FONT, size=10)
+    r += 1
 
 # ---------- Hasil dibawa pulang ----------
 ws = wb.create_sheet("Hasil dibawa pulang")

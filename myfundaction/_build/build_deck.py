@@ -15,7 +15,7 @@ from lxml import etree
 import silabus_data as d
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(HERE, "..", "proposal", "v1 Kurikulum dan Silabus - Pelatihan AI Agent MyFundAction.pptx")
+OUT = os.path.join(HERE, "..", "proposal", "v2 Kurikulum dan Silabus - Pelatihan AI Agent MyFundAction.pptx")
 LOGO = os.path.join(HERE, "assets", "logo_white.png")
 
 TEAL = "15908F"
@@ -313,7 +313,9 @@ for i, sesi in enumerate(d.SKEMA_B["sesi"]):
     box = kotak(s, x1, y, SW - ML - x1, 0.76, ZEBRA if i % 2 else "FFFFFF", line=GREY)
     mods = [r[2] for r in sesi["rundown"] if r[2].startswith("M")]
     teks(s, x1 + 0.12, y + 0.05, 2.6, 0.66, sesi["nama"].replace(": ", "\n"), size=10, bold=True, color=TEAL_T, anchor=MSO_ANCHOR.MIDDLE)
-    teks(s, x1 + 2.8, y + 0.05, SW - ML - x1 - 2.9, 0.66, mods + ([r[2] for r in sesi["rundown"] if r[2] in ("Pre-test", "Post-test")]), size=9, anchor=MSO_ANCHOR.MIDDLE)
+    lb = kotak(s, SW - ML - 1.0, y + 0.2, 0.88, 0.36, LILAC, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.4)
+    isi_kotak(lb, sesi["bentuk"], size=9, bold=True)
+    teks(s, x1 + 2.8, y + 0.05, SW - ML - x1 - 3.9, 0.66, mods + ([r[2] for r in sesi["rundown"] if r[2] in ("Pre-test", "Post-test")]), size=9, anchor=MSO_ANCHOR.MIDDLE)
 alasan = [
     "Jeda antarsesi memberi waktu latihan di pekerjaan nyata dan menyelesaikan instalasi Hermes yang tertunda",
     "Dua jam di pagi WIB masih jam kerja di Kuala Lumpur dan Sydney, sehingga tim lintas negara ikut semua modul",
@@ -321,6 +323,14 @@ alasan = [
 ]
 teks(s, x1, 5.5, SW - ML - x1, 0.3, "Alasan rekomendasi", size=11, bold=True, color=TEAL_T)
 teks(s, x1, 5.8, SW - ML - x1, 1.2, ["• " + a for a in alasan], size=9)
+
+# ---------- 8b. Bentuk pelaksanaan Skema B ----------
+s = kerangka("Skema B:", "Luring dan Daring per Sesi", "Peserta Malaysia dan Australia selalu daring. " + d.SKEMA_B["platform"].replace(" [ISI TIM: konfirmasi platform dengan MFA]", ""))
+rows = []
+for nama, bentuk, ket in [(x["nama"], x["bentuk"], x["ket_bentuk"]) for x in d.SKEMA_B["sesi"]] + d.SKEMA_B["klinik"]:
+    rows.append([{"t": nama, "bold": True, "size": 11}, {"t": bentuk, "bold": True, "color": TEAL_T, "align": PP_ALIGN.CENTER, "size": 12}, {"t": ket, "size": 11}])
+tabel(s, ML, 1.45, SW - 2 * ML, ["Sesi", "Bentuk", "Siapa di mana"], [3.3, 1.3, SW - 2 * ML - 4.6], rows, size=11, tinggi_baris=[0.78] * len(rows))
+teks(s, ML, 6.55, SW - 2 * ML, 0.4, "Luring: tim Jakarta wajib di ruang kelas.   Hibrida: tim Jakarta boleh di ruang kelas atau dari laptop masing-masing.   Daring: semua lewat Google Meet.", size=10, bold=True, color=TEAL_T)
 
 # ---------- 9. Standar Prompt MFA ----------
 s = kerangka("Standar Prompt MFA", "untuk Tiga Negara", "Satu cara menulis prompt untuk tim Indonesia, Malaysia, dan Australia, diukur dengan rubrik yang sama")

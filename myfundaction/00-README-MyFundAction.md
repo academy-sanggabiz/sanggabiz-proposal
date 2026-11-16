@@ -10,9 +10,9 @@ Folder kerja penawaran pelatihan AI Agent (Claude, prompt engineering, Hermes) u
 | `01-RISET-MATERI.md` | Riset Hermes Agent, Claude, prompt engineering, keamanan, biaya, zona waktu, beserta sumber |
 | `02-REKOMENDASI.md` | Rekomendasi skema, jadwal, lingkungan Hermes, akun, data, tim pengajar |
 | `03-CATATAN-TIM.md` | Isian, pertanyaan ke klien, cek klaim, bahan quotation |
-| `silabus/v1 Silabus Pelatihan AI Agent - MyFundAction.xlsx` | Silabus lengkap: ringkasan, silabus per topik, rundown Skema A dan B, hasil dibawa pulang, evaluasi, persiapan teknis, alur program |
-| `proposal/v1 Kurikulum dan Silabus - Pelatihan AI Agent MyFundAction.pptx` | 14 slide untuk proposal (format standar tipe 1, keluarga teal) |
-| `aset/v1 Materi Pelatihan AI Agent - MyFundAction.pptx` | 67 slide materi untuk dipresentasikan trainer di kelas, per modul dan aktivitas, dengan catatan trainer di speaker notes |
+| `silabus/v2 Silabus Pelatihan AI Agent - MyFundAction.xlsx` | Silabus lengkap: ringkasan, silabus per topik, rundown Skema A dan B dengan bentuk luring, hibrida, atau daring per sesi, hasil dibawa pulang, evaluasi, persiapan teknis, alur program |
+| `proposal/v2 Kurikulum dan Silabus - Pelatihan AI Agent MyFundAction.pptx` | 15 slide untuk proposal (format standar tipe 1, keluarga teal). Slide 11 berisi luring dan daring per sesi Skema B |
+| `aset/v2 Materi Pelatihan AI Agent - MyFundAction.pptx` | 67 slide materi untuk dipresentasikan trainer di kelas, per modul dan aktivitas, dengan catatan trainer di speaker notes |
 | `preview/` | PDF slide kurikulum dan slide materi, PNG slide kurikulum |
 | `aset/v1 Panduan Setup Hermes untuk Non-Programmer.docx` | Langkah instalasi macOS dan Windows (WSL2), setup, SOUL.md, Telegram, keamanan, masalah umum |
 | `aset/v1 Pustaka Prompt dan Standar Prompt MFA.docx` | Rubrik 6 unsur, aturan etika, glosarium tiga bahasa, 10 templat dua bahasa |
@@ -21,7 +21,11 @@ Folder kerja penawaran pelatihan AI Agent (Claude, prompt engineering, Hermes) u
 | `aset/v1 Kunci Jawaban dan Panduan Penilaian - untuk Trainer.docx` | Kunci, contoh jawaban skor 12, kunci segmen donatur dan analisis kampanye |
 | `aset/hermes-templat/` | Templat SOUL.md untuk Agen CRM, Iklan, Analis |
 | `aset/data-latihan/` | Data donatur dan kampanye **rekaan** |
-| `_build/` | Skrip pembuat semua berkas di atas |
+| `_build/` | Skrip pembuat semua berkas di atas. Skrip berakhiran `_v1.py` membuat ulang berkas v1 |
+
+Riwayat versi:
+- v1, 16 November 2026: versi pertama.
+- v2, 16 November 2026: bentuk luring, hibrida, atau daring dirinci per sesi Skema B di silabus, slide kurikulum (slide baru), slide materi, dan rekomendasi. Berkas v1 tetap disimpan sebagai arsip.
 
 ## Ringkas program
 

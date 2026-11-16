@@ -16,8 +16,8 @@ from deck_lib import (BLUE, CYAN, GREY, GREY_L, INK, LILAC, LOGO, ML, MUTED, SH,
                       garis, isi_kotak, kerangka, kotak, new_prs, rgb, tabel, teks)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(HERE, "..", "aset", "v1 Materi Pelatihan AI Agent - MyFundAction.pptx")
-LABEL = "Materi Pelatihan AI Agent | MyFundAction | v1"
+OUT = os.path.join(HERE, "..", "aset", "v2 Materi Pelatihan AI Agent - MyFundAction.pptx")
+LABEL = "Materi Pelatihan AI Agent | MyFundAction | v2"
 GELAP = "0D5C5B"
 MONO = "Courier New"
 CW = SW - 2 * ML
@@ -183,7 +183,7 @@ for i, ses in enumerate(d.SKEMA_B["sesi"]):
     w = CW / 4 - 0.2
     top = kotak(s, x, 1.5, w, 0.9, TEAL if i % 2 == 0 else BLUE, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.12)
     nama = ses["nama"].split(": ")
-    isi_kotak(top, [[(nama[0], True, "FFFFFF")], [(nama[1], False, "FFFFFF")]], size=12)
+    isi_kotak(top, [[(nama[0] + "  |  " + ses["bentuk"], True, "FFFFFF")], [(nama[1], False, "FFFFFF")]], size=12)
     isi = [r[2] for r in ses["rundown"]]
     b = kotak(s, x, 2.5, w, 2.9, GREY_L, line=GREY)
     isi_kotak(b, isi, size=11, align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP)

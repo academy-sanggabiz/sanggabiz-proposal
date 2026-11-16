@@ -13,6 +13,7 @@ Dibuat 16 November 2026. Berisi isian, pertanyaan ke klien, cek klaim, dan bahan
 | 5 | Cocokkan istilah Melayu dan Inggris di glosarium dengan tim MFA Malaysia dan Australia | Pustaka prompt bagian 5 |
 | 6 | Penanggung jawab templat di tiap negara | Pustaka prompt bagian 7 |
 | 7 | Logo MFA bila klien mengizinkan dipasang di slide | Slide kurikulum |
+| 8 | Platform daring (Google Meet atau lainnya) dan jumlah peserta daring. Bila lebih dari 3 orang, tambah satu asisten daring di sesi 3 | Rekomendasi bagian 2, silabus tab Rundown Skema B |
 
 ## 2. Pertanyaan untuk Arief
 
@@ -63,7 +64,7 @@ Catatan harga:
 
 | Berkas | Status |
 |---|---|
-| `silabus/v1 Silabus Pelatihan AI Agent - MyFundAction.xlsx` | Siap ditinjau trainer |
-| `proposal/v1 Kurikulum dan Silabus - Pelatihan AI Agent MyFundAction.pptx` | Siap dikirim setelah isian bagian 1 nomor 7 |
+| `silabus/v2 Silabus Pelatihan AI Agent - MyFundAction.xlsx` | Siap ditinjau trainer. Menggantikan v1 |
+| `proposal/v2 Kurikulum dan Silabus - Pelatihan AI Agent MyFundAction.pptx` | Siap dikirim setelah isian bagian 1 nomor 7. Menggantikan v1 |
 | `aset/` | Siap ditinjau trainer. Panduan Hermes wajib dicocokkan H-1 |
 | Quotation | Belum dibuat |

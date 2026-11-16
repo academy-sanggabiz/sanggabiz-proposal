@@ -12,7 +12,7 @@ PROGRAM = {
     "peserta": "Tim CRM dan marketing MyFundAction Jakarta, kurang dari 10 orang. Tim Malaysia dan Australia dapat bergabung daring bila dikonfirmasi klien",
     "level": "Pemula. Tidak memerlukan kemampuan pemrograman",
     "bahasa": "Bahasa Indonesia. Templat prompt dan slide inti disiapkan juga dalam bahasa Inggris bila tim Malaysia dan Australia ikut",
-    "versi": "v1, 16 November 2026",
+    "versi": "v2, 16 November 2026",
 }
 
 METODE = [
@@ -458,10 +458,12 @@ SKEMA_A = {
 
 SKEMA_B = {
     "nama": "Skema B: bertahap 4 sesi x 2 jam",
-    "ringkas": "4 sesi, 09.00 - 11.00 WIB (10.00 - 12.00 Kuala Lumpur, 13.00 - 15.00 Sydney), jeda 2 sampai 3 hari antarsesi. Sesi 1 luring di Jakarta, sesi berikutnya hibrida",
+    "ringkas": "4 sesi, 09.00 - 11.00 WIB (10.00 - 12.00 Kuala Lumpur, 13.00 - 15.00 Sydney), jeda 2 sampai 3 hari antarsesi. Sesi 1 dan 3 luring di Jakarta, sesi 2 dan 4 hibrida, klinik daring. Peserta Malaysia dan Australia selalu daring",
     "sesi": [
         {
             "nama": "Sesi 1: Dasar AI dan Claude",
+            "bentuk": "Luring",
+            "ket_bentuk": "Tim Jakarta hadir di ruang kelas kantor MFA bersama trainer dan asisten. Tim Malaysia dan Australia bergabung lewat Google Meet. Luring karena sesi pembuka, perkenalan, dan aktivitas kartu tempel",
             "rundown": [
                 ("09.00", "09.10", "Pembukaan dan perkenalan", "Sambutan MFA, alur 4 sesi"),
                 ("09.10", "09.20", "Pre-test", "10 soal pilihan ganda dan 1 tugas prompt"),
@@ -472,6 +474,8 @@ SKEMA_B = {
         },
         {
             "nama": "Sesi 2: Prompt Engineering dan Standar Prompt MFA",
+            "bentuk": "Hibrida",
+            "ket_bentuk": "Trainer di ruang kelas. Tim Jakarta boleh hadir di ruang kelas atau ikut dari laptop masing-masing. Tim Malaysia dan Australia lewat Google Meet. Kelompok penyusun templat dicampur antarnegara di breakout room",
             "rundown": [
                 ("09.00", "09.10", "Bahas tugas mandiri", "2 peserta berbagi hasil"),
                 ("09.10", "10.40", "M3 Prompt Engineering", "Topik 3.1, 3.2, 3.3"),
@@ -481,6 +485,8 @@ SKEMA_B = {
         },
         {
             "nama": "Sesi 3: AI Agent, Hermes, dan setup",
+            "bentuk": "Luring",
+            "ket_bentuk": "Tim Jakarta wajib hadir di ruang kelas karena instalasi Hermes di laptop masing-masing. Trainer dan asisten hadir. Peserta daring dipandu asisten lewat berbagi layar. Bila peserta daring lebih dari 3 orang, perlu satu asisten daring tambahan",
             "rundown": [
                 ("09.00", "09.05", "Bahas tugas mandiri", ""),
                 ("09.05", "09.30", "M4 Introduction to AI Agent", "Topik 4.1"),
@@ -490,6 +496,8 @@ SKEMA_B = {
         },
         {
             "nama": "Sesi 4: Penerapan dan rencana 30 hari",
+            "bentuk": "Hibrida",
+            "ket_bentuk": "Sama dengan sesi 2. Agen sudah terpasang, jadi praktik bisa dari meja masing-masing. Presentasi kanvas agen lewat layar bersama agar ketiga negara mengikuti",
             "rundown": [
                 ("09.00", "09.10", "Cek agen peserta", "Semua agen pertama menjawab di Telegram"),
                 ("09.10", "10.40", "M7 AI Agent Implementation", "Topik 7.1 sampai 7.4"),
@@ -499,6 +507,11 @@ SKEMA_B = {
         },
     ],
     "antara": "Klinik setup daring 30 menit di antara sesi 3 dan 4 untuk peserta yang instalasinya belum selesai",
+    "klinik": [
+        ("Klinik setup", "Daring", "Di antara sesi 3 dan 4, 30 menit, lewat Google Meet dengan berbagi layar. Hanya untuk peserta yang instalasinya belum selesai"),
+        ("Klinik pendampingan", "Daring", "1 sampai 2 minggu setelah sesi 4, 60 menit, lewat Google Meet. Membahas agen pertama di pekerjaan nyata"),
+    ],
+    "platform": "Google Meet, mengikuti platform rapat MFA. [ISI TIM: konfirmasi platform dengan MFA]",
 }
 
 HASIL = [
