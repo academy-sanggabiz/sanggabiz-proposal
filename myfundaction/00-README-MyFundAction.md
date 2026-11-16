@@ -12,7 +12,8 @@ Folder kerja penawaran pelatihan AI Agent (Claude, prompt engineering, Hermes) u
 | `03-CATATAN-TIM.md` | Isian, pertanyaan ke klien, cek klaim, bahan quotation |
 | `silabus/v1 Silabus Pelatihan AI Agent - MyFundAction.xlsx` | Silabus lengkap: ringkasan, silabus per topik, rundown Skema A dan B, hasil dibawa pulang, evaluasi, persiapan teknis, alur program |
 | `proposal/v1 Kurikulum dan Silabus - Pelatihan AI Agent MyFundAction.pptx` | 14 slide untuk proposal (format standar tipe 1, keluarga teal) |
-| `preview/` | PDF dan PNG slide |
+| `aset/v1 Materi Pelatihan AI Agent - MyFundAction.pptx` | 67 slide materi untuk dipresentasikan trainer di kelas, per modul dan aktivitas, dengan catatan trainer di speaker notes |
+| `preview/` | PDF slide kurikulum dan slide materi, PNG slide kurikulum |
 | `aset/v1 Panduan Setup Hermes untuk Non-Programmer.docx` | Langkah instalasi macOS dan Windows (WSL2), setup, SOUL.md, Telegram, keamanan, masalah umum |
 | `aset/v1 Pustaka Prompt dan Standar Prompt MFA.docx` | Rubrik 6 unsur, aturan etika, glosarium tiga bahasa, 10 templat dua bahasa |
 | `aset/v1 Lembar Kerja Peserta.docx` | Halaman 1 sampai 10 sesuai rujukan di silabus, plus lampiran bahan |
@@ -38,6 +39,7 @@ cd myfundaction/_build
 python3 build_data.py
 python3 build_silabus_xlsx.py
 python3 build_deck.py
+python3 build_materi.py
 python3 build_panduan_hermes.py
 python3 build_aset_docx.py
 ```
