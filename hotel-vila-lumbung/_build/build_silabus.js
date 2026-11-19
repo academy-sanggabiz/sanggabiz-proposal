@@ -221,7 +221,7 @@ const bagAkhir = [
     ["4 Instrumen Evaluasi", "Pre-test, post-test, rubrik penilaian, survei kepuasan", "Sebelum sesi 1 dan penutup sesi 3"],
     ["5 Kunci dan Pembahasan (pengajar)", "Kunci pre-test dan post-test, kunci latihan modul, rubrik uraian", "Pengajar"],
     ["6 Contoh Sertifikat", "Rancangan e-sertifikat dengan kolom isian", "Setelah sesi 3"],
-    ["7 Slide Sesi 1", "Sepuluh slide sesi 1", "Sesi 1"],
+    ["7 Slide Pelatihan (Sesi 1 sampai 3)", "40 slide untuk ketiga sesi, termasuk soal latihan dan penutup", "Semua sesi"],
   ], { firstBold: true, firstFill: true }),
 
   h1("9. Pengajar dan rujukan"),
