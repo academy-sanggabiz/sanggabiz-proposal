@@ -13,7 +13,7 @@ Dibuat: 23 November 2026. Status: **dasar pengetahuan sudah masuk, proposal belu
 | `02-KORAN-KR-29-OKT-2026.md` | Salinan lengkap berita Kedaulatan Rakyat 29 Oktober 2026, fakta tersurat, dan tafsiran |
 | `03-CATATAN-TIM.md` | Pertentangan dengan aturan repo, pertanyaan untuk tim, daftar cek klaim, daftar isian |
 | `04-MASUKAN-PERBAIKAN-PROPOSAL.md` | 15 masukan perbaikan proposal berdasarkan berita KR dan aturan repo, dengan prioritas dan urutan kerja |
-| `diagram/` | Empat gambar SVG untuk memahami program dan masukan: `01-apa-itu-jogja-berdaya.svg`, `02-alur-pilot-8-minggu.svg`, `03-masukan-perbaikan.svg`, `04-anggaran-mengikuti-proses.svg`. Skrip pembuatnya ada di `diagram/_build/` |
+| `diagram/` | Lima gambar SVG untuk memahami program dan masukan: `01-apa-itu-jogja-berdaya.svg`, `02-alur-pilot-8-minggu.svg`, `03-masukan-perbaikan.svg`, `04-anggaran-mengikuti-proses.svg`, `05-peta-proposal-sekarang-dan-ke-depan.svg` (peta seluruh proposal). Skrip pembuatnya ada di `diagram/_build/` |
 | `sumber/` | Berkas asli: tiga PDF, foto koran asli, dan foto koran yang sudah diputar tegak. Tidak diubah |
 | `proposal/` | Tempat proposal. Masih kosong |
 
