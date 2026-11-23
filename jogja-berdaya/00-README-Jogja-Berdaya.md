@@ -12,10 +12,11 @@ Dibuat: 23 November 2026. Status: **dasar pengetahuan sudah masuk, proposal belu
 | `01-RINGKASAN-TIGA-DOKUMEN-SUMBER.md` | **Dasar pengetahuan utama.** Isi tiga PDF (proposal strategis Rp495 juta, deck pilot Rp48,9 juta, executive proposal pilot) dipilah per topik, angka sudah dihitung ulang |
 | `02-KORAN-KR-29-OKT-2026.md` | Salinan lengkap berita Kedaulatan Rakyat 29 Oktober 2026, fakta tersurat, dan tafsiran |
 | `03-CATATAN-TIM.md` | Pertentangan dengan aturan repo, pertanyaan untuk tim, daftar cek klaim, daftar isian |
+| `04-MASUKAN-PERBAIKAN-PROPOSAL.md` | 15 masukan perbaikan proposal berdasarkan berita KR dan aturan repo, dengan prioritas dan urutan kerja |
 | `sumber/` | Berkas asli: tiga PDF, foto koran asli, dan foto koran yang sudah diputar tegak. Tidak diubah |
 | `proposal/` | Tempat proposal. Masih kosong |
 
-Penomoran 04 dan seterusnya disiapkan untuk rangkuman tiga dokumen pengguna (kajian wirausaha muda, panduan kampung tematik, konsep kerja sama) setelah diunggah.
+Penomoran 05 dan seterusnya disiapkan untuk rangkuman tiga dokumen pengguna (kajian wirausaha muda, panduan kampung tematik, konsep kerja sama) setelah diunggah.
 
 ## Ringkasan satu paragraf
 Jogja Berdaya adalah rancangan program pelatihan kerja berbasis kompetensi di kampung tematik Kota Yogyakarta, dengan Sanggabiz Academy sebagai pelaksana, Polda DIY sebagai fasilitator kemitraan masyarakat, dan Pemkot Yogyakarta sebagai pengampu wilayah. Ada dua ukuran. Program penuh melatih 90 warga di 3 kampung dalam 3 jalur (digital commerce, hospitality, kuliner dan usaha kreatif) selama 6 bulan senilai Rp495 juta. Pilot melatih 20 warga di 1 kampung dalam 1 jalur (digital commerce dan customer operations) selama 8 minggu senilai Rp48,9 juta, dengan 4 UMKM sebagai mitra dan keputusan GO, IMPROVE, atau NO-GO pada hari ke 90. Semua target ditulis sebagai target rancangan, bukan jaminan penempatan kerja. Landasan kebijakannya antara lain arahan Gubernur DIY di Kedaulatan Rakyat, 29 Oktober 2026, agar pelatihan kerja disesuaikan dengan potensi ekonomi kalurahan.
