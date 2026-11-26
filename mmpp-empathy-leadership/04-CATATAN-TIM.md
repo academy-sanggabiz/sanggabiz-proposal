@@ -37,7 +37,29 @@ Gaya slide, mengikuti deck MyFundAction atas permintaan tim. Isi dan alasannya a
    - Kapasitas 24 peserta per kelas dan kebutuhan co-fasilitator.
    - Tindak lanjut hari ke-30 masuk anggaran.
    - Silabus belum memuat profil trainer. Brief meminta profil trainer, jadi perlu slide tambahan setelah trainer dipilih.
-4. Mengubah isi: edit `_build/build_silabus.py`, simpan sebagai v2, dan simpan salinan skrip v1 (`ATURAN-PROPOSAL.md` bagian 8).
+4. Skrip v1 disimpan di `_build/build_silabus_v1.py`.
+
+## 3b. Silabus v2: satu hari (26 November 2026)
+Pertanyaan tim: kenapa harus 2 hari? Jawabannya: **2 hari adalah inisiatif kita, bukan syarat dari brief.** Brief PT MMPP tidak menyebut durasi (`02-FAKTA-DAN-KETENTUAN.md` bagian 3). Angka 2 hari di v1 kami ambil dari durasi lazim program serupa di pasar (`03-RISET-PELATIHAN-SERUPA.md` bagian 1).
+
+Versi 1 hari bisa dan lebih sesuai dengan `ATURAN-PROPOSAL.md` bagian 4 butir 1: dokumen klien menampilkan paket paling ekonomis yang tetap memenuhi tujuan. Tiga tujuan di brief (komunikasi, kolaborasi, kepemimpinan berbasis empati) tetap tertutup.
+
+**Bentuk v2:** asesmen awal, 1 hari tatap muka 08.30 - 16.30 (6 modul, 340 menit materi), tindak lanjut daring 90 menit di hari ke-30.
+
+| Bagian | v1 (2 hari) | v2 (1 hari) |
+|---|---|---|
+| Menit materi | 675 | 340 |
+| M1 Empati | 75 menit, 3 topik | 40 menit, 2 topik. Profil empati pindah ke M6 |
+| M2 Mendengar | 90 menit | 60 menit. Praktik bertiga tetap 3 putaran, percakapan 6 menit |
+| M3 Umpan balik | 105 menit, 3 topik | 60 menit, 2 topik. Topik "menerima umpan balik" dihapus, latihan kalimat dari 8 menjadi 5, naskah SBI dari 2 menjadi 1 |
+| M4 Percakapan sulit | 165 menit, 3 topik | 90 menit, 2 topik. Role play tetap 3 putaran, percakapan 8 menit. Peragaan ulang trainer diganti pembahasan singkat |
+| M5 Tim | 135 menit, 3 topik | 60 menit, 2 topik. Simulasi informasi tersebar dihapus, konflik tugas dan konflik hubungan dibahas di 5.1 |
+| M6 | Percakapan 1-on-1 dan rencana aksi, 105 menit | Rencana aksi saja, 30 menit. Latihan 1-on-1 dihapus |
+| Post-test | Soal pilihan ganda dan kasus tertulis dengan rubrik | Soal pilihan ganda saja. Rubrik diukur di role play |
+
+Yang dikorbankan: waktu praktik per orang lebih pendek, dan tidak ada latihan 1-on-1, menerima umpan balik, serta simulasi tim. Yang dipertahankan: asesmen awal, kasus nyata, nilai siri' na pacce, Alur Percakapan Empatik dengan rubrik, survei tim 30 hari. Sekitar 240 dari 340 menit materi tetap berupa praktik.
+
+Usul kami: kirim v2 sebagai penawaran utama. v1 disiapkan bila PT MMPP meminta program lebih dalam atau peserta lebih senior.
 
 ## 4. Usulan metode (tafsiran Claude, belum diputuskan)
 Mengikuti daftar metode di `../ATURAN-PROPOSAL.md` bagian 1.
@@ -61,6 +83,6 @@ Anggaran nanti mengikuti tahap ini, dengan harga dari `../STANDAR-HARGA.md`. Acu
 1. Kirim pertanyaan bagian 1 ke PT MMPP lewat Mas Nauval.
 2. Cari profil PT MMPP dan catat di file riset baru.
 3. Cari dua atau tiga calon tempat di kota terpilih, simpan cadangan di catatan ini.
-4. Silabus v1 sudah ada di `silabus/`. Tinjau bersama trainer, lalu revisi setelah jawaban klien masuk.
+4. Silabus v2 (1 hari) dan v1 (2 hari) ada di `silabus/`. Tinjau v2 bersama trainer, lalu revisi setelah jawaban klien masuk.
 5. Susun butir survei 8 perilaku empatik untuk asesmen awal.
 6. Tulis proposal di folder `proposal/`.

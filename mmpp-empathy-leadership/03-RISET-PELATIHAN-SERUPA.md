@@ -1,6 +1,6 @@
 # Riset pelatihan serupa dan dasar silabus PT MMPP
 
-Dikerjakan 26 November 2026 untuk menyusun `silabus/v1 Kurikulum dan Silabus ...pptx`. Setiap temuan diberi sumber. Label **[Tafsiran]** menandai kesimpulan Claude yang perlu dicek tim.
+Dikerjakan 26 November 2026 untuk menyusun silabus v1 (2 hari) dan v2 (1 hari) di `silabus/`. Setiap temuan diberi sumber. Label **[Tafsiran]** menandai kesimpulan Claude yang perlu dicek tim.
 
 ## 1. Apa yang ditawarkan pasar
 | Penyedia | Program | Yang relevan untuk kita | Sumber |
@@ -39,10 +39,10 @@ Pola umum yang kami lihat:
 4. **Ukuran perilaku 30 hari** (Kirkpatrick level 3): survei 3 anggota tim per peserta sebelum pelatihan dan di hari ke-30.
 5. **Simulasi informasi tersebar** di topik 5.2 untuk menunjukkan akibat anggota tim yang tidak didengar.
 
-## 5. Asumsi yang dipakai di silabus v1
+## 5. Asumsi yang dipakai di silabus
 | Asumsi | Dasar | Perlu dikonfirmasi |
 |---|---|---|
-| 2 hari tatap muka, 675 menit materi | Durasi lazim program serupa (bagian 1) | Durasi yang diinginkan PT MMPP |
+| v1: 2 hari, 675 menit materi. v2: 1 hari, 340 menit materi | v1 dari durasi lazim program serupa (bagian 1). v2 dari aturan paket paling ekonomis. Brief tidak menyebut durasi | Durasi yang diinginkan PT MMPP |
 | Satu kelas paling banyak 24 peserta, 1 trainer dan 1 co-fasilitator | Role play bertiga dan simulasi kelompok 5 orang butuh pengawasan | Jumlah peserta |
 | Asesmen awal mulai H-18 | Jadwal Q1 2027 memberi waktu | Kesediaan anggota tim mengisi survei |
 | Tindak lanjut daring 90 menit di hari ke-30 | Kirkpatrick level 3 | Masuk anggaran atau tidak |
@@ -50,5 +50,5 @@ Pola umum yang kami lihat:
 
 ## 6. Yang belum diverifikasi
 1. Nama penulis dan tahun white paper CCL perlu dicek ke dokumen asli (liputan menyebut 2007 dan 2016).
-2. Unit SKKNI untuk kepemimpinan dan komunikasi belum dicari sampai lampiran resmi. Pencarian awal mengarah ke Kepmenaker 149 Tahun 2020 (Manajemen SDM), tetapi unitnya belum dicocokkan. Gaya silabus slide tidak mewajibkan kolom SKKNI, jadi silabus v1 tidak mencantumkannya.
+2. Unit SKKNI untuk kepemimpinan dan komunikasi belum dicari sampai lampiran resmi. Pencarian awal mengarah ke Kepmenaker 149 Tahun 2020 (Manajemen SDM), tetapi unitnya belum dicocokkan. Gaya silabus slide tidak mewajibkan kolom SKKNI, jadi silabus v1 dan v2 tidak mencantumkannya.
 3. Butir survei 8 perilaku empatik untuk asesmen awal belum disusun.

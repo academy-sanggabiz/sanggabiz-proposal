@@ -1,4 +1,6 @@
-"""Pembuat v1 Kurikulum dan Silabus PT MMPP (gaya slide landscape 16:9).
+"""Pembuat v2 Kurikulum dan Silabus PT MMPP (gaya slide landscape 16:9), versi 1 hari.
+
+v1 (2 hari) dibuat ulang dengan build_silabus_v1.py.
 
 Gaya mengikuti reference/gaya-silabus/ (deck MyFundAction): judul dua warna,
 logo Sanggabiz dalam kapsul teal, tabel berkepala teal, kaki halaman kontak.
@@ -16,10 +18,10 @@ from pptx.util import Inches, Pt
 ROOT = Path(__file__).resolve().parent
 LOGO = ROOT / "assets" / "logo-sanggabiz-putih.png"
 OUT = ROOT.parent / "silabus" / (
-    "v1 Kurikulum dan Silabus - Communication and Teamwork Leadership "
+    "v2 Kurikulum dan Silabus 1 Hari - Communication and Teamwork Leadership "
     "Based on Empathy - PT MMPP.pptx"
 )
-FOOT_RIGHT = "PT MMPP | v1, 26 November 2026"
+FOOT_RIGHT = "PT MMPP | v2, 26 November 2026"
 
 INK = RGBColor(0x1D, 0x1D, 0x1F)
 TEAL = RGBColor(0x0E, 0x8A, 0x8A)
@@ -209,7 +211,7 @@ s.shapes.add_picture(str(LOGO), Inches(0.9), Inches(0.8), Inches(2.78), Inches(0
 text(s, 0.9, 2.2, 11.0, 0.5, [[("KURIKULUM DAN SILABUS", {"size": 14, "bold": True, "color": CYAN})]])
 text(s, 0.9, 2.7, 11.5, 1.6, [[("Communication & Teamwork Leadership Based on Empathy",
                                 {"size": 36, "bold": True, "color": WHITE})]])
-text(s, 0.9, 4.3, 11.0, 0.5, [[("Pelatihan in-house dua hari untuk para pemimpin: mendengar, "
+text(s, 0.9, 4.3, 11.0, 0.5, [[("Pelatihan in-house satu hari untuk para pemimpin: mendengar, "
                                 "memberi umpan balik, memimpin percakapan sulit, dan membangun "
                                 "tim yang aman untuk bicara", {"size": 16, "color": WHITE})]])
 text(s, 0.9, 5.7, 11.0, 0.9, [[("Disiapkan untuk PT Makassar Mega Putra Prima", {"size": 13, "color": WHITE})],
@@ -274,7 +276,7 @@ for k, (big, body, src) in enumerate(cards):
     text(s, x + 0.15, 2.4, 2.65, 1.7, [[(body, {"size": 11})]])
     box(s, x + 0.15, 4.15, 2.65, 0.45, PINK, MSO_SHAPE.ROUNDED_RECTANGLE,
         parts=[[(src, {"size": 8.5, "bold": True})]])
-box(s, 0.55, 4.95, 12.23, 1.9, WHITE, line=GREY, anchor=MSO_ANCHOR.TOP, align=PP_ALIGN.LEFT,
+box(s, 0.55, 4.95, 12.23, 1.75, WHITE, line=GREY, anchor=MSO_ANCHOR.TOP, align=PP_ALIGN.LEFT,
     parts=[
         [("Yang membuat program ini berbeda", {"size": 12, "bold": True, "color": TEAL})],
         [("Kasus nyata PT MMPP. ", {"size": 11, "bold": True}),
@@ -282,7 +284,7 @@ box(s, 0.55, 4.95, 12.23, 1.9, WHITE, line=GREY, anchor=MSO_ANCHOR.TOP, align=PP
         [("Nilai lokal siri' na pacce. ", {"size": 11, "bold": True}),
          ("Pacce berarti ikut merasakan kesusahan orang lain, siri' berarti harga diri. Keduanya dipakai sebagai bahasa bersama untuk empati dan menjaga martabat saat menegur.", {"size": 11})],
         [("Terukur sebelum dan sesudah. ", {"size": 11, "bold": True}),
-         ("Rubrik percakapan 0 sampai 8 dipakai di kelas dan post-test. Survei singkat oleh anggota tim diambil sebelum pelatihan dan 30 hari sesudahnya.", {"size": 11})],
+         ("Rubrik percakapan 0 sampai 8 dipakai di role play. Survei singkat oleh anggota tim diambil sebelum pelatihan dan 30 hari sesudahnya.", {"size": 11})],
     ])
 
 # ---------- 4. alur program ----------
@@ -296,10 +298,10 @@ steps = [
      "Kasus role play, kalimat latihan, dan kartu peran disusun dari hasil asesmen. Modul disetujui HR PT MMPP sebelum dicetak",
      "Modul, kartu peran, lembar kerja"),
     ("Persiapan tempat",
-     "Ruang kelas dengan meja kelompok 5 orang, dua ruang kecil atau sudut untuk latihan bertiga, proyektor, flipchart, konsumsi",
+     "Ruang kelas dengan meja kelompok 5 orang, ruang cukup untuk latihan bertiga, proyektor, flipchart, konsumsi",
      "Ruang dan bahan siap"),
-    ("Pelatihan 2 hari",
-     "Enam modul, 675 menit materi. Pre-test di awal hari 1 dan post-test di akhir hari 2",
+    ("Pelatihan 1 hari",
+     "Enam modul, 340 menit materi, 08.30 - 16.30. Pre-test di awal dan post-test di akhir",
      "Skor tes, rubrik, norma tim, rencana 30 hari"),
     ("Tindak lanjut 30 hari",
      "Survei anggota tim diulang di hari ke-30. Sesi daring 90 menit untuk berbagi penerapan dan kendala",
@@ -323,7 +325,7 @@ methods = [
     ("ADDIE: ", "Alur program dari asesmen kebutuhan sampai evaluasi (tahap 1 sampai 6)"),
     ("Andragogi: ", "Peserta belajar dari kasusnya sendiri lewat role play dan refleksi, trainer berperan sebagai fasilitator"),
     ("Taksonomi Bloom revisi: ", "Tujuan tiap topik ditulis dengan kata kerja terukur, kode C2 sampai C6"),
-    ("Kirkpatrick: ", "Evaluasi level 1 sampai 3: survei kepuasan, pre-test dan post-test dengan rubrik, survei tim 30 hari"),
+    ("Kirkpatrick: ", "Evaluasi level 1 sampai 3: survei kepuasan, pre-test dan post-test, rubrik role play, survei tim 30 hari"),
 ]
 for k, (a, b) in enumerate(methods):
     text(s, 0.55 + k * 3.08, 5.95, 2.95, 0.9, [[(a, {"size": 9, "bold": True, "color": TEAL}),
@@ -331,26 +333,26 @@ for k, (a, b) in enumerate(methods):
 
 # ---------- 5. ringkasan program ----------
 s = page("Ringkasan", "Program",
-         "Dua hari tatap muka, 675 menit materi, ditambah tindak lanjut daring 90 menit di hari ke-30")
-table(s, 0.55, 1.4, [3.0, 4.6, 1.0, 0.9, 2.73],
-      ["Modul", "Topik", "Menit", "Hari", "Hasil utama"],
+         "Satu hari tatap muka, 340 menit materi, ditambah tindak lanjut daring 90 menit di hari ke-30")
+table(s, 0.55, 1.4, [3.2, 5.3, 1.0, 2.73],
+      ["Modul", "Topik", "Menit", "Hasil utama"],
       [
-          ["M1 Empati dalam Kepemimpinan", "1.1 Empati di tempat kerja dan buktinya\n1.2 Pacce: empati dalam nilai lokal\n1.3 Profil empati diri dan tim", "75", "1", "Dua perilaku prioritas tiap peserta"],
-          ["M2 Mendengar untuk Memahami", "2.1 Tingkat mendengar dan penghambatnya\n2.2 Bertanya terbuka dan merefleksikan perasaan", "90", "1", "Lembar cek praktik mendengar"],
-          ["M3 Komunikasi yang Menjaga Martabat", "3.1 Bahasa yang menjaga martabat\n3.2 Umpan balik dengan model SBI dan niat\n3.3 Menerima umpan balik", "105", "1", "Dua naskah umpan balik dari kasus nyata"],
-          ["M4 Percakapan Sulit dengan Empati", "4.1 Mengenali percakapan sulit\n4.2 Alur Percakapan Empatik 4 langkah\n4.3 Role play kasus nyata", "165", "1 dan 2", "Skor rubrik percakapan 0 sampai 8"],
-          ["M5 Tim yang Aman untuk Bicara", "5.1 Rasa aman psikologis dalam tim\n5.2 Kolaborasi dan konflik dalam tim\n5.3 Norma tim", "135", "2", "Draf norma tim"],
-          ["M6 Memimpin dengan Empati Sehari-hari", "6.1 Percakapan 1-on-1 yang empatik\n6.2 Rencana aksi 30 hari", "105", "2", "Rencana aksi 30 hari"],
-          [[[("Jumlah materi", {"bold": True})]], "Di luar pembukaan, tes, refleksi, dan penutupan (105 menit)", [[("675", {"bold": True})]], "", ""],
+          ["M1 Empati dalam Kepemimpinan", "1.1 Empati di tempat kerja dan buktinya\n1.2 Pacce: empati dalam nilai lokal", "40", "Daftar perilaku siri' dan pacce"],
+          ["M2 Mendengar untuk Memahami", "2.1 Tingkat mendengar dan penghambatnya\n2.2 Bertanya terbuka dan merefleksikan perasaan", "60", "Lembar cek praktik mendengar"],
+          ["M3 Umpan Balik yang Menjaga Martabat", "3.1 Bahasa yang menjaga martabat\n3.2 Umpan balik dengan model SBI dan niat", "60", "Naskah umpan balik dari kasus nyata"],
+          ["M4 Percakapan Sulit dengan Empati", "4.1 Alur Percakapan Empatik 4 langkah\n4.2 Role play kasus nyata", "90", "Skor rubrik percakapan 0 sampai 8"],
+          ["M5 Tim yang Aman untuk Bicara", "5.1 Rasa aman psikologis dalam tim\n5.2 Norma tim", "60", "Draf norma tim"],
+          ["M6 Rencana Aksi 30 Hari", "6.1 Profil empati dan rencana aksi", "30", "Rencana aksi 30 hari"],
+          [[[("Jumlah materi", {"bold": True})]], "Di luar pembukaan, tes, dan penutupan (50 menit)", [[("340", {"bold": True})]], ""],
       ],
-      size=10, row_h=0.62,
-      styles={0: {"bold": True, "color": TEAL}, 2: {"align": PP_ALIGN.CENTER},
-              3: {"align": PP_ALIGN.CENTER}})
-text(s, 0.55, 6.35, 12.23, 0.5, [[(
+      size=10.5, row_h=0.6,
+      styles={0: {"bold": True, "color": TEAL}, 2: {"align": PP_ALIGN.CENTER}})
+text(s, 0.55, 6.25, 12.23, 0.6, [[(
     "Rancangan untuk satu kelas berisi paling banyak 24 peserta dengan satu trainer dan satu co-fasilitator. "
-    "Jumlah kelas menyesuaikan jumlah peserta. Jam mengikuti waktu setempat.", {"size": 10, "color": GREY_T})]])
+    "Jumlah kelas menyesuaikan jumlah peserta. Jam mengikuti waktu setempat. Kelas dibuat padat praktik: "
+    "sekitar 240 dari 340 menit materi dipakai untuk latihan, role play, dan kerja kelompok.", {"size": 10, "color": GREY_T})]])
 
-# ---------- 6 sampai 11. silabus per modul ----------
+# ---------- 6 sampai 9. silabus per modul ----------
 HEAD = ["Modul & fokus", "Topik", "Outline materi", "Tujuan pembelajaran", "Format"]
 WID = [2.2, 2.0, 4.2, 2.75, 1.08]
 
@@ -359,160 +361,134 @@ def bullets(*items):
     return ["• " + i for i in items]
 
 
-def module_slide(code, name, focus, topics, row_h=1.2):
-    s = page("Materi & Silabus", f"{code} {name}")
+def module_block(slide, y, code, name, focus, topics, row_h):
     rows = []
     for k, (tt, outline, goal, fmt) in enumerate(topics):
         first = [[(f"{code} {name}", {"bold": True, "color": TEAL, "size": 11})],
                  [("Fokus: " + focus, {"italic": True, "size": 9.5, "color": GREY_T})]] if k == 0 else ""
         rows.append([first, [[(tt, {"bold": True, "size": 12})]], bullets(*outline), goal,
                      [[(fmt, {"bold": True, "color": TEAL})]]])
+    return rows
+
+
+def module_slide(title, blocks, row_h=1.2):
+    """blocks: list (code, name, focus, topics). Beberapa modul boleh di satu slide."""
+    s = page("Materi & Silabus", title)
+    rows, merges, start = [], [], 1
+    for code, name, focus, topics in blocks:
+        r = module_block(s, 0, code, name, focus, topics, row_h)
+        rows += r
+        if len(r) > 1:
+            merges.append((start, start + len(r) - 1))
+        start += len(r)
     table(s, 0.55, 1.2, WID, HEAD, rows, size=10.5, row_h=row_h,
           styles={0: {"fill": TEAL_L}, 4: {"align": PP_ALIGN.CENTER}},
-          merge_first=[(1, len(rows))] if len(rows) > 1 else None)
+          merge_first=merges or None)
     return s
 
 
-module_slide("M1", "Empati dalam Kepemimpinan",
-             "Peserta memandang empati sebagai keterampilan kerja yang bisa dilatih, diukur, dan tetap sejalan dengan standar kerja yang tinggi.",
-             [
-                 ("1.1 Empati di tempat kerja dan buktinya",
-                  ["Tiga bentuk empati: memahami cara pandang orang (kognitif), ikut merasakan (afektif), dan tergerak membantu (kepedulian)",
-                   "Empati berbeda dengan setuju atau menurunkan target",
-                   "Data riset: CCL atas 6.731 manajer di 38 negara dan Catalyst 2021",
-                   "Saat empati berlebihan: kelelahan dan pilih kasih"],
-                  "C2 Menjelaskan tiga bentuk empati dan bedanya dengan sikap serba membolehkan, dengan contoh dari pekerjaannya sendiri",
-                  "Teori, Diskusi\n30 menit"),
-                 ("1.2 Pacce: empati dalam nilai lokal",
-                  ["Siri' na pacce: harga diri dan ikut merasakan kesusahan orang lain dalam komunitas",
-                   "Siri' di tempat kerja: menjaga martabat anggota tim saat menegur",
-                   "Pacce di tempat kerja: solidaritas yang tetap menuntut tanggung jawab",
-                   "Nilai serupa dari daerah asal peserta lain"],
-                  "C2 Mengaitkan nilai siri' na pacce dengan perilaku memimpin sehari-hari",
-                  "Diskusi kelompok\n25 menit"),
-                 ("1.3 Profil empati diri dan tim",
-                  ["Hasil asesmen awal: skor diri dan skor dari 3 anggota tim",
-                   "Membaca selisih antara penilaian diri dan penilaian tim",
-                   "Memilih dua perilaku yang akan diperbaiki"],
-                  "C4 Membandingkan penilaian diri dengan penilaian anggota tim dan memilih dua perilaku prioritas",
-                  "Refleksi individu\n20 menit"),
-             ], row_h=1.45)
+M1 = ("M1", "Empati dalam Kepemimpinan",
+      "Peserta memandang empati sebagai keterampilan kerja yang bisa dilatih, diukur, dan tetap sejalan dengan standar kerja yang tinggi.",
+      [
+          ("1.1 Empati di tempat kerja dan buktinya",
+           ["Tiga bentuk empati: memahami cara pandang orang (kognitif), ikut merasakan (afektif), dan tergerak membantu (kepedulian)",
+            "Empati berbeda dengan setuju atau menurunkan target",
+            "Data riset: CCL atas 6.731 manajer di 38 negara dan Catalyst 2021"],
+           "C2 Menjelaskan tiga bentuk empati dan bedanya dengan sikap serba membolehkan, dengan contoh dari pekerjaannya sendiri",
+           "Teori, Diskusi\n20 menit"),
+          ("1.2 Pacce: empati dalam nilai lokal",
+           ["Siri' na pacce: harga diri dan ikut merasakan kesusahan orang lain dalam komunitas",
+            "Siri' di tempat kerja: menjaga martabat anggota tim saat menegur",
+            "Pacce di tempat kerja: solidaritas yang tetap menuntut tanggung jawab",
+            "Nilai serupa dari daerah asal peserta lain"],
+           "C2 Mengaitkan nilai siri' na pacce dengan perilaku memimpin sehari-hari",
+           "Diskusi kelompok\n20 menit"),
+      ])
+M2 = ("M2", "Mendengar untuk Memahami",
+      "Peserta mendengar sampai paham isi dan perasaan lawan bicara sebelum menanggapi.",
+      [
+          ("2.1 Tingkat mendengar dan penghambatnya",
+           ["Tiga tingkat mendengar: menunggu giliran bicara, mendengar isi, mendengar isi dan perasaan",
+            "Penghambat: memotong, buru-buru memberi solusi, menghakimi, sibuk dengan ponsel",
+            "Latihan mendengar 2 menit tanpa menyela"],
+           "C3 Mempraktikkan mendengar tanpa menyela dan meringkas ulang isi pembicaraan dengan tepat",
+           "Demo, Latihan berpasangan\n20 menit"),
+          ("2.2 Bertanya terbuka dan merefleksikan perasaan",
+           ["Pertanyaan terbuka: apa, bagaimana, ceritakan",
+            "Refleksi isi dan refleksi perasaan (\"sepertinya Bapak kecewa karena...\"), lalu memberi jeda",
+            "Praktik bertiga: pembicara, pendengar, dan pengamat dengan lembar cek, tiga putaran"],
+           "C3 Menerapkan pertanyaan terbuka dan refleksi perasaan dalam percakapan 6 menit. C5 Menilai praktik rekan dengan lembar cek",
+           "Praktik bertiga\n40 menit"),
+      ])
+M3 = ("M3", "Umpan Balik yang Menjaga Martabat",
+      "Peserta memberi umpan balik tanpa menjatuhkan harga diri orang lain.",
+      [
+          ("3.1 Bahasa yang menjaga martabat",
+           ["Memisahkan orang dari perilaku: \"laporan terlambat dua hari\" dan \"kamu tidak bisa diandalkan\"",
+            "Teguran empat mata, pujian di depan tim",
+            "Latihan mengubah 5 kalimat teguran dari kasus asesmen"],
+           "C3 Mengubah kalimat teguran yang menyerang pribadi menjadi kalimat yang menyebut perilaku dan dampaknya",
+           "Teori, Latihan berpasangan\n15 menit"),
+          ("3.2 Umpan balik dengan model SBI dan niat",
+           ["Model Situation-Behavior-Impact (CCL): situasi, perilaku yang terlihat, dampak",
+            "Menambah pertanyaan tentang niat agar umpan balik menjadi dua arah",
+            "Umpan balik untuk perilaku yang perlu diperbaiki dan yang perlu dipertahankan",
+            "Praktik dengan kasus dari asesmen awal"],
+           "C3 Menyusun dan menyampaikan umpan balik SBI dengan pertanyaan niat untuk satu kasus nyata",
+           "Demo, Praktik berpasangan\n45 menit"),
+      ])
+M4 = ("M4", "Percakapan Sulit dengan Empati",
+      "Peserta memimpin percakapan sulit dengan Alur Percakapan Empatik 4 langkah yang dinilai dengan rubrik 0 sampai 8.",
+      [
+          ("4.1 Alur Percakapan Empatik 4 langkah",
+           ["Ciri percakapan sulit: taruhan tinggi, pendapat berbeda, emosi kuat",
+            "Siapkan: pisahkan fakta dan tafsiran, tetapkan tujuan bersama",
+            "Dengarkan: buka dengan fakta dan pertanyaan, refleksikan perasaan",
+            "Akui: sebut kepentingan kedua pihak tanpa menyalahkan",
+            "Sepakati: langkah, penanggung jawab, waktu, cara memantau"],
+           "C3 Menyusun lembar persiapan percakapan sulit dengan 4 langkah untuk satu kasus sendiri",
+           "Teori, Demo, Latihan individu\n30 menit"),
+          ("4.2 Role play kasus nyata",
+           ["Tiga kasus dari asesmen, misalnya target tidak tercapai, konflik antaranggota tim, keputusan yang tidak populer",
+            "Tiap peserta menjadi pemimpin satu kali, 8 menit per putaran",
+            "Pengamat memberi skor dengan rubrik 0 sampai 8"],
+           "C3 Memimpin percakapan sulit 8 menit dengan Alur 4 langkah. C5 Menilai percakapan rekan dengan rubrik 0 sampai 8",
+           "Role play bertiga\n60 menit"),
+      ])
+M5 = ("M5", "Tim yang Aman untuk Bicara",
+      "Peserta membangun kebiasaan tim yang membuat anggota berani bertanya, mengaku salah, dan memberi usul.",
+      [
+          ("5.1 Rasa aman psikologis dalam tim",
+           ["Definisi Edmondson (1999) dan temuan Project Aristotle Google",
+            "Konflik tugas dan konflik hubungan dalam kolaborasi lintas fungsi",
+            "Membaca skor survei 7 butir tim sendiri dari asesmen awal"],
+           "C2 Menjelaskan rasa aman psikologis. C4 Menganalisis skor survei timnya dan menentukan butir terendah",
+           "Teori, Analisis data tim\n25 menit"),
+          ("5.2 Norma tim",
+           ["Lima kesepakatan perilaku: rapat, beda pendapat, mengakui salah, saling bantu",
+            "Perilaku pemimpin yang memberi contoh: mengakui tidak tahu, bertanya, berterima kasih atas kabar buruk",
+            "Cara membawa norma ke rapat tim masing-masing"],
+           "C6 Menyusun draf norma tim untuk dibahas di rapat tim masing-masing",
+           "Praktik kelompok\n35 menit"),
+      ])
+M6 = ("M6", "Rencana Aksi 30 Hari",
+      "Peserta memilih dua perilaku prioritas dan menyusun rencana yang bisa dipantau anggota timnya.",
+      [
+          ("6.1 Profil empati dan rencana aksi",
+           ["Profil empati dari asesmen awal: skor diri dan skor dari 3 anggota tim",
+            "Dua perilaku prioritas dan tindakan mingguan yang bisa diamati",
+            "Cara memantau: catatan mingguan dan survei tim di hari ke-30",
+            "Berbagi rencana dengan rekan sebagai mitra pengingat"],
+           "C4 Membandingkan penilaian diri dengan penilaian tim. C6 Menyusun rencana aksi 30 hari dengan ukuran keberhasilan",
+           "Refleksi, Praktik individu\n30 menit"),
+      ])
 
-module_slide("M2", "Mendengar untuk Memahami",
-             "Peserta mendengar sampai paham isi dan perasaan lawan bicara sebelum menanggapi.",
-             [
-                 ("2.1 Tingkat mendengar dan penghambatnya",
-                  ["Tiga tingkat mendengar: menunggu giliran bicara, mendengar isi, mendengar isi dan perasaan",
-                   "Penghambat: memotong, buru-buru memberi solusi, menghakimi, sibuk dengan ponsel",
-                   "Isyarat nonverbal: nada, raut wajah, sikap tubuh",
-                   "Latihan mendengar 2 menit tanpa menyela"],
-                  "C3 Mempraktikkan mendengar tanpa menyela dan meringkas ulang isi pembicaraan dengan tepat",
-                  "Teori, Demo, Latihan berpasangan\n35 menit"),
-                 ("2.2 Bertanya terbuka dan merefleksikan perasaan",
-                  ["Pertanyaan terbuka: apa, bagaimana, ceritakan",
-                   "Refleksi isi (\"jadi yang terjadi...\") dan refleksi perasaan (\"sepertinya Bapak kecewa karena...\")",
-                   "Memberi jeda setelah refleksi agar lawan bicara bisa meluruskan",
-                   "Praktik bertiga: pembicara, pendengar, dan pengamat dengan lembar cek, tiga putaran"],
-                  "C3 Menerapkan pertanyaan terbuka dan refleksi perasaan dalam percakapan 8 menit. C5 Menilai praktik rekan dengan lembar cek pengamat",
-                  "Praktik bertiga\n55 menit"),
-             ], row_h=1.9)
+module_slide("M1 dan M2", [M1, M2], row_h=1.15)
+module_slide("M3 Umpan Balik yang Menjaga Martabat", [M3], row_h=2.0)
+module_slide("M4 Percakapan Sulit dengan Empati", [M4], row_h=2.0)
+module_slide("M5 dan M6", [M5, M6], row_h=1.2)
 
-module_slide("M3", "Komunikasi yang Menjaga Martabat",
-             "Peserta memberi dan menerima umpan balik tanpa menjatuhkan harga diri orang lain.",
-             [
-                 ("3.1 Bahasa yang menjaga martabat",
-                  ["Memisahkan orang dari perilaku: \"laporan terlambat dua hari\" dan \"kamu tidak bisa diandalkan\"",
-                   "Kalimat \"saya\" untuk menyampaikan dampak",
-                   "Tempat dan waktu: teguran empat mata, pujian di depan tim",
-                   "Latihan mengubah 8 kalimat teguran dari kasus asesmen"],
-                  "C3 Mengubah kalimat teguran yang menyerang pribadi menjadi kalimat yang menyebut perilaku dan dampaknya",
-                  "Teori, Latihan berpasangan\n30 menit"),
-                 ("3.2 Umpan balik dengan model SBI dan niat",
-                  ["Model Situation-Behavior-Impact (CCL): situasi, perilaku yang terlihat, dampak",
-                   "Menambah pertanyaan tentang niat agar umpan balik menjadi dua arah",
-                   "Umpan balik untuk perilaku yang perlu diperbaiki dan yang perlu dipertahankan",
-                   "Praktik dengan kasus dari asesmen awal"],
-                  "C3 Menyusun dan menyampaikan umpan balik SBI dengan pertanyaan niat untuk dua kasus nyata",
-                  "Demo, Praktik berpasangan\n50 menit"),
-                 ("3.3 Menerima umpan balik",
-                  ["Reaksi awal saat dikritik: membela diri, menyerang balik, diam",
-                   "Tiga langkah menerima: dengar sampai selesai, tanya contoh, ucapkan terima kasih dan sebut langkah",
-                   "Meminta umpan balik secara rutin dari anggota tim"],
-                  "C3 Menanggapi umpan balik kritis dengan tiga langkah menerima tanpa membela diri",
-                  "Role play singkat, Refleksi\n25 menit"),
-             ], row_h=1.45)
-
-module_slide("M4", "Percakapan Sulit dengan Empati",
-             "Peserta memimpin percakapan sulit dengan Alur Percakapan Empatik 4 langkah yang dinilai dengan rubrik 0 sampai 8.",
-             [
-                 ("4.1 Mengenali percakapan sulit",
-                  ["Ciri: taruhan tinggi, pendapat berbeda, emosi kuat",
-                   "Tanda percakapan memburuk: diam, menghindar, nada meninggi, menyerang",
-                   "Percakapan sulit yang paling sering dihadapi pemimpin PT MMPP (hasil asesmen)"],
-                  "C4 Mengidentifikasi ciri dan tanda memburuknya percakapan sulit pada kasus nyata",
-                  "Diskusi, Studi kasus\n25 menit"),
-                 ("4.2 Alur Percakapan Empatik 4 langkah",
-                  ["Siapkan: pisahkan fakta dan tafsiran, tetapkan tujuan bersama",
-                   "Dengarkan: buka dengan fakta dan pertanyaan, refleksikan perasaan",
-                   "Akui: sebut kepentingan dan kekhawatiran kedua pihak tanpa menyalahkan",
-                   "Sepakati: langkah, penanggung jawab, waktu, dan cara memantau",
-                   "Rubrik skor 0 sampai 2 per langkah"],
-                  "C3 Menyusun lembar persiapan percakapan sulit dengan 4 langkah untuk satu kasus sendiri",
-                  "Teori, Demo, Latihan individu\n50 menit"),
-                 ("4.3 Role play kasus nyata",
-                  ["Tiga kasus dari asesmen, misalnya target tidak tercapai, konflik antaranggota tim, keputusan yang tidak populer",
-                   "Tiap peserta menjadi pemimpin satu kali, 10 menit per putaran",
-                   "Pengamat memberi skor dengan rubrik 0 sampai 8",
-                   "Trainer memperagakan ulang bagian yang paling sulit"],
-                  "C3 Memimpin percakapan sulit 10 menit dengan Alur 4 langkah. C5 Menilai percakapan rekan dengan rubrik 0 sampai 8",
-                  "Role play bertiga\n90 menit"),
-             ], row_h=1.45)
-
-module_slide("M5", "Tim yang Aman untuk Bicara",
-             "Peserta membangun kebiasaan tim yang membuat anggota berani bertanya, mengaku salah, dan memberi usul.",
-             [
-                 ("5.1 Rasa aman psikologis dalam tim",
-                  ["Definisi Edmondson (1999): keyakinan bersama bahwa tim aman untuk mengambil risiko antarpribadi",
-                   "Temuan pada 51 tim kerja dan Project Aristotle Google",
-                   "Rasa aman dan standar tinggi berjalan bersama",
-                   "Membaca skor survei 7 butir tim sendiri dari asesmen awal"],
-                  "C2 Menjelaskan rasa aman psikologis. C4 Menganalisis skor survei timnya dan menentukan butir terendah",
-                  "Teori, Analisis data tim\n40 menit"),
-                 ("5.2 Kolaborasi dan konflik dalam tim",
-                  ["Konflik tugas dan konflik hubungan",
-                   "Kolaborasi lintas fungsi: tujuan bersama, peran jelas, jalur informasi",
-                   "Simulasi: kelompok memecahkan kasus operasional dengan informasi yang tersebar di tiap anggota",
-                   "Refleksi: siapa yang tidak didengar dan mengapa"],
-                  "C4 Menganalisis pola komunikasi kelompok dalam simulasi dan penyebab informasi tidak tersampaikan",
-                  "Simulasi tim, Diskusi\n50 menit"),
-                 ("5.3 Norma tim",
-                  ["Lima sampai tujuh kesepakatan perilaku: rapat, beda pendapat, mengakui salah, saling bantu",
-                   "Perilaku pemimpin yang memberi contoh: mengakui tidak tahu, bertanya, berterima kasih atas kabar buruk",
-                   "Cara membawa norma ke rapat tim masing-masing"],
-                  "C6 Menyusun draf norma tim untuk dibahas di rapat tim masing-masing",
-                  "Praktik kelompok\n45 menit"),
-             ], row_h=1.45)
-
-module_slide("M6", "Memimpin dengan Empati Sehari-hari",
-             "Peserta memakai keterampilan M2 sampai M5 dalam percakapan rutin dan menyusun rencana 30 hari.",
-             [
-                 ("6.1 Percakapan 1-on-1 yang empatik",
-                  ["Struktur 30 menit: kabar dan kondisi, kemajuan kerja, hambatan, dukungan yang dibutuhkan, kesepakatan",
-                   "Pertanyaan pembuka yang membuat anggota tim mau bicara",
-                   "Mengenali tanda beban kerja berlebih dan kapan merujuk ke HR",
-                   "Praktik 1-on-1 15 menit dengan bertukar peran"],
-                  "C3 Menjalankan percakapan 1-on-1 15 menit dengan struktur lima bagian",
-                  "Demo, Praktik berpasangan\n60 menit"),
-                 ("6.2 Rencana aksi 30 hari",
-                  ["Dua perilaku prioritas dari topik 1.3",
-                   "Tindakan mingguan yang bisa diamati anggota tim",
-                   "Cara memantau: catatan mingguan dan survei tim di hari ke-30",
-                   "Berbagi rencana dengan rekan sebagai mitra pengingat"],
-                  "C6 Menyusun rencana aksi 30 hari dengan tindakan mingguan dan ukuran keberhasilan",
-                  "Praktik individu, Berbagi berpasangan\n45 menit"),
-             ], row_h=1.9)
-
-# ---------- 12 sampai 14. aktivitas dan ukuran ----------
+# ---------- 10 dan 11. aktivitas dan ukuran ----------
 AHEAD = ["Topik", "Aktivitas di kelas (langkah dan menit)", "Alat dan media", "Output", "Ukuran keberhasilan"]
 AWID = [0.75, 5.2, 1.9, 2.0, 2.38]
 
@@ -523,48 +499,35 @@ def activity_slide(teal, rows, row_h=0.9):
           styles={0: {"bold": True, "color": TEAL, "align": PP_ALIGN.CENTER}})
 
 
-activity_slide("dan Ukuran Keberhasilan M1 dan M2", [
-    ["1.1", "1. Trainer menayangkan dua tanggapan pemimpin atas keluhan anggota tim, peserta memilih yang empatik dan memberi alasan (10)\n2. Penjelasan tiga bentuk empati dan data riset (12)\n3. Berpasangan, peserta menulis satu contoh tiap bentuk dari pekerjaannya (8)",
+activity_slide("dan Ukuran Keberhasilan M1 sampai M3", [
+    ["1.1", "1. Trainer menayangkan dua tanggapan pemimpin atas keluhan anggota tim, peserta memilih yang empatik (6)\n2. Penjelasan tiga bentuk empati dan data riset (8)\n3. Berpasangan, peserta menulis satu contoh tiap bentuk dari pekerjaannya (6)",
      "Slide, kartu kasus, lembar kerja", "Catatan tiga bentuk empati dengan contoh", "Tiap peserta menulis 3 contoh yang sesuai bentuknya"],
-    ["1.2", "1. Trainer menjelaskan arti siri' na pacce dari sumber tertulis (7)\n2. Kelompok 4 orang menulis perilaku pemimpin yang mencerminkan dan yang melanggar siri' dan pacce (12)\n3. Hasil ditempel di dinding, tiap peserta menandai 3 perilaku terpenting (6)",
+    ["1.2", "1. Trainer menjelaskan arti siri' na pacce dari sumber tertulis (5)\n2. Kelompok 4 orang menulis perilaku pemimpin yang mencerminkan dan yang melanggar siri' dan pacce (10)\n3. Dua kelompok membacakan hasil (5)",
      "Flipchart, kertas tempel, spidol", "Daftar perilaku siri' dan pacce di tempat kerja", "Tiap kelompok menulis minimal 4 perilaku yang dapat diamati"],
-    ["1.3", "1. Peserta menerima amplop profil empati pribadi dari asesmen awal (5)\n2. Peserta membandingkan skor diri dan skor tim per butir (10)\n3. Peserta menulis dua perilaku prioritas (5)",
-     "Profil empati cetak per peserta", "Profil empati dan dua perilaku prioritas", "Semua peserta menulis 2 perilaku yang dapat diamati"],
-    ["2.1", "1. Trainer memperagakan dua cara mendengar keluhan yang sama bersama co-fasilitator (8)\n2. Penjelasan tingkat mendengar dan penghambatnya (12)\n3. Berpasangan: A bercerita 2 menit, B mendengar tanpa menyela lalu meringkas, bertukar peran (15)",
+    ["2.1", "1. Trainer memperagakan dua cara mendengar keluhan yang sama bersama co-fasilitator (6)\n2. Penjelasan tingkat mendengar dan penghambatnya (6)\n3. Berpasangan: A bercerita 2 menit, B mendengar tanpa menyela lalu meringkas, bertukar peran (8)",
      "Slide, pengatur waktu", "Ringkasan lisan cerita rekan", "Minimal 80 persen pencerita menyatakan ringkasan rekannya tepat"],
-    ["2.2", "1. Penjelasan pertanyaan terbuka dan refleksi dengan 6 contoh kalimat (10)\n2. Bertiga, 3 putaran x 12 menit: 8 menit percakapan, 4 menit umpan balik pengamat (36)\n3. Diskusi kelas: refleksi yang terasa dibuat-buat dan cara memperbaikinya (9)",
+    ["2.2", "1. Penjelasan pertanyaan terbuka dan refleksi dengan 6 contoh kalimat (7)\n2. Bertiga, 3 putaran x 10 menit: 6 menit percakapan, 4 menit umpan balik pengamat (30)\n3. Satu temuan dari tiap kelompok (3)",
      "Kartu topik percakapan, lembar cek pengamat", "Lembar cek pengamat 3 putaran", "Di putaran ketiga tiap peserta memakai minimal 2 pertanyaan terbuka dan 1 refleksi perasaan"],
-], row_h=0.98)
-
-activity_slide("dan Ukuran Keberhasilan M3 dan M4", [
-    ["3.1", "1. Peserta menandai kalimat yang menyerang pribadi dari 8 kalimat teguran rekaan (8)\n2. Penjelasan memisahkan orang dan perilaku, kalimat \"saya\" (10)\n3. Berpasangan menulis ulang 8 kalimat (12)",
-     "Lembar 8 kalimat teguran", "8 kalimat teguran yang sudah diperbaiki", "Minimal 6 dari 8 kalimat menyebut perilaku dan dampak"],
-    ["3.2", "1. Trainer memperagakan umpan balik tanpa struktur, lalu dengan SBI dan niat (10)\n2. Peserta menulis 2 naskah SBI dari kasusnya (15)\n3. Berpasangan menyampaikan naskah, penerima menanggapi, bertukar peran (20)\n4. Dua pasangan tampil, kelas memberi masukan (5)",
-     "Lembar naskah SBI", "Dua naskah umpan balik untuk kasus nyata", "Naskah memuat situasi, perilaku yang terlihat, dampak, dan satu pertanyaan niat"],
-    ["3.3", "1. Trainer memberi kritik rekaan kepada satu relawan, kelas mencatat reaksinya (5)\n2. Penjelasan tiga langkah menerima (8)\n3. Berpasangan, masing-masing menerima satu kritik dan menjawab dengan tiga langkah (12)",
-     "Kartu kritik rekaan", "Kartu tiga langkah menerima umpan balik", "Penerima tidak membela diri dan menyebut satu langkah perbaikan"],
-    ["4.1", "1. Peserta menulis satu percakapan sulit yang sedang atau akan dihadapinya (5)\n2. Trainer membacakan ringkasan 3 kasus asesmen, kelas menandai ciri dan tanda memburuk (12)\n3. Diskusi kelas (8)",
-     "Kartu kasus, slide", "Kasus percakapan sulit milik peserta", "Tiap kasus menyebut pihak, masalah, dan taruhannya"],
-    ["4.2", "1. Penjelasan alur 4 langkah dan rubrik (15)\n2. Trainer memperagakan alur dengan relawan, kelas menilai dengan rubrik (15)\n3. Peserta mengisi lembar persiapan untuk kasus dari 4.1 (20)",
-     "Kartu Alur Percakapan Empatik, lembar persiapan", "Lembar persiapan percakapan sulit", "Fakta terpisah dari tafsiran, tujuan bersama dan usulan kesepakatan tertulis"],
-    ["4.3", "1. Bertiga: pemimpin, anggota tim dengan kartu peran, pengamat. 3 putaran x 25 menit: 10 menit percakapan, 5 menit skor, 10 menit umpan balik (75)\n2. Trainer memperagakan ulang bagian yang paling sulit di depan kelas (15)",
-     "Kartu peran, rubrik 0 sampai 8, pengatur waktu", "Skor rubrik dari pengamat", "Skor rata-rata putaran ketiga minimal 6 dari 8"],
+    ["3.1", "1. Penjelasan memisahkan orang dan perilaku (5)\n2. Berpasangan menulis ulang 5 kalimat teguran rekaan dari kasus asesmen (10)",
+     "Lembar 5 kalimat teguran", "5 kalimat teguran yang sudah diperbaiki", "Minimal 4 dari 5 kalimat menyebut perilaku dan dampak"],
+    ["3.2", "1. Trainer memperagakan umpan balik tanpa struktur, lalu dengan SBI dan niat (8)\n2. Peserta menulis 1 naskah SBI dari kasusnya (10)\n3. Berpasangan menyampaikan naskah, penerima menanggapi, bertukar peran (20)\n4. Dua pasangan tampil, kelas memberi masukan (7)",
+     "Lembar naskah SBI", "Naskah umpan balik untuk kasus nyata", "Naskah memuat situasi, perilaku yang terlihat, dampak, dan satu pertanyaan niat"],
 ], row_h=0.82)
 
-activity_slide("dan Ukuran Keberhasilan M5 dan M6", [
-    ["5.1", "1. Penjelasan rasa aman psikologis dan data riset (15)\n2. Peserta membaca skor survei 7 butir timnya dari asesmen awal (10)\n3. Kelompok membahas butir terendah dan penyebabnya (15)",
+activity_slide("dan Ukuran Keberhasilan M4 sampai M6", [
+    ["4.1", "1. Peserta menulis satu percakapan sulit yang sedang atau akan dihadapinya (5)\n2. Penjelasan alur 4 langkah dan rubrik (10)\n3. Trainer memperagakan alur dengan relawan, kelas menilai dengan rubrik (7)\n4. Peserta mengisi lembar persiapan untuk kasusnya (8)",
+     "Kartu Alur Percakapan Empatik, lembar persiapan", "Lembar persiapan percakapan sulit", "Fakta terpisah dari tafsiran, tujuan bersama dan usulan kesepakatan tertulis"],
+    ["4.2", "1. Bertiga: pemimpin, anggota tim dengan kartu peran, pengamat. 3 putaran x 18 menit: 8 menit percakapan, 3 menit skor, 7 menit umpan balik (54)\n2. Trainer membahas bagian yang paling sering sulit dari lembar skor (6)",
+     "Kartu peran, rubrik 0 sampai 8, pengatur waktu", "Skor rubrik dari pengamat", "Skor rata-rata putaran ketiga minimal 6 dari 8"],
+    ["5.1", "1. Penjelasan rasa aman psikologis, konflik tugas dan konflik hubungan (10)\n2. Peserta membaca skor survei 7 butir timnya dari asesmen awal (5)\n3. Berpasangan membahas butir terendah dan penyebabnya (10)",
      "Laporan skor tim per peserta", "Skor rasa aman tim dan butir terendah", "Tiap peserta menyebut butir terendah dan satu penyebab yang mungkin"],
-    ["5.2", "1. Kelompok 5 orang menerima kartu informasi berbeda untuk memecahkan satu kasus operasional, satu pengamat mencatat siapa bicara dan siapa didengar (25)\n2. Pembahasan konflik tugas, konflik hubungan, dan informasi yang tidak tersampaikan (25)",
-     "Kartu informasi simulasi, lembar pengamat", "Catatan pola komunikasi kelompok", "Tiap kelompok menemukan minimal 2 informasi yang tidak tersampaikan dan penyebabnya"],
-    ["5.3", "1. Trainer menunjukkan contoh norma tim (5)\n2. Peserta per unit kerja menyusun 5 sampai 7 norma (25)\n3. Galeri: kelompok lain memberi satu pertanyaan untuk tiap norma (15)",
+    ["5.2", "1. Trainer menunjukkan contoh norma tim (5)\n2. Peserta per unit kerja menyusun 5 norma (20)\n3. Galeri: kelompok lain memberi satu pertanyaan untuk tiap norma (10)",
      "Templat norma tim, flipchart", "Draf norma tim", "Tiap norma menyebut perilaku yang dapat diamati"],
-    ["6.1", "1. Trainer memperagakan 1-on-1 bersama relawan (10)\n2. Penjelasan struktur lima bagian dan pertanyaan pembuka (10)\n3. Berpasangan, 2 putaran x 20 menit: 15 menit percakapan, 5 menit umpan balik (40)",
-     "Panduan 1-on-1", "Panduan 1-on-1 30 menit", "Percakapan mencakup lima bagian dan berakhir dengan satu kesepakatan"],
-    ["6.2", "1. Peserta mengisi kanvas rencana 30 hari (20)\n2. Berpasangan berbagi rencana dan menetapkan mitra pengingat (15)\n3. Tiga peserta membacakan rencananya (10)",
-     "Kanvas rencana 30 hari", "Rencana aksi 30 hari", "Rencana memuat 2 perilaku, tindakan mingguan, dan ukuran yang bisa dilihat anggota tim"],
+    ["6.1", "1. Peserta membaca profil empati pribadi dari asesmen awal (5)\n2. Peserta mengisi kanvas rencana 30 hari (15)\n3. Berpasangan berbagi rencana dan menetapkan mitra pengingat (10)",
+     "Profil empati cetak, kanvas rencana 30 hari", "Profil empati dan rencana aksi 30 hari", "Rencana memuat 2 perilaku, tindakan mingguan, dan ukuran yang bisa dilihat anggota tim"],
 ], row_h=0.98)
 
-# ---------- 15. alat kerja ----------
+# ---------- 12. alat kerja ----------
 s = page("Alur Percakapan", "Empatik 4 Langkah",
          "Satu alur untuk umpan balik, teguran, dan perbedaan pendapat, dinilai dengan rubrik 0 sampai 8")
 langkah = [
@@ -598,54 +561,45 @@ box(s, 0.55, 4.25, 8.2, 2.55, WHITE, line=GREY, align=PP_ALIGN.LEFT, anchor=MSO_
 ])
 box(s, 9.0, 4.25, 3.78, 2.55, TEAL_L, align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP, parts=[
     [("Cara memakai rubrik", {"size": 10.5, "bold": True, "color": TEAL})],
-    [("Tiap langkah diberi skor 0, 1, atau 2. Pengamat mengisi rubrik di role play topik 4.3. Post-test memuat satu kasus tertulis yang dinilai dengan rubrik yang sama.", {"size": 9.5})],
-    [("Target: skor rata-rata minimal 6 dari 8 di putaran ketiga role play dan di post-test.", {"size": 9.5, "bold": True})],
+    [("Tiap langkah diberi skor 0, 1, atau 2. Pengamat mengisi rubrik di role play topik 4.2, tiga putaran. Peserta membawa pulang kartu alur ini untuk dipakai di tempat kerja.", {"size": 9.5})],
+    [("Target: skor rata-rata minimal 6 dari 8 di putaran ketiga role play.", {"size": 9.5, "bold": True})],
 ])
 
-# ---------- 16. rundown ----------
-s = page("Rundown", "Dua Hari",
-         "08.30 - 16.30 waktu setempat. 390 menit kegiatan per hari, termasuk pembukaan, tes, dan refleksi")
-day1 = [
-    ("08.30 - 08.50", "Pembukaan, tujuan pelatihan, kesepakatan kelas"),
-    ("08.50 - 09.00", "Pre-test"),
-    ("09.00 - 10.15", "M1 Empati dalam Kepemimpinan"),
-    ("10.15 - 10.30", "Rehat"),
-    ("10.30 - 12.00", "M2 Mendengar untuk Memahami"),
-    ("12.00 - 13.00", "Ishoma"),
-    ("13.00 - 14.45", "M3 Komunikasi yang Menjaga Martabat"),
-    ("14.45 - 15.00", "Rehat"),
-    ("15.00 - 16.15", "M4 Percakapan Sulit: topik 4.1 dan 4.2"),
-    ("16.15 - 16.30", "Refleksi hari pertama"),
+# ---------- 13. rundown ----------
+s = page("Rundown", "Satu Hari",
+         "08.30 - 16.30 waktu setempat. 390 menit kegiatan: 340 menit materi, 50 menit pembukaan, tes, dan penutupan")
+day = [
+    ("08.30 - 08.45", "Pembukaan, tujuan pelatihan, kesepakatan kelas"),
+    ("08.45 - 08.55", "Pre-test"),
+    ("08.55 - 09.35", "M1 Empati dalam Kepemimpinan"),
+    ("09.35 - 10.35", "M2 Mendengar untuk Memahami"),
+    ("10.35 - 10.50", "Rehat"),
+    ("10.50 - 11.50", "M3 Umpan Balik yang Menjaga Martabat"),
+    ("11.50 - 12.50", "Ishoma"),
+    ("12.50 - 14.20", "M4 Percakapan Sulit dengan Empati"),
+    ("14.20 - 14.35", "Rehat"),
+    ("14.35 - 15.35", "M5 Tim yang Aman untuk Bicara"),
+    ("15.35 - 16.05", "M6 Rencana Aksi 30 Hari"),
+    ("16.05 - 16.15", "Post-test"),
+    ("16.15 - 16.30", "Survei kepuasan, penutupan, sertifikat"),
 ]
-day2 = [
-    ("08.30 - 08.45", "Ulasan hari pertama"),
-    ("08.45 - 10.15", "M4 Percakapan Sulit: topik 4.3 role play"),
-    ("10.15 - 10.30", "Rehat"),
-    ("10.30 - 12.00", "M5 Tim yang Aman untuk Bicara: topik 5.1 dan 5.2"),
-    ("12.00 - 13.00", "Ishoma"),
-    ("13.00 - 13.45", "M5 topik 5.3 Norma tim"),
-    ("13.45 - 14.45", "M6 topik 6.1 Percakapan 1-on-1"),
-    ("14.45 - 15.00", "Rehat"),
-    ("15.00 - 15.45", "M6 topik 6.2 Rencana aksi 30 hari"),
-    ("15.45 - 16.00", "Post-test"),
-    ("16.00 - 16.30", "Survei kepuasan, penutupan, sertifikat"),
-]
+box(s, 0.55, 1.4, 6.6, 0.45, TEAL_H, parts=[[("Hari pelatihan", {"size": 11, "bold": True, "color": WHITE})]])
+table(s, 0.55, 1.9, [1.5, 5.1], ["Waktu", "Kegiatan"],
+      [[t, [[(k, {"bold": not k.startswith(("Rehat", "Ishoma"))})]]] for t, k in day],
+      size=10, row_h=0.33, head_h=0.28)
+box(s, 7.45, 1.4, 5.33, 0.45, BLUE, parts=[[("Sebelum dan sesudah hari pelatihan", {"size": 11, "bold": True, "color": WHITE})]])
+for k, (ttl, body) in enumerate([
+    ("H-18 sampai H-10  Asesmen awal",
+     "Formulir diri, survei 3 anggota tim, survei rasa aman tim, wawancara 3 sampai 5 peserta. Hasilnya menjadi kasus role play dan profil empati, sehingga waktu kelas tidak terpakai untuk mengumpulkan kasus."),
+    ("H+30  Tindak lanjut daring, 90 menit",
+     "Peserta berbagi hasil rencana aksi, membahas kendala, dan menerima skor survei tim kedua. Survei diisi 3 anggota tim tiap peserta pada minggu sebelumnya."),
+]):
+    y = 1.95 + k * 1.7
+    box(s, 7.45, y, 5.33, 1.55, ROW_ALT, line=GREY, align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP, parts=[
+        [(ttl, {"size": 11, "bold": True, "color": TEAL})],
+        [(body, {"size": 10.5})]])
 
-
-def rundown(x, title, rows):
-    box(s, x, 1.4, 5.95, 0.45, TEAL_H, parts=[[(title, {"size": 11, "bold": True, "color": WHITE})]])
-    bold_rows = [[t, [[(k, {"bold": not k.startswith(("Rehat", "Ishoma"))})]]] for t, k in rows]
-    table(s, x, 1.9, [1.35, 4.6], ["Waktu", "Kegiatan"], bold_rows, size=9.5, row_h=0.3, head_h=0.28)
-
-
-rundown(0.55, "Hari 1", day1)
-rundown(6.83, "Hari 2", day2)
-box(s, 0.55, 5.85, 12.23, 0.85, ROW_ALT, line=GREY, align=PP_ALIGN.LEFT, parts=[
-    [("Tindak lanjut hari ke-30 (daring, 90 menit): ", {"size": 10, "bold": True, "color": TEAL}),
-     ("peserta berbagi hasil rencana aksi berpasangan dan di kelas, membahas kendala, lalu menerima skor survei tim kedua. "
-      "Survei tim diisi 3 anggota tim tiap peserta pada minggu sebelumnya.", {"size": 10})]])
-
-# ---------- 17. persiapan dan evaluasi ----------
+# ---------- 14. persiapan dan evaluasi ----------
 s = page("Persiapan", "dan Evaluasi")
 table(s, 0.55, 1.15, [0.75, 4.35, 2.3], ["Kapan", "Kegiatan", "Penanggung jawab"], [
     ["H-21", "Rapat awal: jumlah peserta, jadwal, kota, daftar peserta dan atasannya", "PT MMPP dan Sanggabiz"],
@@ -659,9 +613,9 @@ table(s, 0.55, 1.15, [0.75, 4.35, 2.3], ["Kapan", "Kegiatan", "Penanggung jawab"
     ["H+40", "Laporan akhir diserahkan", "Sanggabiz"],
 ], size=10, row_h=0.52, styles={0: {"bold": True, "align": PP_ALIGN.CENTER}})
 table(s, 8.2, 1.15, [1.2, 1.85, 1.53], ["Level Kirkpatrick", "Alat ukur", "Target"], [
-    [[[("Level 1 Reaksi", {"bold": True})]], "Survei kepuasan 8 butir di akhir hari kedua", "Rata-rata minimal 4 dari 5"],
-    [[[("Level 2 Pembelajaran", {"bold": True})]], "Pre-test dan post-test: 10 soal kasus pilihan ganda dan 1 kasus tertulis yang dinilai dengan rubrik 0 sampai 8",
-     "Skor rata-rata naik. Rubrik rata-rata minimal 6 dari 8 di post-test"],
+    [[[("Level 1 Reaksi", {"bold": True})]], "Survei kepuasan 8 butir di akhir pelatihan", "Rata-rata minimal 4 dari 5"],
+    [[[("Level 2 Pembelajaran", {"bold": True})]], "Pre-test dan post-test 10 soal kasus pilihan ganda. Rubrik 0 sampai 8 di role play topik 4.2",
+     "Skor tes rata-rata naik. Rubrik rata-rata minimal 6 dari 8 di putaran ketiga"],
     [[[("Level 3 Perilaku", {"bold": True})]], "Survei 3 anggota tim per peserta sebelum pelatihan dan di hari ke-30: 8 butir perilaku empatik dan 7 butir rasa aman tim",
      "Skor dua perilaku prioritas naik pada minimal separuh peserta"],
 ], size=9.5, row_h=1.35)
@@ -671,31 +625,29 @@ text(s, 8.2, 5.65, 4.58, 1.2, [[(
     "karyawan atau hasil survei keterlibatan, data itu bisa dibandingkan pada periode berikutnya.",
     {"size": 9.5, "color": GREY_T})]])
 
-# ---------- 18. hasil yang dibawa pulang ----------
+# ---------- 15. hasil yang dibawa pulang ----------
 s = page("Hasil yang", "Dibawa Pulang", "Setiap output dihasilkan di topik yang disebut")
 left = [
     ["1.1", "Catatan tiga bentuk empati dengan contoh dari pekerjaan"],
     ["1.2", "Daftar perilaku siri' dan pacce di tempat kerja"],
-    ["1.3", "Profil empati diri dan tim, dua perilaku prioritas"],
     ["2.2", "Lembar cek pengamat praktik mendengar"],
-    ["3.1", "8 kalimat teguran yang sudah diperbaiki"],
-    ["3.2", "Dua naskah umpan balik SBI untuk kasus nyata"],
-    ["3.3", "Kartu tiga langkah menerima umpan balik"],
+    ["3.1", "5 kalimat teguran yang sudah diperbaiki"],
+    ["3.2", "Naskah umpan balik SBI untuk kasus nyata"],
+    ["4.1", "Lembar persiapan percakapan sulit dan kartu Alur 4 langkah"],
 ]
 right = [
-    ["4.2", "Lembar persiapan percakapan sulit"],
-    ["4.3", "Skor rubrik percakapan sulit dari pengamat"],
+    ["4.2", "Skor rubrik percakapan sulit dari pengamat"],
     ["5.1", "Skor rasa aman tim dan butir terendah"],
-    ["5.3", "Draf norma tim untuk rapat tim"],
-    ["6.1", "Panduan 1-on-1 30 menit"],
-    ["6.2", "Rencana aksi 30 hari dengan mitra pengingat"],
+    ["5.2", "Draf norma tim untuk rapat tim"],
+    ["6.1", "Profil empati diri dan tim"],
+    ["6.1", "Rencana aksi 30 hari dengan mitra pengingat"],
     ["H+30", "Skor survei tim sebelum dan sesudah"],
 ]
 st = {0: {"bold": True, "color": TEAL, "align": PP_ALIGN.CENTER}}
 table(s, 0.55, 1.4, [0.9, 5.05], ["Topik", "Output"], left, size=11, row_h=0.7, styles=st)
 table(s, 6.75, 1.4, [0.9, 5.05], ["Topik", "Output"], right, size=11, row_h=0.7, styles=st)
 
-# ---------- 19. rujukan ----------
+# ---------- 16. rujukan ----------
 s = page("Rujukan", "", "Sumber data dan model yang dipakai di kurikulum ini")
 refs = [
     "Gentry, W. A., Weber, T. J., dan Sadri, G. (2016). Empathy in the Workplace: A Tool for Effective Leadership. Center for Creative Leadership. doi.org/10.35613/ccl.2016.1070",
