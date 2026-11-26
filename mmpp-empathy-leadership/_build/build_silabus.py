@@ -1,6 +1,7 @@
-"""Pembuat v2 Kurikulum dan Silabus PT MMPP (gaya slide landscape 16:9), versi 1 hari.
+"""Pembuat v3 Kurikulum dan Silabus PT MMPP (gaya slide landscape 16:9), versi 1 hari dengan visual SVG
+dan contoh modul. Jalankan build_visual.py dan build_modul_contoh.py lebih dulu.
 
-v1 (2 hari) dibuat ulang dengan build_silabus_v1.py.
+v1 (2 hari): build_silabus_v1.py. v2 (1 hari, tanpa visual): build_silabus_v2.py.
 
 Gaya mengikuti reference/gaya-silabus/ (deck MyFundAction): judul dua warna,
 logo Sanggabiz dalam kapsul teal, tabel berkepala teal, kaki halaman kontak.
@@ -18,10 +19,10 @@ from pptx.util import Inches, Pt
 ROOT = Path(__file__).resolve().parent
 LOGO = ROOT / "assets" / "logo-sanggabiz-putih.png"
 OUT = ROOT.parent / "silabus" / (
-    "v2 Kurikulum dan Silabus 1 Hari - Communication and Teamwork Leadership "
+    "v3 Kurikulum dan Silabus 1 Hari - Communication and Teamwork Leadership "
     "Based on Empathy - PT MMPP.pptx"
 )
-FOOT_RIGHT = "PT MMPP | v2, 26 November 2026"
+FOOT_RIGHT = "PT MMPP | v3, 26 November 2026"
 
 INK = RGBColor(0x1D, 0x1D, 0x1F)
 TEAL = RGBColor(0x0E, 0x8A, 0x8A)
@@ -203,6 +204,37 @@ def _borders(t):
                 etree.SubElement(sf, qn("a:srgbClr"), val="000000")
 
 
+# ---------- visual SVG ----------
+VIS = ROOT / "visual"
+
+
+def vis(slide, name, x, y, w, h):
+    """Sisipkan visual: PNG sebagai cadangan, SVG asli untuk PowerPoint 2016 ke atas."""
+    from PIL import Image
+    from pptx.opc.constants import RELATIONSHIP_TYPE as RT
+    from pptx.opc.package import Part
+    from pptx.opc.packuri import PackURI
+    from pptx.oxml.ns import qn
+    from lxml import etree
+    png = VIS / f"{name}.png"
+    pw, ph = Image.open(png).size
+    k = min(w / pw, h / ph)
+    dw, dh = pw * k, ph * k
+    pic = slide.shapes.add_picture(str(png), Inches(x + (w - dw) / 2), Inches(y), Inches(dw), Inches(dh))
+    svg_path = VIS / f"{name}.svg"
+    if svg_path.exists():
+        part = Part(PackURI(f"/ppt/media/{name}.svg"), "image/svg+xml", slide.part.package,
+                    svg_path.read_bytes())
+        rid = slide.part.relate_to(part, RT.IMAGE)
+        blip = pic._element.find(".//" + qn("a:blip"))
+        ext_lst = etree.SubElement(blip, qn("a:extLst"))
+        ext = etree.SubElement(ext_lst, qn("a:ext"), uri="{96DAC541-7B7A-43D3-8B79-37D633B846F1}")
+        svgb = etree.SubElement(ext, "{http://schemas.microsoft.com/office/drawing/2016/SVG/main}svgBlip",
+                                nsmap={"asvg": "http://schemas.microsoft.com/office/drawing/2016/SVG/main"})
+        svgb.set(qn("r:embed"), rid)
+    return pic
+
+
 # ---------- 1. sampul ----------
 s = prs.slides.add_slide(BLANK)
 box(s, 0, 0, 13.333, 7.5, TEAL_D)
@@ -219,138 +251,23 @@ text(s, 0.9, 5.7, 11.0, 0.9, [[("Disiapkan untuk PT Makassar Mega Putra Prima", 
 
 # ---------- 2. kebutuhan dan hasil ----------
 s = page("Kebutuhan dan", "Hasil yang Diharapkan",
-         "Diambil dari kebutuhan pelatihan yang disampaikan PT MMPP, November 2026")
-
-
-def numbered_panel(slide, x, title, color, items):
-    box(slide, x, 1.45, 5.95, 0.5, color,
-        parts=[[(title, {"size": 12, "bold": True, "color": WHITE})]])
-    box(slide, x, 1.95, 5.95, 4.75, WHITE, line=GREY)
-    for k, it in enumerate(items):
-        y = 2.1 + k * 0.9
-        box(slide, x + 0.2, y + 0.08, 0.42, 0.42, color, MSO_SHAPE.OVAL,
-            parts=[[(str(k + 1), {"size": 10, "bold": True, "color": WHITE})]])
-        text(slide, x + 0.75, y, 5.0, 0.85, [[(it, {"size": 11})]], anchor=MSO_ANCHOR.MIDDLE)
-
-
-numbered_panel(s, 0.55, "Kebutuhan PT MMPP", TEAL_H, [
-    "Memperkuat keterampilan komunikasi para pemimpin",
-    "Membangun pola pikir kolaboratif di dalam dan antartim",
-    "Mengembangkan kemampuan memimpin dengan pendekatan berbasis empati",
-    "Pelatihan luring dan privat, khusus karyawan PT MMPP",
-    "Januari sampai Maret 2027 di Makassar atau Jakarta, dalam satu paket dengan tempat",
-])
-numbered_panel(s, 6.75, "Yang bisa dikerjakan peserta setelah pelatihan", BLUE, [
-    "Mendengar sampai paham isi dan perasaan anggota tim sebelum menanggapi",
-    "Memberi umpan balik dengan model SBI tanpa menjatuhkan martabat orang",
-    "Memimpin percakapan sulit dengan Alur Percakapan Empatik, skor minimal 6 dari 8",
-    "Membaca skor rasa aman psikologis timnya dan menyusun norma tim",
-    "Menjalankan rencana aksi 30 hari yang dipantau lewat survei anggota tim",
-])
+         "Tiga tujuan di brief PT MMPP, enam modul, dan yang bisa dikerjakan peserta setelah pelatihan")
+vis(s, "01-kebutuhan-ke-hasil", 0.55, 1.4, 12.23, 5.5)
 
 # ---------- 3. riset pendukung ----------
 s = page("Mengapa", "Empati dalam Memimpin",
          "Empati adalah keterampilan kerja yang bisa dilatih dan diukur. Empat temuan riset yang menjadi dasar program")
-cards = [
-    ("6.731 manajer, 38 negara",
-     "Manajer yang dinilai bawahannya lebih empatik dinilai atasannya berkinerja lebih baik. "
-     "Pengaruh empati lebih besar di budaya dengan jarak kekuasaan tinggi.",
-     "Center for Creative Leadership, 2016"),
-    ("76% dan 32%",
-     "Karyawan dengan pemimpin senior yang sangat empatik merasa terlibat 76 persen, "
-     "dibanding 32 persen pada pemimpin yang kurang empatik. Survei 889 karyawan.",
-     "Catalyst, 2021"),
-    ("51 tim kerja",
-     "Rasa aman psikologis berkaitan dengan perilaku belajar tim, dan perilaku belajar "
-     "berkaitan dengan kinerja tim. Studi di perusahaan manufaktur.",
-     "Edmondson, Administrative Science Quarterly, 1999"),
-    ("Faktor pertama dari lima",
-     "Riset Google atas tim-timnya sendiri menempatkan rasa aman psikologis sebagai faktor "
-     "paling mendasar dari lima ciri tim yang efektif.",
-     "Google, Project Aristotle, 2016"),
-]
-for k, (big, body, src) in enumerate(cards):
-    x = 0.55 + k * 3.1
-    box(s, x, 1.45, 2.95, 3.3, ROW_ALT, MSO_SHAPE.ROUNDED_RECTANGLE, line=GREY)
-    text(s, x + 0.15, 1.6, 2.65, 0.8, [[(big, {"size": 18, "bold": True, "color": TEAL})]])
-    text(s, x + 0.15, 2.4, 2.65, 1.7, [[(body, {"size": 11})]])
-    box(s, x + 0.15, 4.15, 2.65, 0.45, PINK, MSO_SHAPE.ROUNDED_RECTANGLE,
-        parts=[[(src, {"size": 8.5, "bold": True})]])
-box(s, 0.55, 4.95, 12.23, 1.75, WHITE, line=GREY, anchor=MSO_ANCHOR.TOP, align=PP_ALIGN.LEFT,
-    parts=[
-        [("Yang membuat program ini berbeda", {"size": 12, "bold": True, "color": TEAL})],
-        [("Kasus nyata PT MMPP. ", {"size": 11, "bold": True}),
-         ("Asesmen awal mengumpulkan percakapan sulit yang benar-benar dihadapi peserta. Tiga kasus terbanyak menjadi bahan role play.", {"size": 11})],
-        [("Nilai lokal siri' na pacce. ", {"size": 11, "bold": True}),
-         ("Pacce berarti ikut merasakan kesusahan orang lain, siri' berarti harga diri. Keduanya dipakai sebagai bahasa bersama untuk empati dan menjaga martabat saat menegur.", {"size": 11})],
-        [("Terukur sebelum dan sesudah. ", {"size": 11, "bold": True}),
-         ("Rubrik percakapan 0 sampai 8 dipakai di role play. Survei singkat oleh anggota tim diambil sebelum pelatihan dan 30 hari sesudahnya.", {"size": 11})],
-    ])
+vis(s, "02-riset", 0.55, 1.35, 12.23, 5.6)
 
 # ---------- 4. alur program ----------
 s = page("Alur Program", "dan Metode",
-         "Enam tahap dari asesmen kebutuhan sampai laporan. Metode: ADDIE, andragogi, Bloom, Kirkpatrick")
-steps = [
-    ("Asesmen kebutuhan",
-     "Formulir diri untuk peserta, survei singkat oleh 3 anggota tim tiap peserta, survei rasa aman tim 7 butir, wawancara 30 menit dengan 3 sampai 5 peserta dan atasannya",
-     "Profil peserta dan 3 kasus utama"),
-    ("Penyesuaian modul dan kasus",
-     "Kasus role play, kalimat latihan, dan kartu peran disusun dari hasil asesmen. Modul disetujui HR PT MMPP sebelum dicetak",
-     "Modul, kartu peran, lembar kerja"),
-    ("Persiapan tempat",
-     "Ruang kelas dengan meja kelompok 5 orang, ruang cukup untuk latihan bertiga, proyektor, flipchart, konsumsi",
-     "Ruang dan bahan siap"),
-    ("Pelatihan 1 hari",
-     "Enam modul, 340 menit materi, 08.30 - 16.30. Pre-test di awal dan post-test di akhir",
-     "Skor tes, rubrik, norma tim, rencana 30 hari"),
-    ("Tindak lanjut 30 hari",
-     "Survei anggota tim diulang di hari ke-30. Sesi daring 90 menit untuk berbagi penerapan dan kendala",
-     "Skor survei sebelum dan sesudah"),
-    ("Evaluasi dan laporan",
-     "Analisis pre-test dan post-test, skor rubrik, survei kepuasan, perubahan skor survei tim, rekomendasi lanjutan",
-     "Laporan akhir"),
-]
-for k, (ttl, body, out) in enumerate(steps):
-    x = 0.55 + k * 2.07
-    box(s, x, 1.5, 1.89, 3.55, GREY, MSO_SHAPE.ROUNDED_RECTANGLE)
-    box(s, x + 0.69, 1.62, 0.5, 0.5, CYAN, MSO_SHAPE.OVAL,
-        parts=[[(str(k + 1), {"size": 12, "bold": True, "color": WHITE})]])
-    text(s, x + 0.08, 2.2, 1.73, 0.65, [[(ttl, {"size": 11, "bold": True})]], align=PP_ALIGN.CENTER)
-    text(s, x + 0.08, 2.85, 1.73, 2.1, [[(body, {"size": 8.5})]])
-    box(s, x + 0.08, 5.15, 1.73, 0.6, PINK, MSO_SHAPE.ROUNDED_RECTANGLE,
-        parts=[[(out, {"size": 8.5, "bold": True})]])
-    if k < 5:
-        line(s, x + 1.9, 3.3, x + 2.06, 3.3, TEAL_H, 1.5)
-methods = [
-    ("ADDIE: ", "Alur program dari asesmen kebutuhan sampai evaluasi (tahap 1 sampai 6)"),
-    ("Andragogi: ", "Peserta belajar dari kasusnya sendiri lewat role play dan refleksi, trainer berperan sebagai fasilitator"),
-    ("Taksonomi Bloom revisi: ", "Tujuan tiap topik ditulis dengan kata kerja terukur, kode C2 sampai C6"),
-    ("Kirkpatrick: ", "Evaluasi level 1 sampai 3: survei kepuasan, pre-test dan post-test, rubrik role play, survei tim 30 hari"),
-]
-for k, (a, b) in enumerate(methods):
-    text(s, 0.55 + k * 3.08, 5.95, 2.95, 0.9, [[(a, {"size": 9, "bold": True, "color": TEAL}),
-                                               (b, {"size": 9})]])
+         "Enam tahap dari asesmen kebutuhan sampai laporan. Metode: ADDIE, backward design, andragogi, Bloom, Kirkpatrick")
+vis(s, "03-alur-program", 0.55, 1.4, 12.23, 5.55)
 
 # ---------- 5. ringkasan program ----------
 s = page("Ringkasan", "Program",
-         "Satu hari tatap muka, 340 menit materi, ditambah tindak lanjut daring 90 menit di hari ke-30")
-table(s, 0.55, 1.4, [3.2, 5.3, 1.0, 2.73],
-      ["Modul", "Topik", "Menit", "Hasil utama"],
-      [
-          ["M1 Empati dalam Kepemimpinan", "1.1 Empati di tempat kerja dan buktinya\n1.2 Pacce: empati dalam nilai lokal", "40", "Daftar perilaku siri' dan pacce"],
-          ["M2 Mendengar untuk Memahami", "2.1 Tingkat mendengar dan penghambatnya\n2.2 Bertanya terbuka dan merefleksikan perasaan", "60", "Lembar cek praktik mendengar"],
-          ["M3 Umpan Balik yang Menjaga Martabat", "3.1 Bahasa yang menjaga martabat\n3.2 Umpan balik dengan model SBI dan niat", "60", "Naskah umpan balik dari kasus nyata"],
-          ["M4 Percakapan Sulit dengan Empati", "4.1 Alur Percakapan Empatik 4 langkah\n4.2 Role play kasus nyata", "90", "Skor rubrik percakapan 0 sampai 8"],
-          ["M5 Tim yang Aman untuk Bicara", "5.1 Rasa aman psikologis dalam tim\n5.2 Norma tim", "60", "Draf norma tim"],
-          ["M6 Rencana Aksi 30 Hari", "6.1 Profil empati dan rencana aksi", "30", "Rencana aksi 30 hari"],
-          [[[("Jumlah materi", {"bold": True})]], "Di luar pembukaan, tes, dan penutupan (50 menit)", [[("340", {"bold": True})]], ""],
-      ],
-      size=10.5, row_h=0.6,
-      styles={0: {"bold": True, "color": TEAL}, 2: {"align": PP_ALIGN.CENTER}})
-text(s, 0.55, 6.25, 12.23, 0.6, [[(
-    "Rancangan untuk satu kelas berisi paling banyak 24 peserta dengan satu trainer dan satu co-fasilitator. "
-    "Jumlah kelas menyesuaikan jumlah peserta. Jam mengikuti waktu setempat. Kelas dibuat padat praktik: "
-    "sekitar 240 dari 340 menit materi dipakai untuk latihan, role play, dan kerja kelompok.", {"size": 10, "color": GREY_T})]])
+         "Satu hari tatap muka, enam modul, 340 menit materi. Tiga perempat waktu materi dipakai untuk praktik")
+vis(s, "04-ringkasan-modul", 0.55, 1.35, 12.23, 5.6)
 
 # ---------- 6 sampai 9. silabus per modul ----------
 HEAD = ["Modul & fokus", "Topik", "Outline materi", "Tujuan pembelajaran", "Format"]
@@ -530,124 +447,79 @@ activity_slide("dan Ukuran Keberhasilan M4 sampai M6", [
 # ---------- 12. alat kerja ----------
 s = page("Alur Percakapan", "Empatik 4 Langkah",
          "Satu alur untuk umpan balik, teguran, dan perbedaan pendapat, dinilai dengan rubrik 0 sampai 8")
-langkah = [
-    ("Siapkan", "Pisahkan fakta dan tafsiran. Tetapkan tujuan yang sama-sama diinginkan",
-     "Fakta tertulis terpisah dari tafsiran, tujuan bersama jelas"),
-    ("Dengarkan", "Buka dengan fakta dan satu pertanyaan terbuka. Refleksikan perasaan, beri jeda",
-     "Pertanyaan terbuka dan minimal satu refleksi perasaan"),
-    ("Akui", "Sebut kepentingan dan kekhawatiran kedua pihak tanpa menyalahkan",
-     "Kepentingan kedua pihak disebut, martabat lawan bicara terjaga"),
-    ("Sepakati", "Tutup dengan langkah yang jelas dan cara memantaunya",
-     "Langkah, penanggung jawab, waktu, dan cara memantau disebut"),
-]
-for k, (nm, desc, sk) in enumerate(langkah):
-    x = 0.55 + k * 3.1
-    box(s, x, 1.45, 2.95, 0.75, TEAL_H if k % 2 == 0 else BLUE, MSO_SHAPE.ROUNDED_RECTANGLE,
-        parts=[[(f"{k + 1}  {nm}", {"size": 14, "bold": True, "color": WHITE})]])
-    text(s, x + 0.1, 2.28, 2.75, 0.85, [[(desc, {"size": 10})]], align=PP_ALIGN.CENTER)
-    box(s, x, 3.15, 2.95, 0.85, ROW_ALT, MSO_SHAPE.ROUNDED_RECTANGLE, line=GREY,
-        align=PP_ALIGN.LEFT, parts=[[("Skor 2: ", {"size": 9, "bold": True, "color": TEAL}),
-                                     (sk, {"size": 9})]])
-box(s, 0.55, 4.25, 8.2, 2.55, WHITE, line=GREY, align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP, parts=[
-    [("Contoh rekaan: supervisor dan staf administrasi gudang", {"size": 10.5, "bold": True, "color": TEAL})],
-    [("Siapkan: ", {"size": 10, "bold": True}),
-     ("Fakta: laporan stok terlambat 3 kali bulan ini. Tafsiran saya: dia kurang peduli. Tujuan bersama: laporan tepat waktu tanpa lembur berlebihan.", {"size": 10})],
-    [("Dengarkan: ", {"size": 10, "bold": True}),
-     ("\"Laporan stok tiga kali terlambat bulan ini. Bagaimana keadaannya dari sisi kamu?\"", {"size": 10})],
-    [("Akui: ", {"size": 10, "bold": True}),
-     ("\"Jadi data dari gudang sering baru masuk sore, dan kamu kesal karena kamu yang ditegur. Saya juga perlu laporan itu untuk rapat pagi.\"", {"size": 10})],
-    [("Sepakati: ", {"size": 10, "bold": True}),
-     ("\"Besok saya bicara dengan kepala gudang supaya data masuk jam 14.00. Jumat kamu kabari saya apakah berjalan.\"", {"size": 10})],
-])
-box(s, 9.0, 4.25, 3.78, 2.55, TEAL_L, align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP, parts=[
-    [("Cara memakai rubrik", {"size": 10.5, "bold": True, "color": TEAL})],
-    [("Tiap langkah diberi skor 0, 1, atau 2. Pengamat mengisi rubrik di role play topik 4.2, tiga putaran. Peserta membawa pulang kartu alur ini untuk dipakai di tempat kerja.", {"size": 9.5})],
-    [("Target: skor rata-rata minimal 6 dari 8 di putaran ketiga role play.", {"size": 9.5, "bold": True})],
-])
+vis(s, "06-alur-percakapan", 0.55, 1.35, 12.23, 5.6)
 
 # ---------- 13. rundown ----------
 s = page("Rundown", "Satu Hari",
-         "08.30 - 16.30 waktu setempat. 390 menit kegiatan: 340 menit materi, 50 menit pembukaan, tes, dan penutupan")
-day = [
-    ("08.30 - 08.45", "Pembukaan, tujuan pelatihan, kesepakatan kelas"),
-    ("08.45 - 08.55", "Pre-test"),
-    ("08.55 - 09.35", "M1 Empati dalam Kepemimpinan"),
-    ("09.35 - 10.35", "M2 Mendengar untuk Memahami"),
-    ("10.35 - 10.50", "Rehat"),
-    ("10.50 - 11.50", "M3 Umpan Balik yang Menjaga Martabat"),
-    ("11.50 - 12.50", "Ishoma"),
-    ("12.50 - 14.20", "M4 Percakapan Sulit dengan Empati"),
-    ("14.20 - 14.35", "Rehat"),
-    ("14.35 - 15.35", "M5 Tim yang Aman untuk Bicara"),
-    ("15.35 - 16.05", "M6 Rencana Aksi 30 Hari"),
-    ("16.05 - 16.15", "Post-test"),
-    ("16.15 - 16.30", "Survei kepuasan, penutupan, sertifikat"),
-]
-box(s, 0.55, 1.4, 6.6, 0.45, TEAL_H, parts=[[("Hari pelatihan", {"size": 11, "bold": True, "color": WHITE})]])
-table(s, 0.55, 1.9, [1.5, 5.1], ["Waktu", "Kegiatan"],
-      [[t, [[(k, {"bold": not k.startswith(("Rehat", "Ishoma"))})]]] for t, k in day],
-      size=10, row_h=0.33, head_h=0.28)
-box(s, 7.45, 1.4, 5.33, 0.45, BLUE, parts=[[("Sebelum dan sesudah hari pelatihan", {"size": 11, "bold": True, "color": WHITE})]])
-for k, (ttl, body) in enumerate([
-    ("H-18 sampai H-10  Asesmen awal",
-     "Formulir diri, survei 3 anggota tim, survei rasa aman tim, wawancara 3 sampai 5 peserta. Hasilnya menjadi kasus role play dan profil empati, sehingga waktu kelas tidak terpakai untuk mengumpulkan kasus."),
-    ("H+30  Tindak lanjut daring, 90 menit",
-     "Peserta berbagi hasil rencana aksi, membahas kendala, dan menerima skor survei tim kedua. Survei diisi 3 anggota tim tiap peserta pada minggu sebelumnya."),
-]):
-    y = 1.95 + k * 1.7
-    box(s, 7.45, y, 5.33, 1.55, ROW_ALT, line=GREY, align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP, parts=[
-        [(ttl, {"size": 11, "bold": True, "color": TEAL})],
-        [(body, {"size": 10.5})]])
+         "08.30 - 16.30 waktu setempat. 340 menit materi, 50 menit pembukaan, tes, dan penutupan, 90 menit istirahat")
+vis(s, "05-peta-hari", 0.55, 1.35, 12.23, 5.6)
 
-# ---------- 14. persiapan dan evaluasi ----------
-s = page("Persiapan", "dan Evaluasi")
-table(s, 0.55, 1.15, [0.75, 4.35, 2.3], ["Kapan", "Kegiatan", "Penanggung jawab"], [
-    ["H-21", "Rapat awal: jumlah peserta, jadwal, kota, daftar peserta dan atasannya", "PT MMPP dan Sanggabiz"],
-    ["H-18", "Asesmen awal dikirim: formulir diri, survei 3 anggota tim, survei rasa aman tim", "Sanggabiz, disebarkan HR PT MMPP"],
-    ["H-14", "Wawancara 30 menit dengan 3 sampai 5 peserta dan atasannya", "Trainer"],
-    ["H-10", "Rekap asesmen, pemilihan 3 kasus utama, profil empati per peserta", "Sanggabiz"],
-    ["H-7", "Modul, kartu peran, dan lembar kerja disetujui", "HR PT MMPP"],
-    ["H-3", "Cetak bahan, konfirmasi ruang, konsumsi, dan daftar hadir", "Sanggabiz"],
-    ["H-1", "Penataan ruang: meja kelompok 5 orang, proyektor, flipchart, pengeras suara", "Sanggabiz dan pihak tempat"],
-    ["H+30", "Survei tim kedua dan sesi tindak lanjut daring", "Sanggabiz"],
-    ["H+40", "Laporan akhir diserahkan", "Sanggabiz"],
-], size=10, row_h=0.52, styles={0: {"bold": True, "align": PP_ALIGN.CENTER}})
-table(s, 8.2, 1.15, [1.2, 1.85, 1.53], ["Level Kirkpatrick", "Alat ukur", "Target"], [
-    [[[("Level 1 Reaksi", {"bold": True})]], "Survei kepuasan 8 butir di akhir pelatihan", "Rata-rata minimal 4 dari 5"],
-    [[[("Level 2 Pembelajaran", {"bold": True})]], "Pre-test dan post-test 10 soal kasus pilihan ganda. Rubrik 0 sampai 8 di role play topik 4.2",
-     "Skor tes rata-rata naik. Rubrik rata-rata minimal 6 dari 8 di putaran ketiga"],
-    [[[("Level 3 Perilaku", {"bold": True})]], "Survei 3 anggota tim per peserta sebelum pelatihan dan di hari ke-30: 8 butir perilaku empatik dan 7 butir rasa aman tim",
-     "Skor dua perilaku prioritas naik pada minimal separuh peserta"],
-], size=9.5, row_h=1.35)
-text(s, 8.2, 5.65, 4.58, 1.2, [[(
-    "Level 4 (dampak bisnis) tidak kami janjikan karena perubahan angka bisnis dalam 30 hari "
-    "dipengaruhi banyak hal di luar pelatihan. Bila PT MMPP memiliki data seperti tingkat keluar "
-    "karyawan atau hasil survei keterlibatan, data itu bisa dibandingkan pada periode berikutnya.",
-    {"size": 9.5, "color": GREY_T})]])
+# ---------- 14. persiapan ----------
+s = page("Persiapan", "Sebelum dan Sesudah Pelatihan",
+         "Sepuluh titik kerja dari rapat awal sampai laporan akhir, dengan penanggung jawabnya")
+vis(s, "07-persiapan", 0.55, 1.35, 12.23, 5.6)
 
-# ---------- 15. hasil yang dibawa pulang ----------
-s = page("Hasil yang", "Dibawa Pulang", "Setiap output dihasilkan di topik yang disebut")
-left = [
-    ["1.1", "Catatan tiga bentuk empati dengan contoh dari pekerjaan"],
-    ["1.2", "Daftar perilaku siri' dan pacce di tempat kerja"],
-    ["2.2", "Lembar cek pengamat praktik mendengar"],
-    ["3.1", "5 kalimat teguran yang sudah diperbaiki"],
-    ["3.2", "Naskah umpan balik SBI untuk kasus nyata"],
-    ["4.1", "Lembar persiapan percakapan sulit dan kartu Alur 4 langkah"],
-]
-right = [
-    ["4.2", "Skor rubrik percakapan sulit dari pengamat"],
-    ["5.1", "Skor rasa aman tim dan butir terendah"],
-    ["5.2", "Draf norma tim untuk rapat tim"],
-    ["6.1", "Profil empati diri dan tim"],
-    ["6.1", "Rencana aksi 30 hari dengan mitra pengingat"],
-    ["H+30", "Skor survei tim sebelum dan sesudah"],
-]
-st = {0: {"bold": True, "color": TEAL, "align": PP_ALIGN.CENTER}}
-table(s, 0.55, 1.4, [0.9, 5.05], ["Topik", "Output"], left, size=11, row_h=0.7, styles=st)
-table(s, 6.75, 1.4, [0.9, 5.05], ["Topik", "Output"], right, size=11, row_h=0.7, styles=st)
+# ---------- 15. evaluasi ----------
+s = page("Evaluasi", "Kirkpatrick Level 1 sampai 3",
+         "Apa yang diukur, targetnya, dan kapan diukur")
+vis(s, "08-evaluasi", 0.55, 1.35, 12.23, 5.6)
 
-# ---------- 16. rujukan ----------
+# ---------- 16. hasil yang dibawa pulang ----------
+s = page("Hasil yang", "Dibawa Pulang", "Setiap output dihasilkan di topik yang tertulis di pojok kartu")
+vis(s, "09-hasil", 0.55, 1.4, 12.23, 5.5)
+
+# ---------- 17. standar minimal modul ----------
+s = page("Standar Minimal", "Modul Sanggabiz",
+         "Delapan bagian yang selalu ada di setiap modul peserta. Dua contoh di slide berikut memenuhi kedelapannya")
+vis(s, "10-standar-modul", 0.55, 1.4, 12.23, 4.3)
+box(s, 0.55, 5.85, 12.23, 0.9, TEAL_L, MSO_SHAPE.ROUNDED_RECTANGLE, align=PP_ALIGN.LEFT, parts=[
+    [("Cara kami menyusun modul untuk PT MMPP: ", {"size": 11, "bold": True, "color": TEAL_D}),
+     ("kerangka dan konsep disiapkan sebelum asesmen. Kasus, kalimat latihan, dan kartu peran diisi dari hasil "
+      "asesmen awal, lalu disetujui HR PT MMPP pada H-7.", {"size": 11})]])
+
+
+def contoh_slide(teal, sub, pages, captions, facts):
+    s = page("Contoh Modul", teal, sub)
+    n = len(pages)
+    gw = 2.75
+    gap = (9.3 - n * gw) / (n - 1)
+    for k, (pg, cap) in enumerate(zip(pages, captions)):
+        x = 0.55 + k * (gw + gap)
+        box(s, x - 0.03, 1.42, gw + 0.06, 3.95, GREY)
+        s.shapes.add_picture(str(VIS / pg), Inches(x), Inches(1.45), Inches(gw), Inches(3.89))
+        text(s, x, 5.42, gw, 0.6, [[(cap, {"size": 9.5, "color": GREY_T})]], align=PP_ALIGN.CENTER)
+    fx = 10.05
+    for k, (big, small) in enumerate(facts):
+        y = 1.45 + k * 1.02
+        box(s, fx, y, 2.73, 0.9, ROW_ALT if k else TEAL_H, MSO_SHAPE.ROUNDED_RECTANGLE, align=PP_ALIGN.LEFT,
+            parts=[[(big, {"size": 15, "bold": True, "color": WHITE if not k else TEAL_D})],
+                   [(small, {"size": 9.5, "color": WHITE if not k else GREY_T})]])
+    box(s, 0.55, 6.15, 12.23, 0.65, RGBColor(0xF6, 0xE5, 0xFB), MSO_SHAPE.ROUNDED_RECTANGLE,
+        align=PP_ALIGN.LEFT, parts=[[("Status: CONTOH. ", {"size": 10, "bold": True}),
+                                     ("Kasus dan kalimat latihan masih rekaan dan diganti dengan hasil asesmen awal. "
+                                      "Dokumen lengkap (docx dan PDF) disertakan terpisah.", {"size": 10})]])
+
+
+contoh_slide("M3 Umpan Balik yang Menjaga Martabat",
+             "Modul peserta dan catatan fasilitator, A4, 8 halaman",
+             ["hal-m3-01.png", "hal-m3-04.png", "hal-m3-05.png"],
+             ["Sampul dengan status dokumen", "Konsep SBI dan niat dengan contoh lengkap",
+              "Lembar kerja 3.1: menulis ulang kalimat teguran"],
+             [("8 halaman", "Modul peserta dan catatan fasilitator"),
+              ("2 lembar kerja", "Kalimat teguran dan naskah SBI"),
+              ("1 lembar cek", "Dipakai pasangan saat praktik"),
+              ("60 menit", "Alur menit di catatan fasilitator")])
+contoh_slide("M4 Percakapan Sulit dengan Empati",
+             "Modul peserta dan catatan fasilitator, A4, 10 halaman",
+             ["hal-m4-05.png", "hal-m4-07.png", "hal-m4-08.png"],
+             ["Contoh percakapan lengkap dengan skor per langkah", "Kartu peran pemimpin dan anggota tim",
+              "Rubrik pengamat 0 sampai 8 untuk 3 putaran"],
+             [("10 halaman", "Modul peserta dan catatan fasilitator"),
+              ("1 lembar persiapan", "Untuk kasus milik peserta"),
+              ("Rubrik 0 sampai 8", "Target minimal 6 di putaran ketiga"),
+              ("90 menit", "Termasuk role play 3 putaran")])
+
+# ---------- 20. rujukan ----------
 s = page("Rujukan", "", "Sumber data dan model yang dipakai di kurikulum ini")
 refs = [
     "Gentry, W. A., Weber, T. J., dan Sadri, G. (2016). Empathy in the Workplace: A Tool for Effective Leadership. Center for Creative Leadership. doi.org/10.35613/ccl.2016.1070",

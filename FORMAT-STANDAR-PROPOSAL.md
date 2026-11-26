@@ -39,10 +39,33 @@ Arahan tim, 26 November 2026: **setiap kali diminta membuat silabus, tanyakan du
 | Gaya | Bentuk | Contoh | Cocok untuk |
 |---|---|---|---|
 | A. Gaya Plan | Excel berjenjang: tab Timeline, satu tab per chapter dengan kepala modul (rujukan SKKNI, prasyarat, tools, aspek kompetensi, tujuan berkode Bloom), tab Detail Kelas berisi rundown menit | `plan-bojonegoro/silabus/` dan spesifikasinya di `plan-bojonegoro/01-SPESIFIKASI-SILABUS.md` | Program panjang banyak pertemuan, klien yang meminta rujukan SKKNI atau silabus sebagai lampiran |
-| B. Gaya slide | PowerPoint 16:9 landscape: sampul teal tua, kebutuhan dan hasil, alur program dan metode, satu slide tabel per modul (Modul & fokus, Topik, Outline materi, Tujuan pembelajaran, Format), rundown, persiapan dan evaluasi Kirkpatrick, hasil yang dibawa pulang | `reference/gaya-silabus/` (deck MyFundAction). Penerapan: `mmpp-empathy-leadership/silabus/`, skrip `mmpp-empathy-leadership/_build/build_silabus.py` | Pelatihan 1 sampai 3 hari, silabus yang dikirim atau dipresentasikan langsung ke klien |
+| B. Gaya slide | PowerPoint 16:9 landscape: sampul teal tua, kebutuhan dan hasil, alur program dan metode, satu slide tabel per modul (Modul & fokus, Topik, Outline materi, Tujuan pembelajaran, Format), rundown, persiapan dan evaluasi Kirkpatrick, hasil yang dibawa pulang | `reference/gaya-silabus/` (deck MyFundAction). Penerapan terbaru dengan visual SVG dan contoh modul: `mmpp-empathy-leadership/silabus/v3 ...pptx`, skrip `mmpp-empathy-leadership/_build/` (`build_visual.py`, `build_modul_contoh.py`, `build_silabus.py`) | Pelatihan 1 sampai 3 hari, silabus yang dikirim atau dipresentasikan langsung ke klien |
 | C. Gaya dokumen portrait | Silabus sebagai bab di proposal Word A4, memakai Tipe 1 di atas | Proposal docx di `slb-kaltim/proposal/` dan `pim-wla/proposal/` | Proposal lengkap dalam satu dokumen |
 
 Gaya baru yang dipakai tim ditambahkan ke tabel ini dengan contohnya.
+
+## Visual SVG di slide
+Arahan tim, 26 November 2026: slide yang isinya bisa digambar dibuat sebagai visual, bukan teks.
+1. Yang divisualkan: kebutuhan ke hasil, data riset, alur program, ringkasan modul, rundown hari, alat kerja, persiapan, evaluasi, hasil yang dibawa pulang.
+2. Yang tetap tabel: silabus per modul dan aktivitas per topik, karena isinya rinci dan dibaca baris per baris.
+3. Visual dibuat sebagai SVG dengan warna keluarga teal dan biru di atas, huruf Arial. Di pptx, SVG ditanam bersama PNG cadangan supaya tetap tajam di PowerPoint dan tetap tampil di aplikasi lain. Contoh dan alat bantunya: `mmpp-empathy-leadership/_build/svgkit.py` dan `build_visual.py`.
+4. Grafik angka hanya dari data yang ada dan menyebut sumbernya di dalam gambar (`ATURAN-PROPOSAL.md` bagian 7).
+
+## Standar minimal modul
+Setiap modul peserta yang kita buat, termasuk contoh modul di proposal, memuat delapan bagian berikut. Contoh: `mmpp-empathy-leadership/modul-contoh/` (M3 dan M4).
+
+| No | Bagian | Isi minimal |
+|---|---|---|
+| 1 | Sampul dan status | Judul modul, program, klien, versi, label DRAF atau CONTOH |
+| 2 | Peta modul | Tujuan berkode Bloom, durasi per topik, posisi di program, yang dibawa pulang, ukuran keberhasilan, alasan modul ini penting |
+| 3 | Konsep inti bergambar | Satu halaman per konsep dengan satu diagram |
+| 4 | Contoh lengkap | Contoh utuh dari konteks klien. Diberi label rekaan bila belum dari asesmen. Sertakan kesalahan yang sering terjadi |
+| 5 | Lembar kerja | Diisi peserta di kelas, dengan waktu pengerjaan |
+| 6 | Alat ukur | Lembar cek atau rubrik dengan target |
+| 7 | Refleksi dan tindak lanjut | Pertanyaan refleksi dan satu hal yang dicoba minggu itu |
+| 8 | Catatan fasilitator dan rujukan | Alur menit, bahan, kesalahan umum peserta dan cara meluruskan, penyesuaian setelah asesmen, sumber |
+
+Format: Word A4 portrait dengan PDF, kepala halaman berisi nama modul dan status, kaki halaman berisi kontak Sanggabiz.
 
 ## Catatan
 - Format ini memakai warna cyan dan biru. Compro Sanggabiz memakai navy `#0B396D` dan kuning `#FFC00C`. Pilih satu keluarga warna per dokumen dan konsisten. Proposal SLB Kaltim memakai keluarga compro.

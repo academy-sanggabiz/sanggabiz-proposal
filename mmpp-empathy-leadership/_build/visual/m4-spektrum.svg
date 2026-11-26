@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250" font-family="Arial, 'Liberation Sans', Helvetica, sans-serif">
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#9FB7C9"/><stop offset="0.5" stop-color="#15908F"/><stop offset="1" stop-color="#C98BA8"/></linearGradient></defs>
+<rect x="0" y="70" width="1000" height="30" rx="15" fill="url(#g)"/>
+<text font-size="17" fill="#4F6F86" text-anchor="start" font-weight="bold"><tspan x="0" y="25.3">DIAM</tspan></text>
+<text font-size="17" fill="#0D5C5B" text-anchor="middle" font-weight="bold"><tspan x="500.0" y="25.3">DIALOG</tspan></text>
+<text font-size="17" fill="#8E4468" text-anchor="end" font-weight="bold"><tspan x="1000" y="25.3">MENYERANG</tspan></text>
+<text font-size="13" fill="#555555" text-anchor="start"><tspan x="0" y="45.7">Menghindar dan menahan pendapat</tspan></text>
+<text font-size="13" fill="#555555" text-anchor="middle"><tspan x="500.0" y="45.7">Fakta, perasaan, dan usul dibicarakan</tspan></text>
+<text font-size="13" fill="#555555" text-anchor="end"><tspan x="1000" y="45.7">Memaksa pendapat dan menekan</tspan></text>
+<text font-size="14" fill="#4F6F86" text-anchor="start" font-weight="bold"><tspan x="0" y="130.6">Tanda diam</tspan></text>
+<text font-size="13" fill="#1D1D1F" text-anchor="start"><tspan x="0" y="153.7">• Mengalihkan topik</tspan></text>
+<text font-size="13" fill="#1D1D1F" text-anchor="start"><tspan x="0" y="177.7">• Setuju di mulut, tidak dijalankan</tspan></text>
+<text font-size="13" fill="#1D1D1F" text-anchor="start"><tspan x="0" y="201.7">• Jawaban singkat, menghindari tatapan</tspan></text>
+<text font-size="14" fill="#0D5C5B" text-anchor="start" font-weight="bold"><tspan x="350" y="130.6">Tanda dialog</tspan></text>
+<text font-size="13" fill="#1D1D1F" text-anchor="start"><tspan x="350" y="153.7">• Bertanya untuk memahami</tspan></text>
+<text font-size="13" fill="#1D1D1F" text-anchor="start"><tspan x="350" y="177.7">• Mengakui perasaan lawan bicara</tspan></text>
+<text font-size="13" fill="#1D1D1F" text-anchor="start"><tspan x="350" y="201.7">• Mencari langkah bersama</tspan></text>
+<text font-size="14" fill="#8E4468" text-anchor="start" font-weight="bold"><tspan x="690" y="130.6">Tanda menyerang</tspan></text>
+<text font-size="13" fill="#1D1D1F" text-anchor="start"><tspan x="690" y="153.7">• Nada meninggi, memotong</tspan></text>
+<text font-size="13" fill="#1D1D1F" text-anchor="start"><tspan x="690" y="177.7">• Menyindir atau melabeli orang</tspan></text>
+<text font-size="13" fill="#1D1D1F" text-anchor="start"><tspan x="690" y="201.7">• Membawa kesalahan lama</tspan></text>
+</svg>

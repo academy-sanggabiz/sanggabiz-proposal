@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300" font-family="Arial, 'Liberation Sans', Helvetica, sans-serif">
+<rect x="0" y="0" width="470" height="300" rx="14" fill="#F4F4F4" stroke="#D9D9D9" stroke-width="1.2"/>
+<rect x="530" y="0" width="470" height="300" rx="14" fill="#F2F8F9" stroke="#15908F" stroke-width="1.5"/>
+<text font-size="15" fill="#555555" text-anchor="start" font-weight="bold"><tspan x="24" y="33.5">MENYERANG ORANG</tspan></text>
+<text font-size="15" fill="#0D5C5B" text-anchor="start" font-weight="bold"><tspan x="554" y="33.5">MENYEBUT PERILAKU DAN DAMPAK</tspan></text>
+<text font-size="15" fill="#1D1D1F" text-anchor="start" font-style="italic"><tspan x="24" y="75.5">"Kamu tidak bisa diandalkan."</tspan></text>
+<text font-size="15" fill="#1D1D1F" text-anchor="start" font-style="italic"><tspan x="554" y="75.5">"Laporan stok terlambat dua hari minggu ini, rapat</tspan><tspan x="554" y="94.2">pagi jadi tanpa data."</tspan></text>
+<text font-size="15" fill="#1D1D1F" text-anchor="start" font-style="italic"><tspan x="24" y="151.5">"Kamu selalu telat."</tspan></text>
+<text font-size="15" fill="#1D1D1F" text-anchor="start" font-style="italic"><tspan x="554" y="151.5">"Kamu datang 08.40 tiga kali minggu ini, briefing jadi</tspan><tspan x="554" y="170.2">diulang."</tspan></text>
+<text font-size="15" fill="#1D1D1F" text-anchor="start" font-style="italic"><tspan x="24" y="227.5">"Kerjamu asal-asalan."</tspan></text>
+<text font-size="15" fill="#1D1D1F" text-anchor="start" font-style="italic"><tspan x="554" y="227.5">"Ada 4 salah input di faktur kemarin, tim keuangan</tspan><tspan x="554" y="246.2">harus memeriksa ulang."</tspan></text>
+<line x1="478" y1="150" x2="513.6" y2="150.0" stroke="#15908F" stroke-width="4"/><polygon points="522,150 509.4,156.1 509.4,143.9" fill="#15908F"/>
+</svg>

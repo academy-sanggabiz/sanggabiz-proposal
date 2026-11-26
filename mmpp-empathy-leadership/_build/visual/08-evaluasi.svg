@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1223 560" width="1223" height="560" font-family="Arial, 'Liberation Sans', Helvetica, sans-serif">
+<rect x="0" y="160" width="290" height="170" rx="12" fill="#D7ECEC"/>
+<text font-size="13" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="16" y="185.7">Level 1</tspan></text>
+<text font-size="20" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="16" y="212.0">Reaksi</tspan></text>
+<text font-size="12.5" fill="#1D1D1F" text-anchor="start"><tspan x="16" y="237.2">Survei kepuasan 8 butir di akhir</tspan><tspan x="16" y="253.5">pelatihan</tspan></text>
+<rect x="12" y="270" width="266" height="38" rx="8" fill="#FFFFFF" opacity="0.92"/>
+<text font-size="12" fill="#0D5C5B" text-anchor="start" font-weight="bold"><tspan x="24" y="288.8">Target: Rata-rata minimal 4 dari 5</tspan></text>
+<rect x="311" y="110" width="290" height="220" rx="12" fill="#33BCCF"/>
+<text font-size="13" fill="#FFFFFF" text-anchor="start" font-weight="bold"><tspan x="327" y="135.7">Level 2</tspan></text>
+<text font-size="20" fill="#FFFFFF" text-anchor="start" font-weight="bold"><tspan x="327" y="162.0">Pembelajaran</tspan></text>
+<text font-size="12.5" fill="#FFFFFF" text-anchor="start"><tspan x="327" y="187.2">Pre-test dan post-test 10 soal kasus.</tspan><tspan x="327" y="203.5">Rubrik 0 sampai 8 di role play</tspan></text>
+<rect x="323" y="220" width="266" height="54" rx="8" fill="#FFFFFF" opacity="0.92"/>
+<text font-size="12" fill="#0D5C5B" text-anchor="start" font-weight="bold"><tspan x="335" y="238.8">Target: Skor tes naik. Rubrik</tspan><tspan x="335" y="253.8">minimal 6 dari 8</tspan></text>
+<rect x="622" y="60" width="290" height="270" rx="12" fill="#15908F"/>
+<text font-size="13" fill="#FFFFFF" text-anchor="start" font-weight="bold"><tspan x="638" y="85.7">Level 3</tspan></text>
+<text font-size="20" fill="#FFFFFF" text-anchor="start" font-weight="bold"><tspan x="638" y="112.0">Perilaku</tspan></text>
+<text font-size="12.5" fill="#FFFFFF" text-anchor="start"><tspan x="638" y="137.2">Survei 3 anggota tim per peserta sebelum</tspan><tspan x="638" y="153.5">pelatihan dan di hari ke-30</tspan></text>
+<rect x="634" y="170" width="266" height="54" rx="8" fill="#FFFFFF" opacity="0.92"/>
+<text font-size="12" fill="#0D5C5B" text-anchor="start" font-weight="bold"><tspan x="646" y="188.8">Target: Dua perilaku prioritas naik</tspan><tspan x="646" y="203.8">pada minimal separuh peserta</tspan></text>
+<rect x="933" y="10" width="290" height="320" rx="12" fill="#FFFFFF" stroke="#999999" stroke-width="2" stroke-dasharray="6 5"/>
+<text font-size="13" fill="#555555" text-anchor="start" font-weight="bold"><tspan x="949" y="35.7">Level 4</tspan></text>
+<text font-size="20" fill="#555555" text-anchor="start" font-weight="bold"><tspan x="949" y="62.0">Dampak bisnis</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="start"><tspan x="949" y="87.2">Tidak kami janjikan dalam 30 hari. Bisa</tspan><tspan x="949" y="103.5">dibandingkan dengan data PT MMPP bila</tspan><tspan x="949" y="119.8">tersedia</tspan></text>
+<text font-size="12.5" fill="#0E8A8A" text-anchor="start" font-weight="bold"><tspan x="0" y="391.2">KAPAN DIUKUR</tspan></text>
+<line x1="122.3" y1="432" x2="1100.7" y2="432" stroke="#D7ECEC" stroke-width="6"/>
+<circle cx="122.3" cy="432" r="14" fill="#15908F"/>
+<text font-size="13" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="122.3" y="471.7">H-18</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="middle"><tspan x="122.3" y="493.2">Survei tim pertama, profil empati</tspan></text>
+<circle cx="366.9" cy="432" r="14" fill="#33BCCF"/>
+<text font-size="13" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="366.9" y="471.7">Hari H, 08.45</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="middle"><tspan x="366.9" y="493.2">Pre-test</tspan></text>
+<circle cx="611.5" cy="432" r="14" fill="#33BCCF"/>
+<text font-size="13" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="611.5" y="471.7">Hari H, 12.50</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="middle"><tspan x="611.5" y="493.2">Rubrik role play 3 putaran</tspan></text>
+<circle cx="856.0999999999999" cy="432" r="14" fill="#33BCCF"/>
+<text font-size="13" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="856.0999999999999" y="471.7">Hari H, 16.05</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="middle"><tspan x="856.0999999999999" y="493.2">Post-test dan survei kepuasan</tspan></text>
+<circle cx="1100.7" cy="432" r="14" fill="#15908F"/>
+<text font-size="13" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="1100.7" y="471.7">H+30</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="middle"><tspan x="1100.7" y="493.2">Survei tim kedua</tspan></text>
+</svg>

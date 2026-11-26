@@ -57,9 +57,16 @@ Versi 1 hari bisa dan lebih sesuai dengan `ATURAN-PROPOSAL.md` bagian 4 butir 1:
 | M6 | Percakapan 1-on-1 dan rencana aksi, 105 menit | Rencana aksi saja, 30 menit. Latihan 1-on-1 dihapus |
 | Post-test | Soal pilihan ganda dan kasus tertulis dengan rubrik | Soal pilihan ganda saja. Rubrik diukur di role play |
 
-Yang dikorbankan: waktu praktik per orang lebih pendek, dan tidak ada latihan 1-on-1, menerima umpan balik, serta simulasi tim. Yang dipertahankan: asesmen awal, kasus nyata, nilai siri' na pacce, Alur Percakapan Empatik dengan rubrik, survei tim 30 hari. Sekitar 240 dari 340 menit materi tetap berupa praktik.
+Yang dikorbankan: waktu praktik per orang lebih pendek, dan tidak ada latihan 1-on-1, menerima umpan balik, serta simulasi tim. Yang dipertahankan: asesmen awal, kasus nyata, nilai siri' na pacce, Alur Percakapan Empatik dengan rubrik, survei tim 30 hari. 257 dari 340 menit materi (76 persen) tetap berupa praktik, dihitung dari rundown aktivitas.
 
-Usul kami: kirim v2 sebagai penawaran utama. v1 disiapkan bila PT MMPP meminta program lebih dalam atau peserta lebih senior.
+Usul kami: kirim versi 1 hari sebagai penawaran utama. v1 disiapkan bila PT MMPP meminta program lebih dalam atau peserta lebih senior.
+
+## 3c. Silabus v3: v2 dengan visual dan contoh modul (26 November 2026)
+Permintaan tim: slide yang berisi teks dibuat visual, dan silabus disertai contoh modul sebagai standar minimal. Isi program sama dengan v2 (1 hari, 340 menit materi). v2 disimpan sebagai arsip.
+1. **Visual SVG** menggantikan teks di 9 slide: kebutuhan ke hasil, riset, alur program, ringkasan modul, alur percakapan, rundown, persiapan, evaluasi, hasil yang dibawa pulang. Tabel silabus dan aktivitas tetap tabel. Berkas SVG ada di `_build/visual/`.
+2. **Slide baru:** Standar Minimal Modul Sanggabiz, Contoh Modul M3, Contoh Modul M4, serta Persiapan dan Evaluasi dipisah. Jumlah slide 20.
+3. **Contoh modul** di `modul-contoh/`: M3 Umpan Balik yang Menjaga Martabat (8 halaman) dan M4 Percakapan Sulit dengan Empati (10 halaman), docx dan PDF. Dipilih karena keduanya punya alat kerja yang paling jelas (model SBI, Alur 4 langkah, rubrik).
+4. Perlu dicek tim: contoh di modul memakai pekerjaan rekaan (penjualan, gudang, pengiriman) karena bidang usaha PT MMPP belum diketahui. Ganti setelah profil perusahaan dan asesmen awal ada.
 
 ## 4. Usulan metode (tafsiran Claude, belum diputuskan)
 Mengikuti daftar metode di `../ATURAN-PROPOSAL.md` bagian 1.

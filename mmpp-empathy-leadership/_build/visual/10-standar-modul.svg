@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1223 420" width="1223" height="420" font-family="Arial, 'Liberation Sans', Helvetica, sans-serif">
+<rect x="0.0" y="0" width="293.75" height="190" rx="14" fill="#F2F8F9" stroke="#D9D9D9" stroke-width="1.2"/>
+<path d="M253.75,0 h26 a14,14 0 0 1 14,14 v26 z" fill="#D7ECEC"/>
+<circle cx="40.0" cy="42" r="26" fill="#15908F"/><g transform="translate(25.1,27.1) scale(1.246)"><path d="M3 5c3-1.5 6-1.5 9 0v15c-3-1.5-6-1.5-9 0z" fill="#fff"/><path d="M12 5c3-1.5 6-1.5 9 0v15c-3-1.5-6-1.5-9 0z" fill="#fff" opacity="0.8"/></g>
+<text font-size="22" fill="#0D5C5B" text-anchor="end" font-weight="bold"><tspan x="275.75" y="36.0">1</tspan></text>
+<text font-size="16" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="18.0" y="98.4">Sampul dan status</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="start"><tspan x="18.0" y="120.2">Judul modul, program, klien, versi,</tspan><tspan x="18.0" y="136.5">label DRAF atau CONTOH</tspan></text>
+<rect x="309.75" y="0" width="293.75" height="190" rx="14" fill="#F2F8F9" stroke="#D9D9D9" stroke-width="1.2"/>
+<path d="M563.5,0 h26 a14,14 0 0 1 14,14 v26 z" fill="#D7ECEC"/>
+<circle cx="349.75" cy="42" r="26" fill="#0071CE"/><g transform="translate(334.8,27.1) scale(1.246)"><circle cx="12" cy="12" r="9" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="12" cy="12" r="5" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></g>
+<text font-size="22" fill="#0D5C5B" text-anchor="end" font-weight="bold"><tspan x="585.5" y="36.0">2</tspan></text>
+<text font-size="16" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="327.75" y="98.4">Peta modul</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="start"><tspan x="327.75" y="120.2">Tujuan berkode Bloom, durasi, posisi di</tspan><tspan x="327.75" y="136.5">program, output</tspan></text>
+<rect x="619.5" y="0" width="293.75" height="190" rx="14" fill="#F2F8F9" stroke="#D9D9D9" stroke-width="1.2"/>
+<path d="M873.25,0 h26 a14,14 0 0 1 14,14 v26 z" fill="#D7ECEC"/>
+<circle cx="659.5" cy="42" r="26" fill="#15908F"/><g transform="translate(644.5,27.1) scale(1.246)"><circle cx="10" cy="10" r="6.5" fill="none" stroke="#fff" stroke-width="2.8"/><path d="M15 15l6 6" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g>
+<text font-size="22" fill="#0D5C5B" text-anchor="end" font-weight="bold"><tspan x="895.25" y="36.0">3</tspan></text>
+<text font-size="16" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="637.5" y="98.4">Konsep inti bergambar</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="start"><tspan x="637.5" y="120.2">Satu halaman per konsep, satu diagram</tspan><tspan x="637.5" y="136.5">yang mudah dibaca</tspan></text>
+<rect x="929.25" y="0" width="293.75" height="190" rx="14" fill="#F2F8F9" stroke="#D9D9D9" stroke-width="1.2"/>
+<path d="M1183.0,0 h26 a14,14 0 0 1 14,14 v26 z" fill="#D7ECEC"/>
+<circle cx="969.25" cy="42" r="26" fill="#0071CE"/><g transform="translate(954.3,27.1) scale(1.246)"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" fill="#fff"/></g>
+<text font-size="22" fill="#0D5C5B" text-anchor="end" font-weight="bold"><tspan x="1205.0" y="36.0">4</tspan></text>
+<text font-size="16" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="947.25" y="98.4">Contoh lengkap</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="start"><tspan x="947.25" y="120.2">Contoh dari konteks klien. Diberi label</tspan><tspan x="947.25" y="136.5">rekaan bila belum dari asesmen</tspan></text>
+<rect x="0.0" y="210" width="293.75" height="190" rx="14" fill="#F2F8F9" stroke="#D9D9D9" stroke-width="1.2"/>
+<path d="M253.75,210 h26 a14,14 0 0 1 14,14 v26 z" fill="#D7ECEC"/>
+<circle cx="40.0" cy="252" r="26" fill="#15908F"/><g transform="translate(25.1,237.1) scale(1.246)"><path d="M4 20l1-5L16 4l4 4L9 19z" fill="#fff"/><path d="M4 20l5-1-4-4z" fill="#000" opacity="0.25"/></g>
+<text font-size="22" fill="#0D5C5B" text-anchor="end" font-weight="bold"><tspan x="275.75" y="246.1">5</tspan></text>
+<text font-size="16" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="18.0" y="308.4">Lembar kerja</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="start"><tspan x="18.0" y="330.2">Diisi peserta di kelas, langsung dipakai</tspan><tspan x="18.0" y="346.5">di role play</tspan></text>
+<rect x="309.75" y="210" width="293.75" height="190" rx="14" fill="#F2F8F9" stroke="#D9D9D9" stroke-width="1.2"/>
+<path d="M563.5,210 h26 a14,14 0 0 1 14,14 v26 z" fill="#D7ECEC"/>
+<circle cx="349.75" cy="252" r="26" fill="#0071CE"/><g transform="translate(334.8,237.1) scale(1.246)"><rect x="5" y="4" width="14" height="18" rx="2" fill="#fff"/><rect x="9" y="2" width="6" height="4" rx="1" fill="#fff" stroke="#000" stroke-opacity="0.25"/><path d="M8.5 13l2.5 2.5 4.5-5" stroke="#000" stroke-opacity="0.35" stroke-width="2" fill="none"/></g>
+<text font-size="22" fill="#0D5C5B" text-anchor="end" font-weight="bold"><tspan x="585.5" y="246.1">6</tspan></text>
+<text font-size="16" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="327.75" y="308.4">Alat ukur</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="start"><tspan x="327.75" y="330.2">Lembar cek atau rubrik dengan target</tspan><tspan x="327.75" y="346.5">yang jelas</tspan></text>
+<rect x="619.5" y="210" width="293.75" height="190" rx="14" fill="#F2F8F9" stroke="#D9D9D9" stroke-width="1.2"/>
+<path d="M873.25,210 h26 a14,14 0 0 1 14,14 v26 z" fill="#D7ECEC"/>
+<circle cx="659.5" cy="252" r="26" fill="#15908F"/><g transform="translate(644.5,237.1) scale(1.246)"><path d="M5 22V3h12l-2 4 2 4H7v11z" fill="#fff"/></g>
+<text font-size="22" fill="#0D5C5B" text-anchor="end" font-weight="bold"><tspan x="895.25" y="246.1">7</tspan></text>
+<text font-size="16" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="637.5" y="308.4">Refleksi dan tindak lanjut</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="start"><tspan x="637.5" y="330.2">Yang dibawa dan dicoba di tempat kerja</tspan><tspan x="637.5" y="346.5">minggu itu</tspan></text>
+<rect x="929.25" y="210" width="293.75" height="190" rx="14" fill="#F2F8F9" stroke="#D9D9D9" stroke-width="1.2"/>
+<path d="M1183.0,210 h26 a14,14 0 0 1 14,14 v26 z" fill="#D7ECEC"/>
+<circle cx="969.25" cy="252" r="26" fill="#0071CE"/><g transform="translate(954.3,237.1) scale(1.246)"><circle cx="12" cy="12" r="9.5" fill="none" stroke="#fff" stroke-width="2.4"/><path d="M12 6.5V12l4 2.5" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/></g>
+<text font-size="22" fill="#0D5C5B" text-anchor="end" font-weight="bold"><tspan x="1205.0" y="246.1">8</tspan></text>
+<text font-size="16" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="947.25" y="308.4">Catatan fasilitator dan</tspan><tspan x="947.25" y="328.4">rujukan</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="start"><tspan x="947.25" y="351.2">Alur menit, bahan, kesalahan umum</tspan><tspan x="947.25" y="367.5">peserta, sumber</tspan></text>
+</svg>

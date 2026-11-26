@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1223 330" width="1223" height="330" font-family="Arial, 'Liberation Sans', Helvetica, sans-serif">
+<line x1="204.875" y1="58" x2="395.425" y2="58.0" stroke="#999999" stroke-width="3"/><polygon points="402.625,58 391.8,63.2 391.8,52.8" fill="#999999"/>
+<circle cx="152.875" cy="58" r="46" fill="#15908F"/><g transform="translate(126.4,31.6) scale(2.204)"><rect x="5" y="4" width="14" height="18" rx="2" fill="#fff"/><rect x="9" y="2" width="6" height="4" rx="1" fill="#fff" stroke="#000" stroke-opacity="0.25"/><path d="M8.5 13l2.5 2.5 4.5-5" stroke="#000" stroke-opacity="0.35" stroke-width="2" fill="none"/></g>
+<circle cx="188.875" cy="22" r="15" fill="#0D5C5B"/>
+<text font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="188.875" y="25.9">1</tspan></text>
+<text font-size="20" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="152.875" y="136.0">Siapkan</tspan></text>
+<text font-size="13" fill="#555555" text-anchor="middle"><tspan x="152.875" y="159.7">Pisahkan fakta dan tafsiran. Tetapkan</tspan><tspan x="152.875" y="176.6">tujuan bersama</tspan></text>
+<rect x="42.875" y="230" width="220" height="34" rx="17.0" fill="#D7ECEC"/><text font-size="12.5" fill="#0D5C5B" text-anchor="middle" font-weight="bold"><tspan x="152.875" y="250.4">Skor 0, 1, atau 2</tspan></text>
+<line x1="510.625" y1="58" x2="701.175" y2="58.0" stroke="#999999" stroke-width="3"/><polygon points="708.375,58 697.6,63.2 697.6,52.8" fill="#999999"/>
+<circle cx="458.625" cy="58" r="46" fill="#0071CE"/><g transform="translate(432.2,31.6) scale(2.204)"><path d="M12 3a8 8 0 0 0-8 8v5a3 3 0 0 0 3 3h2v-8H6.2A5.8 5.8 0 0 1 17.8 11H15v8h2a3 3 0 0 0 3-3v-5a8 8 0 0 0-8-8z" fill="#fff"/></g>
+<circle cx="494.625" cy="22" r="15" fill="#0D5C5B"/>
+<text font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="494.625" y="25.9">2</tspan></text>
+<text font-size="20" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="458.625" y="136.0">Dengarkan</tspan></text>
+<text font-size="13" fill="#555555" text-anchor="middle"><tspan x="458.625" y="159.7">Buka dengan fakta dan pertanyaan</tspan><tspan x="458.625" y="176.6">terbuka. Refleksikan perasaan</tspan></text>
+<rect x="348.625" y="230" width="220" height="34" rx="17.0" fill="#D7ECEC"/><text font-size="12.5" fill="#0D5C5B" text-anchor="middle" font-weight="bold"><tspan x="458.625" y="250.4">Skor 0, 1, atau 2</tspan></text>
+<line x1="816.375" y1="58" x2="1006.925" y2="58.0" stroke="#999999" stroke-width="3"/><polygon points="1014.125,58 1003.3,63.2 1003.3,52.8" fill="#999999"/>
+<circle cx="764.375" cy="58" r="46" fill="#15908F"/><g transform="translate(737.9,31.6) scale(2.204)"><path d="M12 21s-8-4.8-10-10A5.3 5.3 0 0 1 12 6.5 5.3 5.3 0 0 1 22 11c-2 5.2-10 10-10 10z" fill="#fff"/></g>
+<circle cx="800.375" cy="22" r="15" fill="#0D5C5B"/>
+<text font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="800.375" y="25.9">3</tspan></text>
+<text font-size="20" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="764.375" y="136.0">Akui</tspan></text>
+<text font-size="13" fill="#555555" text-anchor="middle"><tspan x="764.375" y="159.7">Sebut kepentingan kedua pihak tanpa</tspan><tspan x="764.375" y="176.6">menyalahkan</tspan></text>
+<rect x="654.375" y="230" width="220" height="34" rx="17.0" fill="#D7ECEC"/><text font-size="12.5" fill="#0D5C5B" text-anchor="middle" font-weight="bold"><tspan x="764.375" y="250.4">Skor 0, 1, atau 2</tspan></text>
+<circle cx="1070.125" cy="58" r="46" fill="#0071CE"/><g transform="translate(1043.7,31.6) scale(2.204)"><path d="M2 9l5-3 5 2 5-2 5 3v5l-3 2-4 3.5a1.5 1.5 0 0 1-2-.1L6 14l-4-2z" fill="#fff"/><path d="M9 12l3 3M11.5 10.5l3 3" stroke="#000" stroke-opacity="0.3" stroke-width="1.5"/></g>
+<circle cx="1106.125" cy="22" r="15" fill="#0D5C5B"/>
+<text font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="1106.125" y="25.9">4</tspan></text>
+<text font-size="20" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="1070.125" y="136.0">Sepakati</tspan></text>
+<text font-size="13" fill="#555555" text-anchor="middle"><tspan x="1070.125" y="159.7">Langkah, penanggung jawab, waktu, cara</tspan><tspan x="1070.125" y="176.6">memantau</tspan></text>
+<rect x="960.125" y="230" width="220" height="34" rx="17.0" fill="#D7ECEC"/><text font-size="12.5" fill="#0D5C5B" text-anchor="middle" font-weight="bold"><tspan x="1070.125" y="250.4">Skor 0, 1, atau 2</tspan></text>
+<text font-size="14" fill="#0D5C5B" text-anchor="middle" font-weight="bold"><tspan x="611.5" y="302.6">Total 0 sampai 8. Target: minimal 6 di putaran ketiga role play</tspan></text>
+</svg>

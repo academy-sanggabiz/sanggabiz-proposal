@@ -35,6 +35,8 @@ Silabus ditulis per sesi dan per topik, cukup rinci supaya semua pembaca memaham
 3. Aktivitas menggambarkan keadaan nyata di ruang pelatihan, bukan istilah umum.
 4. Output tiap topik ditulis jelas. Semua output dikumpulkan di bagian "Hasil yang dibawa pulang" dengan keterangan dihasilkan di topik mana.
 5. Tidak ada istilah yang bisa dibaca dua arti. Bila memakai istilah teknis, jelaskan sekali di tempat pertama muncul.
+6. **Silabus disertai 1 atau 2 contoh modul** (arahan tim, 26 November 2026, meneruskan praktik bukti kerja di `tanoto/assets/`). Contoh modul memenuhi standar minimal di `FORMAT-STANDAR-PROPOSAL.md` bagian "Standar minimal modul". Pilih modul yang paling menunjukkan cara kerja kita, biasanya modul dengan alat kerja atau rubrik. Silabus memuat slide atau halaman berisi cuplikan halaman contoh modul.
+7. **Bagian yang bisa digambar tidak ditulis sebagai teks panjang.** Alur, jadwal, perbandingan angka, dan pemetaan dibuat sebagai visual SVG yang mudah dipahami (arahan tim, 26 November 2026). Tabel silabus per modul dan tabel aktivitas tetap berupa tabel. Grafik angka mengikuti bagian 7.
 
 ## 4. Anggaran untuk klien
 0. Semua angka mengikuti `STANDAR-HARGA.md` (rentang harga, rumus keuntungan dan pajak, harga yang tidak diambil). Butir di bawah mengatur cara menampilkannya ke klien.

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1223 565" width="1223" height="565" font-family="Arial, 'Liberation Sans', Helvetica, sans-serif">
+<rect x="1" y="62" width="36.21875" height="96" rx="6" fill="#E2A9F1"/>
+<line x1="19.109375" y1="34" x2="19.109375" y2="62" stroke="#999999" stroke-width="1"/>
+<text font-size="11" fill="#555555" text-anchor="start" font-weight="bold"><tspan x="0" y="27.9">Pembukaan</tspan></text>
+<rect x="39.21875" y="62" width="23.479166666666664" height="96" rx="6" fill="#E2A9F1"/>
+<line x1="50.95833333333333" y1="54" x2="50.95833333333333" y2="62" stroke="#999999" stroke-width="1"/>
+<text font-size="11" fill="#555555" text-anchor="start" font-weight="bold"><tspan x="38.21875" y="47.9">Pre-test</tspan></text>
+<rect x="64.69791666666666" y="62" width="99.91666666666666" height="96" rx="6" fill="#0D5C5B"/>
+<text font-size="20" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="114.65625" y="93.5">M1</tspan></text>
+<text font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="114.65625" y="117.3">40 menit</tspan></text>
+<rect x="166.61458333333331" y="62" width="150.875" height="96" rx="6" fill="#0071CE"/>
+<text font-size="20" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="242.05208333333331" y="93.5">M2</tspan></text>
+<text font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="242.05208333333331" y="117.3">60 menit</tspan></text>
+<text font-size="10.5" fill="#FFFFFF" text-anchor="middle"><tspan x="242.05208333333331" y="140.9">Mendengar untuk Memahami</tspan></text>
+<rect x="319.4895833333333" y="62" width="36.21875" height="96" rx="6" fill="#D9D9D9"/>
+<line x1="337.5989583333333" y1="34" x2="337.5989583333333" y2="62" stroke="#999999" stroke-width="1"/>
+<text font-size="11" fill="#555555" text-anchor="middle" font-weight="bold"><tspan x="337.5989583333333" y="27.9">Rehat</tspan></text>
+<rect x="357.7083333333333" y="62" width="150.875" height="96" rx="6" fill="#15908F"/>
+<text font-size="20" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="433.1458333333333" y="93.5">M3</tspan></text>
+<text font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="433.1458333333333" y="117.3">60 menit</tspan></text>
+<text font-size="10.5" fill="#FFFFFF" text-anchor="middle"><tspan x="433.1458333333333" y="134.3">Umpan Balik yang Menjaga</tspan><tspan x="433.1458333333333" y="147.4">Martabat</tspan></text>
+<rect x="510.5833333333333" y="62" width="150.875" height="96" rx="6" fill="#D9D9D9"/>
+<text font-size="12.5" fill="#555555" text-anchor="middle" font-weight="bold"><tspan x="586.0208333333333" y="113.4">Ishoma</tspan></text>
+<rect x="663.4583333333333" y="62" width="227.3125" height="96" rx="6" fill="#0B4F8A"/>
+<text font-size="20" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="777.1145833333333" y="93.5">M4</tspan></text>
+<text font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="777.1145833333333" y="117.3">90 menit</tspan></text>
+<text font-size="10.5" fill="#FFFFFF" text-anchor="middle"><tspan x="777.1145833333333" y="140.9">Percakapan Sulit dengan Empati</tspan></text>
+<rect x="892.7708333333333" y="62" width="36.21875" height="96" rx="6" fill="#D9D9D9"/>
+<line x1="910.8802083333333" y1="54" x2="910.8802083333333" y2="62" stroke="#999999" stroke-width="1"/>
+<text font-size="11" fill="#555555" text-anchor="middle" font-weight="bold"><tspan x="910.8802083333333" y="47.9">Rehat</tspan></text>
+<rect x="930.9895833333333" y="62" width="150.875" height="96" rx="6" fill="#33BCCF"/>
+<text font-size="20" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="1006.4270833333333" y="93.5">M5</tspan></text>
+<text font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="1006.4270833333333" y="117.3">60 menit</tspan></text>
+<text font-size="10.5" fill="#FFFFFF" text-anchor="middle"><tspan x="1006.4270833333333" y="140.9">Tim yang Aman untuk Bicara</tspan></text>
+<rect x="1083.8645833333333" y="62" width="74.4375" height="96" rx="6" fill="#7B4C9C"/>
+<text font-size="20" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="1121.0833333333333" y="93.5">M6</tspan></text>
+<text font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="1121.0833333333333" y="117.3">30 menit</tspan></text>
+<rect x="1160.3020833333333" y="62" width="23.479166666666664" height="96" rx="6" fill="#E2A9F1"/>
+<line x1="1172.0416666666665" y1="34" x2="1172.0416666666665" y2="62" stroke="#999999" stroke-width="1"/>
+<text font-size="11" fill="#555555" text-anchor="end" font-weight="bold"><tspan x="1184.78125" y="27.9">Post-test</tspan></text>
+<rect x="1185.78125" y="62" width="36.21875" height="96" rx="6" fill="#E2A9F1"/>
+<line x1="1203.890625" y1="54" x2="1203.890625" y2="62" stroke="#999999" stroke-width="1"/>
+<text font-size="11" fill="#555555" text-anchor="end" font-weight="bold"><tspan x="1223.0" y="47.9">Penutupan</tspan></text>
+<line x1="76.4375" y1="158" x2="76.4375" y2="166" stroke="#555555" stroke-width="1.2"/>
+<text font-size="11.5" fill="#555555" text-anchor="middle"><tspan x="76.4375" y="180.3">09.00</tspan></text>
+<line x1="229.3125" y1="158" x2="229.3125" y2="166" stroke="#555555" stroke-width="1.2"/>
+<text font-size="11.5" fill="#555555" text-anchor="middle"><tspan x="229.3125" y="180.3">10.00</tspan></text>
+<line x1="382.1875" y1="158" x2="382.1875" y2="166" stroke="#555555" stroke-width="1.2"/>
+<text font-size="11.5" fill="#555555" text-anchor="middle"><tspan x="382.1875" y="180.3">11.00</tspan></text>
+<line x1="535.0625" y1="158" x2="535.0625" y2="166" stroke="#555555" stroke-width="1.2"/>
+<text font-size="11.5" fill="#555555" text-anchor="middle"><tspan x="535.0625" y="180.3">12.00</tspan></text>
+<line x1="687.9375" y1="158" x2="687.9375" y2="166" stroke="#555555" stroke-width="1.2"/>
+<text font-size="11.5" fill="#555555" text-anchor="middle"><tspan x="687.9375" y="180.3">13.00</tspan></text>
+<line x1="840.8125" y1="158" x2="840.8125" y2="166" stroke="#555555" stroke-width="1.2"/>
+<text font-size="11.5" fill="#555555" text-anchor="middle"><tspan x="840.8125" y="180.3">14.00</tspan></text>
+<line x1="993.6875" y1="158" x2="993.6875" y2="166" stroke="#555555" stroke-width="1.2"/>
+<text font-size="11.5" fill="#555555" text-anchor="middle"><tspan x="993.6875" y="180.3">15.00</tspan></text>
+<line x1="1146.5625" y1="158" x2="1146.5625" y2="166" stroke="#555555" stroke-width="1.2"/>
+<text font-size="11.5" fill="#555555" text-anchor="middle"><tspan x="1146.5625" y="180.3">16.00</tspan></text>
+<text font-size="11.5" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="0" y="180.3">08.30</tspan></text>
+<text font-size="11.5" fill="#1D1D1F" text-anchor="end" font-weight="bold"><tspan x="1223" y="180.3">16.30</tspan></text>
+<text font-size="13" fill="#0E8A8A" text-anchor="start" font-weight="bold"><tspan x="0" y="261.7">PERJALANAN PESERTA</tspan></text>
+<line x1="152.875" y1="320" x2="1070.125" y2="320" stroke="#D7ECEC" stroke-width="6"/>
+<circle cx="152.875" cy="320" r="34" fill="#15908F"/><g transform="translate(133.3,300.4) scale(1.629)"><circle cx="10" cy="10" r="6.5" fill="none" stroke="#fff" stroke-width="2.8"/><path d="M15 15l6 6" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g>
+<rect x="72.875" y="366" width="160" height="28" rx="14.0" fill="#D7ECEC"/><text font-size="12" fill="#0D5C5B" text-anchor="middle" font-weight="bold"><tspan x="152.875" y="383.3">H-18 sampai H-10</tspan></text>
+<text font-size="15.5" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="152.875" y="419.9">Asesmen awal</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="middle"><tspan x="152.875" y="443.2">Formulir diri, survei 3 anggota tim, survei</tspan><tspan x="152.875" y="459.5">rasa aman tim, wawancara. Kasus role play</tspan><tspan x="152.875" y="475.8">berasal dari sini.</tspan></text>
+<circle cx="458.625" cy="320" r="34" fill="#0071CE"/><g transform="translate(439.1,300.4) scale(1.629)"><circle cx="8" cy="7" r="3.5" fill="#fff"/><path d="M1 20c0-4 3-6.5 7-6.5s7 2.5 7 6.5z" fill="#fff"/><circle cx="17" cy="8" r="3" fill="#fff" opacity="0.8"/><path d="M14 14.2c1-.5 2-.7 3-.7 3.4 0 6 2.2 6 5.5h-6.5c0-2-.9-3.6-2.5-4.8z" fill="#fff" opacity="0.8"/></g>
+<rect x="378.625" y="366" width="160" height="28" rx="14.0" fill="#D7ECEC"/><text font-size="12" fill="#0D5C5B" text-anchor="middle" font-weight="bold"><tspan x="458.625" y="383.3">Hari H</tspan></text>
+<text font-size="15.5" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="458.625" y="419.9">Pelatihan 1 hari</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="middle"><tspan x="458.625" y="443.2">6 modul, 340 menit materi, role play dengan</tspan><tspan x="458.625" y="459.5">rubrik 0 sampai 8, pre-test dan post-test.</tspan></text>
+<circle cx="764.375" cy="320" r="34" fill="#15908F"/><g transform="translate(744.8,300.4) scale(1.629)"><path d="M5 22V3h12l-2 4 2 4H7v11z" fill="#fff"/></g>
+<rect x="684.375" y="366" width="160" height="28" rx="14.0" fill="#D7ECEC"/><text font-size="12" fill="#0D5C5B" text-anchor="middle" font-weight="bold"><tspan x="764.375" y="383.3">Hari 1 sampai 30</tspan></text>
+<text font-size="15.5" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="764.375" y="419.9">Menjalankan rencana</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="middle"><tspan x="764.375" y="443.2">Dua perilaku prioritas dengan tindakan</tspan><tspan x="764.375" y="459.5">mingguan, dipantau bersama mitra pengingat.</tspan></text>
+<circle cx="1070.125" cy="320" r="34" fill="#15908F"/><g transform="translate(1050.6,300.4) scale(1.629)"><rect x="3" y="5" width="18" height="16" rx="2" fill="#fff"/><rect x="3" y="5" width="18" height="5" fill="#000" opacity="0.2"/><rect x="7" y="2.5" width="2" height="5" rx="1" fill="#fff"/><rect x="15" y="2.5" width="2" height="5" rx="1" fill="#fff"/></g>
+<rect x="990.125" y="366" width="160" height="28" rx="14.0" fill="#D7ECEC"/><text font-size="12" fill="#0D5C5B" text-anchor="middle" font-weight="bold"><tspan x="1070.125" y="383.3">H+30</tspan></text>
+<text font-size="15.5" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="1070.125" y="419.9">Tindak lanjut daring</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="middle"><tspan x="1070.125" y="443.2">Sesi 90 menit: berbagi hasil, membahas</tspan><tspan x="1070.125" y="459.5">kendala, membaca skor survei tim kedua.</tspan></text>
+</svg>

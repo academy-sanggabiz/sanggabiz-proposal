@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1223 560" width="1223" height="560" font-family="Arial, 'Liberation Sans', Helvetica, sans-serif">
+<line x1="204.875" y1="58" x2="395.425" y2="58.0" stroke="#999999" stroke-width="3"/><polygon points="402.625,58 391.8,63.2 391.8,52.8" fill="#999999"/>
+<circle cx="152.875" cy="58" r="46" fill="#15908F"/><g transform="translate(126.4,31.6) scale(2.204)"><rect x="5" y="4" width="14" height="18" rx="2" fill="#fff"/><rect x="9" y="2" width="6" height="4" rx="1" fill="#fff" stroke="#000" stroke-opacity="0.25"/><path d="M8.5 13l2.5 2.5 4.5-5" stroke="#000" stroke-opacity="0.35" stroke-width="2" fill="none"/></g>
+<circle cx="188.875" cy="22" r="15" fill="#0D5C5B"/>
+<text font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="188.875" y="25.9">1</tspan></text>
+<text font-size="20" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="152.875" y="136.0">Siapkan</tspan></text>
+<text font-size="13" fill="#555555" text-anchor="middle"><tspan x="152.875" y="159.7">Pisahkan fakta dan tafsiran. Tetapkan</tspan><tspan x="152.875" y="176.6">tujuan bersama</tspan></text>
+<rect x="12.0" y="222" width="281.75" height="168" rx="6" fill="#FFF8D6" stroke="#E8D98A" stroke-width="1.2"/>
+<text font-size="11" fill="#8A7A20" text-anchor="start" font-weight="bold"><tspan x="24.0" y="241.9">CATATAN PEMIMPIN</tspan></text>
+<text font-size="12.5" fill="#1D1D1F" text-anchor="start"><tspan x="24.0" y="263.2">Catatan: laporan stok terlambat 3 kali</tspan><tspan x="24.0" y="279.5">bulan ini (fakta). Dia kurang peduli</tspan><tspan x="24.0" y="295.8">(tafsiran saya). Tujuan: laporan tepat</tspan><tspan x="24.0" y="312.0">waktu tanpa lembur.</tspan></text>
+<line x1="510.625" y1="58" x2="701.175" y2="58.0" stroke="#999999" stroke-width="3"/><polygon points="708.375,58 697.6,63.2 697.6,52.8" fill="#999999"/>
+<circle cx="458.625" cy="58" r="46" fill="#0071CE"/><g transform="translate(432.2,31.6) scale(2.204)"><path d="M12 3a8 8 0 0 0-8 8v5a3 3 0 0 0 3 3h2v-8H6.2A5.8 5.8 0 0 1 17.8 11H15v8h2a3 3 0 0 0 3-3v-5a8 8 0 0 0-8-8z" fill="#fff"/></g>
+<circle cx="494.625" cy="22" r="15" fill="#0D5C5B"/>
+<text font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="494.625" y="25.9">2</tspan></text>
+<text font-size="20" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="458.625" y="136.0">Dengarkan</tspan></text>
+<text font-size="13" fill="#555555" text-anchor="middle"><tspan x="458.625" y="159.7">Buka dengan fakta dan pertanyaan</tspan><tspan x="458.625" y="176.6">terbuka. Refleksikan perasaan</tspan></text>
+<rect x="317.75" y="222" width="281.75" height="168" rx="14" fill="#F2F8F9" stroke="#0071CE" stroke-width="1.5"/>
+<path d="M446.625,222 l12,-14 l12,14 z" fill="#F2F8F9" stroke="#0071CE" stroke-width="1.5"/>
+<rect x="447.625" y="221" width="22" height="4" rx="0" fill="#F2F8F9"/>
+<text font-size="11" fill="#0071CE" text-anchor="start" font-weight="bold"><tspan x="329.75" y="241.9">SUPERVISOR</tspan></text>
+<text font-size="12.5" fill="#1D1D1F" text-anchor="start" font-style="italic"><tspan x="329.75" y="263.2">"Laporan stok tiga kali terlambat bulan</tspan><tspan x="329.75" y="279.5">ini. Bagaimana keadaannya dari sisi</tspan><tspan x="329.75" y="295.8">kamu?"</tspan></text>
+<line x1="816.375" y1="58" x2="1006.925" y2="58.0" stroke="#999999" stroke-width="3"/><polygon points="1014.125,58 1003.3,63.2 1003.3,52.8" fill="#999999"/>
+<circle cx="764.375" cy="58" r="46" fill="#15908F"/><g transform="translate(737.9,31.6) scale(2.204)"><path d="M12 21s-8-4.8-10-10A5.3 5.3 0 0 1 12 6.5 5.3 5.3 0 0 1 22 11c-2 5.2-10 10-10 10z" fill="#fff"/></g>
+<circle cx="800.375" cy="22" r="15" fill="#0D5C5B"/>
+<text font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="800.375" y="25.9">3</tspan></text>
+<text font-size="20" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="764.375" y="136.0">Akui</tspan></text>
+<text font-size="13" fill="#555555" text-anchor="middle"><tspan x="764.375" y="159.7">Sebut kepentingan kedua pihak tanpa</tspan><tspan x="764.375" y="176.6">menyalahkan</tspan></text>
+<rect x="623.5" y="222" width="281.75" height="168" rx="14" fill="#F2F8F9" stroke="#15908F" stroke-width="1.5"/>
+<path d="M752.375,222 l12,-14 l12,14 z" fill="#F2F8F9" stroke="#15908F" stroke-width="1.5"/>
+<rect x="753.375" y="221" width="22" height="4" rx="0" fill="#F2F8F9"/>
+<text font-size="11" fill="#15908F" text-anchor="start" font-weight="bold"><tspan x="635.5" y="241.9">SUPERVISOR</tspan></text>
+<text font-size="12.5" fill="#1D1D1F" text-anchor="start" font-style="italic"><tspan x="635.5" y="263.2">"Jadi data gudang sering baru masuk</tspan><tspan x="635.5" y="279.5">sore, dan kamu kesal karena kamu yang</tspan><tspan x="635.5" y="295.8">ditegur. Saya juga perlu laporan itu</tspan><tspan x="635.5" y="312.0">untuk rapat pagi."</tspan></text>
+<circle cx="1070.125" cy="58" r="46" fill="#0071CE"/><g transform="translate(1043.7,31.6) scale(2.204)"><path d="M2 9l5-3 5 2 5-2 5 3v5l-3 2-4 3.5a1.5 1.5 0 0 1-2-.1L6 14l-4-2z" fill="#fff"/><path d="M9 12l3 3M11.5 10.5l3 3" stroke="#000" stroke-opacity="0.3" stroke-width="1.5"/></g>
+<circle cx="1106.125" cy="22" r="15" fill="#0D5C5B"/>
+<text font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="1106.125" y="25.9">4</tspan></text>
+<text font-size="20" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="1070.125" y="136.0">Sepakati</tspan></text>
+<text font-size="13" fill="#555555" text-anchor="middle"><tspan x="1070.125" y="159.7">Langkah, penanggung jawab, waktu, cara</tspan><tspan x="1070.125" y="176.6">memantau</tspan></text>
+<rect x="929.25" y="222" width="281.75" height="168" rx="14" fill="#F2F8F9" stroke="#0071CE" stroke-width="1.5"/>
+<path d="M1058.125,222 l12,-14 l12,14 z" fill="#F2F8F9" stroke="#0071CE" stroke-width="1.5"/>
+<rect x="1059.125" y="221" width="22" height="4" rx="0" fill="#F2F8F9"/>
+<text font-size="11" fill="#0071CE" text-anchor="start" font-weight="bold"><tspan x="941.25" y="241.9">SUPERVISOR</tspan></text>
+<text font-size="12.5" fill="#1D1D1F" text-anchor="start" font-style="italic"><tspan x="941.25" y="263.2">"Besok saya bicara dengan kepala gudang</tspan><tspan x="941.25" y="279.5">supaya data masuk jam 14.00. Jumat kamu</tspan><tspan x="941.25" y="295.8">kabari saya apakah berjalan."</tspan></text>
+<text font-size="12.5" fill="#0E8A8A" text-anchor="start" font-weight="bold"><tspan x="0" y="431.2">RUBRIK PENGAMAT</tspan></text>
+<rect x="0.0" y="444" width="243.75" height="56" rx="10" fill="#FFFFFF" stroke="#D9D9D9" stroke-width="1.2"/>
+<text font-size="14" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="14.0" y="475.9">Siapkan</tspan></text>
+<circle cx="147.75" cy="472" r="13" fill="#F2F8F9" stroke="#D9D9D9" stroke-width="1"/>
+<text font-size="12" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="147.75" y="475.3">0</tspan></text>
+<circle cx="179.75" cy="472" r="13" fill="#D7ECEC" stroke="#D9D9D9" stroke-width="1"/>
+<text font-size="12" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="179.75" y="475.3">1</tspan></text>
+<circle cx="211.75" cy="472" r="13" fill="#15908F" stroke="#D9D9D9" stroke-width="1"/>
+<text font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="211.75" y="475.3">2</tspan></text>
+<rect x="255.75" y="444" width="243.75" height="56" rx="10" fill="#FFFFFF" stroke="#D9D9D9" stroke-width="1.2"/>
+<text font-size="14" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="269.75" y="475.9">Dengarkan</tspan></text>
+<circle cx="403.5" cy="472" r="13" fill="#F2F8F9" stroke="#D9D9D9" stroke-width="1"/>
+<text font-size="12" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="403.5" y="475.3">0</tspan></text>
+<circle cx="435.5" cy="472" r="13" fill="#D7ECEC" stroke="#D9D9D9" stroke-width="1"/>
+<text font-size="12" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="435.5" y="475.3">1</tspan></text>
+<circle cx="467.5" cy="472" r="13" fill="#0071CE" stroke="#D9D9D9" stroke-width="1"/>
+<text font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="467.5" y="475.3">2</tspan></text>
+<rect x="511.5" y="444" width="243.75" height="56" rx="10" fill="#FFFFFF" stroke="#D9D9D9" stroke-width="1.2"/>
+<text font-size="14" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="525.5" y="475.9">Akui</tspan></text>
+<circle cx="659.25" cy="472" r="13" fill="#F2F8F9" stroke="#D9D9D9" stroke-width="1"/>
+<text font-size="12" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="659.25" y="475.3">0</tspan></text>
+<circle cx="691.25" cy="472" r="13" fill="#D7ECEC" stroke="#D9D9D9" stroke-width="1"/>
+<text font-size="12" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="691.25" y="475.3">1</tspan></text>
+<circle cx="723.25" cy="472" r="13" fill="#15908F" stroke="#D9D9D9" stroke-width="1"/>
+<text font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="723.25" y="475.3">2</tspan></text>
+<rect x="767.25" y="444" width="243.75" height="56" rx="10" fill="#FFFFFF" stroke="#D9D9D9" stroke-width="1.2"/>
+<text font-size="14" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="781.25" y="475.9">Sepakati</tspan></text>
+<circle cx="915.0" cy="472" r="13" fill="#F2F8F9" stroke="#D9D9D9" stroke-width="1"/>
+<text font-size="12" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="915.0" y="475.3">0</tspan></text>
+<circle cx="947.0" cy="472" r="13" fill="#D7ECEC" stroke="#D9D9D9" stroke-width="1"/>
+<text font-size="12" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="947.0" y="475.3">1</tspan></text>
+<circle cx="979.0" cy="472" r="13" fill="#0071CE" stroke="#D9D9D9" stroke-width="1"/>
+<text font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="979.0" y="475.3">2</tspan></text>
+<rect x="1023.0" y="444" width="200.0" height="56" rx="10" fill="#0D5C5B"/>
+<text font-size="15" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="1123.0" y="466.1">Total 8</tspan></text>
+<text font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan x="1123.0" y="487.3">Target minimal 6</tspan></text>
+<text font-size="11.5" fill="#999999" text-anchor="start" font-style="italic"><tspan x="0" y="530.4">Contoh rekaan: supervisor dan staf administrasi gudang. Kasus asli diambil dari asesmen awal.</tspan></text>
+</svg>

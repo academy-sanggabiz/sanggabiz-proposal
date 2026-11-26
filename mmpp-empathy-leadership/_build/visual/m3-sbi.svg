@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 330" width="1000" height="330" font-family="Arial, 'Liberation Sans', Helvetica, sans-serif">
+<line x1="224.0" y1="50" x2="250.0" y2="50.0" stroke="#999999" stroke-width="3"/><polygon points="256.0,50 247.0,54.3 247.0,45.7" fill="#999999"/>
+<circle cx="115.0" cy="50" r="40" fill="#15908F"/>
+<text font-size="30" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="115.0" y="58.2">S</tspan></text>
+<text font-size="20" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="115.0" y="122.0">Situasi</tspan></text>
+<text font-size="13.5" fill="#555555" text-anchor="middle"><tspan x="115.0" y="144.2">Kapan dan di mana</tspan></text>
+<rect x="8.0" y="196" width="214.0" height="112" rx="12" fill="#F2F8F9" stroke="#15908F" stroke-width="1.5"/>
+<text font-size="14" fill="#1D1D1F" text-anchor="start" font-style="italic"><tspan x="20.0" y="220.6">"Di rapat mingguan Senin</tspan><tspan x="20.0" y="238.8">kemarin..."</tspan></text>
+<line x1="474.0" y1="50" x2="500.0" y2="50.0" stroke="#999999" stroke-width="3"/><polygon points="506.0,50 497.0,54.3 497.0,45.7" fill="#999999"/>
+<circle cx="365.0" cy="50" r="40" fill="#0071CE"/>
+<text font-size="30" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="365.0" y="58.2">B</tspan></text>
+<text font-size="20" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="365.0" y="122.0">Perilaku</tspan></text>
+<text font-size="13.5" fill="#555555" text-anchor="middle"><tspan x="365.0" y="144.2">Yang terlihat atau terdengar,</tspan><tspan x="365.0" y="161.0">tanpa menilai</tspan></text>
+<rect x="258.0" y="196" width="214.0" height="112" rx="12" fill="#F2F8F9" stroke="#0071CE" stroke-width="1.5"/>
+<text font-size="14" fill="#1D1D1F" text-anchor="start" font-style="italic"><tspan x="270.0" y="220.6">"...kamu memotong Rina dua</tspan><tspan x="270.0" y="238.8">kali saat ia menjelaskan</tspan><tspan x="270.0" y="257.0">angka."</tspan></text>
+<line x1="724.0" y1="50" x2="750.0" y2="50.0" stroke="#999999" stroke-width="3"/><polygon points="756.0,50 747.0,54.3 747.0,45.7" fill="#999999"/>
+<circle cx="615.0" cy="50" r="40" fill="#0D5C5B"/>
+<text font-size="30" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="615.0" y="58.2">I</tspan></text>
+<text font-size="20" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="615.0" y="122.0">Dampak</tspan></text>
+<text font-size="13.5" fill="#555555" text-anchor="middle"><tspan x="615.0" y="144.2">Akibatnya pada orang, tim,</tspan><tspan x="615.0" y="161.0">atau pekerjaan</tspan></text>
+<rect x="508.0" y="196" width="214.0" height="112" rx="12" fill="#F2F8F9" stroke="#0D5C5B" stroke-width="1.5"/>
+<text font-size="14" fill="#1D1D1F" text-anchor="start" font-style="italic"><tspan x="520.0" y="220.6">"Rina berhenti bicara, dan</tspan><tspan x="520.0" y="238.8">kita tidak dengar</tspan><tspan x="520.0" y="257.0">usulnya."</tspan></text>
+<circle cx="865.0" cy="50" r="40" fill="#7B4C9C"/>
+<text font-size="30" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="865.0" y="58.2">N</tspan></text>
+<text font-size="20" fill="#1D1D1F" text-anchor="middle" font-weight="bold"><tspan x="865.0" y="122.0">Niat</tspan></text>
+<text font-size="13.5" fill="#555555" text-anchor="middle"><tspan x="865.0" y="144.2">Pertanyaan agar umpan balik</tspan><tspan x="865.0" y="161.0">dua arah</tspan></text>
+<rect x="758.0" y="196" width="214.0" height="112" rx="12" fill="#F2F8F9" stroke="#7B4C9C" stroke-width="1.5"/>
+<text font-size="14" fill="#1D1D1F" text-anchor="start" font-style="italic"><tspan x="770.0" y="220.6">"Apa yang sedang kamu</tspan><tspan x="770.0" y="238.8">pikirkan waktu itu?"</tspan></text>
+</svg>

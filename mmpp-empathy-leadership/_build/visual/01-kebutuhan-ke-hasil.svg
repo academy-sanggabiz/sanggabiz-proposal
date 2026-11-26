@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1223 550" width="1223" height="550" font-family="Arial, 'Liberation Sans', Helvetica, sans-serif">
+<text font-size="13" fill="#0E8A8A" text-anchor="start" font-weight="bold"><tspan x="0" y="11.7">KEBUTUHAN PT MMPP</tspan></text>
+<text font-size="13" fill="#0E8A8A" text-anchor="start" font-weight="bold"><tspan x="445" y="11.7">MODUL PELATIHAN</tspan></text>
+<text font-size="13" fill="#0071CE" text-anchor="start" font-weight="bold"><tspan x="890" y="11.7">YANG BISA DIKERJAKAN PESERTA</tspan></text>
+<path d="M335,95 C390.0,95 390.0,126.0 445,126.0" fill="none" stroke="#D7ECEC" stroke-width="4"/>
+<path d="M335,95 C390.0,95 390.0,192.0 445,192.0" fill="none" stroke="#D7ECEC" stroke-width="4"/>
+<path d="M335,95 C390.0,95 390.0,258.0 445,258.0" fill="none" stroke="#D7ECEC" stroke-width="4"/>
+<path d="M335,225 C390.0,225 390.0,324.0 445,324.0" fill="none" stroke="#D7ECEC" stroke-width="4"/>
+<path d="M335,225 C390.0,225 390.0,258.0 445,258.0" fill="none" stroke="#D7ECEC" stroke-width="4"/>
+<path d="M335,355 C390.0,355 390.0,60.0 445,60.0" fill="none" stroke="#D7ECEC" stroke-width="4"/>
+<path d="M335,355 C390.0,355 390.0,258.0 445,258.0" fill="none" stroke="#D7ECEC" stroke-width="4"/>
+<path d="M335,355 C390.0,355 390.0,390.0 445,390.0" fill="none" stroke="#D7ECEC" stroke-width="4"/>
+<rect x="0" y="40" width="335" height="110" rx="12" fill="#F2F8F9" stroke="#D9D9D9" stroke-width="1.2"/>
+<circle cx="48" cy="95" r="30" fill="#15908F"/><g transform="translate(30.8,77.8) scale(1.438)"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" fill="#fff"/></g>
+<text font-size="18" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="92" y="78.2">Komunikasi pemimpin</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="start"><tspan x="92" y="96.2">Memperkuat keterampilan komunikasi</tspan><tspan x="92" y="111.9">para pemimpin</tspan></text>
+<rect x="0" y="170" width="335" height="110" rx="12" fill="#F2F8F9" stroke="#D9D9D9" stroke-width="1.2"/>
+<circle cx="48" cy="225" r="30" fill="#15908F"/><g transform="translate(30.8,207.8) scale(1.438)"><circle cx="8" cy="7" r="3.5" fill="#fff"/><path d="M1 20c0-4 3-6.5 7-6.5s7 2.5 7 6.5z" fill="#fff"/><circle cx="17" cy="8" r="3" fill="#fff" opacity="0.8"/><path d="M14 14.2c1-.5 2-.7 3-.7 3.4 0 6 2.2 6 5.5h-6.5c0-2-.9-3.6-2.5-4.8z" fill="#fff" opacity="0.8"/></g>
+<text font-size="18" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="92" y="208.2">Pola pikir kolaboratif</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="start"><tspan x="92" y="226.2">Kerja sama di dalam dan antartim</tspan></text>
+<rect x="0" y="300" width="335" height="110" rx="12" fill="#F2F8F9" stroke="#D9D9D9" stroke-width="1.2"/>
+<circle cx="48" cy="355" r="30" fill="#15908F"/><g transform="translate(30.8,337.8) scale(1.438)"><path d="M12 21s-8-4.8-10-10A5.3 5.3 0 0 1 12 6.5 5.3 5.3 0 0 1 22 11c-2 5.2-10 10-10 10z" fill="#fff"/></g>
+<text font-size="18" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="92" y="338.2">Kepemimpinan berbasis</tspan><tspan x="92" y="360.7">empati</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="start"><tspan x="92" y="379.2">Memimpin dengan memahami orang lain</tspan></text>
+<rect x="445" y="34" width="335" height="52" rx="26.0" fill="#FFFFFF" stroke="#0D5C5B" stroke-width="2"/>
+<circle cx="471.0" cy="60.0" r="22.0" fill="#0D5C5B"/><g transform="translate(458.4,47.4) scale(1.054)"><path d="M12 21s-8-4.8-10-10A5.3 5.3 0 0 1 12 6.5 5.3 5.3 0 0 1 22 11c-2 5.2-10 10-10 10z" fill="#fff"/></g>
+<text font-size="13.5" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="505" y="63.7">M1  Empati dalam Kepemimpinan</tspan></text>
+<rect x="445" y="100" width="335" height="52" rx="26.0" fill="#FFFFFF" stroke="#0071CE" stroke-width="2"/>
+<circle cx="471.0" cy="126.0" r="22.0" fill="#0071CE"/><g transform="translate(458.4,113.3) scale(1.054)"><path d="M12 3a8 8 0 0 0-8 8v5a3 3 0 0 0 3 3h2v-8H6.2A5.8 5.8 0 0 1 17.8 11H15v8h2a3 3 0 0 0 3-3v-5a8 8 0 0 0-8-8z" fill="#fff"/></g>
+<text font-size="13.5" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="505" y="129.7">M2  Mendengar untuk Memahami</tspan></text>
+<rect x="445" y="166" width="335" height="52" rx="26.0" fill="#FFFFFF" stroke="#15908F" stroke-width="2"/>
+<circle cx="471.0" cy="192.0" r="22.0" fill="#15908F"/><g transform="translate(458.4,179.3) scale(1.054)"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" fill="#fff"/></g>
+<text font-size="13.5" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="505" y="195.7">M3  Umpan Balik yang Menjaga Martabat</tspan></text>
+<rect x="445" y="232" width="335" height="52" rx="26.0" fill="#FFFFFF" stroke="#0B4F8A" stroke-width="2"/>
+<circle cx="471.0" cy="258.0" r="22.0" fill="#0B4F8A"/><g transform="translate(458.4,245.3) scale(1.054)"><path d="M2 4h12a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H8l-4 3v-3H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" fill="#fff"/><path d="M18 9h3a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-1v3l-4-3h-5a2 2 0 0 1-2-2v-1h5a3 3 0 0 0 3-3z" fill="#fff" opacity="0.75"/></g>
+<text font-size="13.5" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="505" y="261.7">M4  Percakapan Sulit dengan Empati</tspan></text>
+<rect x="445" y="298" width="335" height="52" rx="26.0" fill="#FFFFFF" stroke="#33BCCF" stroke-width="2"/>
+<circle cx="471.0" cy="324.0" r="22.0" fill="#33BCCF"/><g transform="translate(458.4,311.4) scale(1.054)"><path d="M12 2l8 3v6.5c0 5-3.4 9-8 10.5-4.6-1.5-8-5.5-8-10.5V5z" fill="#fff"/><path d="M8 12l3 3 5-6" stroke="#000" stroke-opacity="0.25" stroke-width="2" fill="none"/></g>
+<text font-size="13.5" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="505" y="327.7">M5  Tim yang Aman untuk Bicara</tspan></text>
+<rect x="445" y="364" width="335" height="52" rx="26.0" fill="#FFFFFF" stroke="#7B4C9C" stroke-width="2"/>
+<circle cx="471.0" cy="390.0" r="22.0" fill="#7B4C9C"/><g transform="translate(458.4,377.4) scale(1.054)"><path d="M5 22V3h12l-2 4 2 4H7v11z" fill="#fff"/></g>
+<text font-size="13.5" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="505" y="393.7">M6  Rencana Aksi 30 Hari</tspan></text>
+<text font-size="12.5" fill="#555555" text-anchor="start" font-style="italic"><tspan x="890" y="63.4">Dasar cara pandang untuk semua modul</tspan></text>
+<line x1="782" y1="126.0" x2="878.6" y2="126.0" stroke="#0071CE" stroke-width="2.5"/><polygon points="884,126.0 875.9,129.9 875.9,122.1" fill="#0071CE"/>
+<rect x="890" y="100" width="333" height="52" rx="10" fill="#DCEBFA"/>
+<circle cx="914" cy="126.0" r="14" fill="#0071CE"/><g transform="translate(906.0,118.0) scale(0.671)"><path d="M4 12.5l5 5L20 6.5" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text font-size="13" fill="#1D1D1F" text-anchor="start"><tspan x="948" y="121.5">Mendengar sampai paham isi dan perasaan</tspan><tspan x="948" y="137.7">anggota tim</tspan></text>
+<line x1="782" y1="192.0" x2="878.6" y2="192.0" stroke="#15908F" stroke-width="2.5"/><polygon points="884,192.0 875.9,195.9 875.9,188.1" fill="#15908F"/>
+<rect x="890" y="166" width="333" height="52" rx="10" fill="#DCEBFA"/>
+<circle cx="914" cy="192.0" r="14" fill="#0071CE"/><g transform="translate(906.0,183.9) scale(0.671)"><path d="M4 12.5l5 5L20 6.5" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text font-size="13" fill="#1D1D1F" text-anchor="start"><tspan x="948" y="187.4">Memberi umpan balik SBI tanpa</tspan><tspan x="948" y="203.7">menjatuhkan martabat</tspan></text>
+<line x1="782" y1="258.0" x2="878.6" y2="258.0" stroke="#0B4F8A" stroke-width="2.5"/><polygon points="884,258.0 875.9,261.9 875.9,254.1" fill="#0B4F8A"/>
+<rect x="890" y="232" width="333" height="52" rx="10" fill="#DCEBFA"/>
+<circle cx="914" cy="258.0" r="14" fill="#0071CE"/><g transform="translate(906.0,249.9) scale(0.671)"><path d="M4 12.5l5 5L20 6.5" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text font-size="13" fill="#1D1D1F" text-anchor="start"><tspan x="948" y="253.4">Memimpin percakapan sulit, skor minimal</tspan><tspan x="948" y="269.7">6 dari 8</tspan></text>
+<line x1="782" y1="324.0" x2="878.6" y2="324.0" stroke="#33BCCF" stroke-width="2.5"/><polygon points="884,324.0 875.9,327.9 875.9,320.1" fill="#33BCCF"/>
+<rect x="890" y="298" width="333" height="52" rx="10" fill="#DCEBFA"/>
+<circle cx="914" cy="324.0" r="14" fill="#0071CE"/><g transform="translate(906.0,315.9) scale(0.671)"><path d="M4 12.5l5 5L20 6.5" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text font-size="13" fill="#1D1D1F" text-anchor="start"><tspan x="948" y="319.4">Membaca rasa aman tim dan menyusun norma</tspan><tspan x="948" y="335.7">tim</tspan></text>
+<line x1="782" y1="390.0" x2="878.6" y2="390.0" stroke="#7B4C9C" stroke-width="2.5"/><polygon points="884,390.0 875.9,393.9 875.9,386.1" fill="#7B4C9C"/>
+<rect x="890" y="364" width="333" height="52" rx="10" fill="#DCEBFA"/>
+<circle cx="914" cy="390.0" r="14" fill="#0071CE"/><g transform="translate(906.0,381.9) scale(0.671)"><path d="M4 12.5l5 5L20 6.5" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text font-size="13" fill="#1D1D1F" text-anchor="start"><tspan x="948" y="385.4">Menjalankan rencana aksi 30 hari yang</tspan><tspan x="948" y="401.7">dipantau tim</tspan></text>
+<line x1="0" y1="448" x2="1223" y2="448" stroke="#D9D9D9" stroke-width="1.2"/>
+<text font-size="12" fill="#555555" text-anchor="start" font-weight="bold"><tspan x="0" y="468.8">KETENTUAN DARI BRIEF</tspan></text>
+<rect x="0.0" y="484" width="233.4" height="54" rx="27" fill="#D7ECEC"/>
+<circle cx="27.0" cy="511" r="19" fill="#0D5C5B"/><g transform="translate(16.1,500.1) scale(0.910)"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.8a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6z" fill="#fff"/></g>
+<text font-size="13.5" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="54.0" y="514.7">Luring</tspan></text>
+<rect x="247.4" y="484" width="233.4" height="54" rx="27" fill="#D7ECEC"/>
+<circle cx="274.4" cy="511" r="19" fill="#0D5C5B"/><g transform="translate(263.5,500.1) scale(0.910)"><rect x="4.5" y="10" width="15" height="11" rx="2" fill="#fff"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="#fff" stroke-width="2.4" fill="none"/></g>
+<text font-size="13.5" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="301.4" y="514.7">Privat, khusus PT MMPP</tspan></text>
+<rect x="494.8" y="484" width="233.4" height="54" rx="27" fill="#D7ECEC"/>
+<circle cx="521.8" cy="511" r="19" fill="#0D5C5B"/><g transform="translate(510.9,500.1) scale(0.910)"><rect x="3" y="5" width="18" height="16" rx="2" fill="#fff"/><rect x="3" y="5" width="18" height="5" fill="#000" opacity="0.2"/><rect x="7" y="2.5" width="2" height="5" rx="1" fill="#fff"/><rect x="15" y="2.5" width="2" height="5" rx="1" fill="#fff"/></g>
+<text font-size="13.5" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="548.8" y="514.7">Januari - Maret 2027</tspan></text>
+<rect x="742.2" y="484" width="233.4" height="54" rx="27" fill="#D7ECEC"/>
+<circle cx="769.2" cy="511" r="19" fill="#0D5C5B"/><g transform="translate(758.3,500.1) scale(0.910)"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.8a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6z" fill="#fff"/></g>
+<text font-size="13.5" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="796.2" y="514.7">Makassar atau Jakarta</tspan></text>
+<rect x="989.6" y="484" width="233.4" height="54" rx="27" fill="#D7ECEC"/>
+<circle cx="1016.6" cy="511" r="19" fill="#0D5C5B"/><g transform="translate(1005.7,500.1) scale(0.910)"><rect x="3" y="9" width="18" height="12" fill="#fff"/><path d="M2 9l10-6 10 6z" fill="#fff"/><rect x="10" y="14" width="4" height="7" fill="#000" opacity="0.25"/></g>
+<text font-size="13.5" fill="#1D1D1F" text-anchor="start" font-weight="bold"><tspan x="1043.6" y="506.3">Satu paket dengan</tspan><tspan x="1043.6" y="523.1">tempat</tspan></text>
+</svg>
