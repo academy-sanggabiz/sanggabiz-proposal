@@ -28,6 +28,17 @@ Disampaikan lewat Mas Nauval. Jawaban dicatat di `sumber/` sebagai file baru, la
 2. **Kota pelaksanaan.** Dokumen klien hanya memuat satu tempat (`../ATURAN-PROPOSAL.md` bagian 5 butir 4). Pilih Makassar atau Jakarta setelah jawaban pertanyaan 4. Bila klien tidak menjawab, kami cenderung memilih Makassar karena nama perusahaan menunjukkan basisnya di sana (tafsiran, perlu dicek).
 3. **Cara menampilkan biaya tempat.** Lihat `02-FAKTA-DAN-KETENTUAN.md` bagian 5.
 
+## 3a. Silabus v1 (26 November 2026)
+Gaya slide, mengikuti deck MyFundAction atas permintaan tim. Isi dan alasannya ada di `03-RISET-PELATIHAN-SERUPA.md`.
+1. **Bentuk program:** asesmen awal, 2 hari tatap muka (6 modul, 675 menit materi), tindak lanjut daring 90 menit di hari ke-30.
+2. **Modul:** M1 Empati dalam Kepemimpinan, M2 Mendengar untuk Memahami, M3 Komunikasi yang Menjaga Martabat, M4 Percakapan Sulit dengan Empati, M5 Tim yang Aman untuk Bicara, M6 Memimpin dengan Empati Sehari-hari.
+3. **Perlu dicek tim sebelum dikirim:**
+   - Pendekatan siri' na pacce diterima PT MMPP atau tidak, terutama bila pelatihan di Jakarta (riset bagian 3).
+   - Kapasitas 24 peserta per kelas dan kebutuhan co-fasilitator.
+   - Tindak lanjut hari ke-30 masuk anggaran.
+   - Silabus belum memuat profil trainer. Brief meminta profil trainer, jadi perlu slide tambahan setelah trainer dipilih.
+4. Mengubah isi: edit `_build/build_silabus.py`, simpan sebagai v2, dan simpan salinan skrip v1 (`ATURAN-PROPOSAL.md` bagian 8).
+
 ## 4. Usulan metode (tafsiran Claude, belum diputuskan)
 Mengikuti daftar metode di `../ATURAN-PROPOSAL.md` bagian 1.
 - **ADDIE** untuk alur program, dari analisis kebutuhan sampai evaluasi.
@@ -50,5 +61,6 @@ Anggaran nanti mengikuti tahap ini, dengan harga dari `../STANDAR-HARGA.md`. Acu
 1. Kirim pertanyaan bagian 1 ke PT MMPP lewat Mas Nauval.
 2. Cari profil PT MMPP dan catat di file riset baru.
 3. Cari dua atau tiga calon tempat di kota terpilih, simpan cadangan di catatan ini.
-4. Susun silabus per sesi sesuai `../ATURAN-PROPOSAL.md` bagian 3.
-5. Tulis proposal di folder `proposal/`.
+4. Silabus v1 sudah ada di `silabus/`. Tinjau bersama trainer, lalu revisi setelah jawaban klien masuk.
+5. Susun butir survei 8 perilaku empatik untuk asesmen awal.
+6. Tulis proposal di folder `proposal/`.

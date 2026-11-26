@@ -33,6 +33,17 @@ Contoh: `03-strategi-dan-metode-pelaksanaan.png`.
 - Panah putih menghubungkan kotak mengikuti urutan.
 - Dipakai untuk: gambaran pelaksanaan end to end yang rinci pada program besar.
 
+## Gaya silabus yang sudah ada
+Arahan tim, 26 November 2026: **setiap kali diminta membuat silabus, tanyakan dulu gaya mana yang dipakai.** Jangan memilih sendiri. Pilihan saat ini:
+
+| Gaya | Bentuk | Contoh | Cocok untuk |
+|---|---|---|---|
+| A. Gaya Plan | Excel berjenjang: tab Timeline, satu tab per chapter dengan kepala modul (rujukan SKKNI, prasyarat, tools, aspek kompetensi, tujuan berkode Bloom), tab Detail Kelas berisi rundown menit | `plan-bojonegoro/silabus/` dan spesifikasinya di `plan-bojonegoro/01-SPESIFIKASI-SILABUS.md` | Program panjang banyak pertemuan, klien yang meminta rujukan SKKNI atau silabus sebagai lampiran |
+| B. Gaya slide | PowerPoint 16:9 landscape: sampul teal tua, kebutuhan dan hasil, alur program dan metode, satu slide tabel per modul (Modul & fokus, Topik, Outline materi, Tujuan pembelajaran, Format), rundown, persiapan dan evaluasi Kirkpatrick, hasil yang dibawa pulang | `reference/gaya-silabus/` (deck MyFundAction). Penerapan: `mmpp-empathy-leadership/silabus/`, skrip `mmpp-empathy-leadership/_build/build_silabus.py` | Pelatihan 1 sampai 3 hari, silabus yang dikirim atau dipresentasikan langsung ke klien |
+| C. Gaya dokumen portrait | Silabus sebagai bab di proposal Word A4, memakai Tipe 1 di atas | Proposal docx di `slb-kaltim/proposal/` dan `pim-wla/proposal/` | Proposal lengkap dalam satu dokumen |
+
+Gaya baru yang dipakai tim ditambahkan ke tabel ini dengan contohnya.
+
 ## Catatan
 - Format ini memakai warna cyan dan biru. Compro Sanggabiz memakai navy `#0B396D` dan kuning `#FFC00C`. Pilih satu keluarga warna per dokumen dan konsisten. Proposal SLB Kaltim memakai keluarga compro.
 - Format standar belum dipasang di proposal SLB Kaltim. Dipakai bila nanti diperlukan.

@@ -9,4 +9,5 @@ Repo ini berisi proposal dan dokumen kerja Sanggabiz.
 4. Setiap proyek proposal punya foldernya sendiri (`tanoto/`, `slb-kaltim/`). Jangan mencampur aturan atau aset antarproyek.
 5. Kutipan chat dan dokumen sumber ditulis apa adanya. Tafsiran dipisah dan diberi label.
 6. Bagian yang harus diisi tim ditandai `[ISI TIM: ...]` dengan stabilo kuning di dokumen.
+6a. Setiap kali diminta membuat silabus, tanyakan dulu gaya silabus yang dipakai sebelum mulai. Daftar gaya ada di `FORMAT-STANDAR-PROPOSAL.md` bagian "Gaya silabus yang sudah ada".
 7. Versi lama dokumen tidak dihapus saat membuat versi baru (lihat `ATURAN-PROPOSAL.md` bagian 8).
